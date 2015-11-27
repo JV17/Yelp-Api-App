@@ -16,6 +16,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "YAConstants.h"
+    #import "NSURLRequest+OAuth.h"
+    #import "UIColor+Hex.h"
 #endif
 
 #endif /* YelpApiApp_Prefix_pch */
