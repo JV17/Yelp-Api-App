@@ -11,6 +11,6 @@
 #ifndef YAConstants_h
 #define YAConstants_h
 
-FOUNDATION_EXTERN NSString *const YAIsYelpAppInstalledKey;
+
 
 #endif /* YAConstants_h */

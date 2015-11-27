@@ -8,4 +8,3 @@
 
 #import "YAConstants.h"
 
-NSString *const YAIsYelpAppInstalledKey = @"yelp:";
