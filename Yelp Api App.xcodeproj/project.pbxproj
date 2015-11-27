@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		7FE099FA1C08D74F00ACB80A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE099F91C08D74F00ACB80A /* main.m */; };
 		7FE099FD1C08D74F00ACB80A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE099FC1C08D74F00ACB80A /* AppDelegate.m */; };
-		7FE09A001C08D74F00ACB80A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE099FF1C08D74F00ACB80A /* ViewController.m */; };
-		7FE09A031C08D74F00ACB80A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FE09A011C08D74F00ACB80A /* Main.storyboard */; };
+		7FE09A001C08D74F00ACB80A /* YARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE099FF1C08D74F00ACB80A /* YARootViewController.m */; };
 		7FE09A051C08D74F00ACB80A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FE09A041C08D74F00ACB80A /* Assets.xcassets */; };
 		7FE09A081C08D74F00ACB80A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FE09A061C08D74F00ACB80A /* LaunchScreen.storyboard */; };
 		7FE09A131C08D75000ACB80A /* Yelp_Api_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE09A121C08D75000ACB80A /* Yelp_Api_AppTests.m */; };
@@ -39,9 +38,8 @@
 		7FE099F91C08D74F00ACB80A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FE099FB1C08D74F00ACB80A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7FE099FC1C08D74F00ACB80A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7FE099FE1C08D74F00ACB80A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7FE099FF1C08D74F00ACB80A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7FE09A021C08D74F00ACB80A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7FE099FE1C08D74F00ACB80A /* YARootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YARootViewController.h; sourceTree = "<group>"; };
+		7FE099FF1C08D74F00ACB80A /* YARootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YARootViewController.m; sourceTree = "<group>"; };
 		7FE09A041C08D74F00ACB80A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FE09A071C08D74F00ACB80A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FE09A091C08D74F00ACB80A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,9 +101,8 @@
 			children = (
 				7FE099FB1C08D74F00ACB80A /* AppDelegate.h */,
 				7FE099FC1C08D74F00ACB80A /* AppDelegate.m */,
-				7FE099FE1C08D74F00ACB80A /* ViewController.h */,
-				7FE099FF1C08D74F00ACB80A /* ViewController.m */,
-				7FE09A011C08D74F00ACB80A /* Main.storyboard */,
+				7FE099FE1C08D74F00ACB80A /* YARootViewController.h */,
+				7FE099FF1C08D74F00ACB80A /* YARootViewController.m */,
 				7FE09A041C08D74F00ACB80A /* Assets.xcassets */,
 				7FE09A061C08D74F00ACB80A /* LaunchScreen.storyboard */,
 				7FE09A091C08D74F00ACB80A /* Info.plist */,
@@ -245,7 +242,6 @@
 			files = (
 				7FE09A081C08D74F00ACB80A /* LaunchScreen.storyboard in Resources */,
 				7FE09A051C08D74F00ACB80A /* Assets.xcassets in Resources */,
-				7FE09A031C08D74F00ACB80A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FE09A001C08D74F00ACB80A /* ViewController.m in Sources */,
+				7FE09A001C08D74F00ACB80A /* YARootViewController.m in Sources */,
 				7FE099FD1C08D74F00ACB80A /* AppDelegate.m in Sources */,
 				7FE099FA1C08D74F00ACB80A /* main.m in Sources */,
 			);
@@ -308,14 +304,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7FE09A011C08D74F00ACB80A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7FE09A021C08D74F00ACB80A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7FE09A061C08D74F00ACB80A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -498,6 +486,7 @@
 				7FE09A241C08D75000ACB80A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FE09A251C08D75000ACB80A /* Build configuration list for PBXNativeTarget "Yelp Api AppTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +495,7 @@
 				7FE09A271C08D75000ACB80A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FE09A281C08D75000ACB80A /* Build configuration list for PBXNativeTarget "Yelp Api AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +504,7 @@
 				7FE09A2A1C08D75000ACB80A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
