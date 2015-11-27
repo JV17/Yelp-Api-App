@@ -14,10 +14,10 @@
 		7FE09A081C08D74F00ACB80A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FE09A061C08D74F00ACB80A /* LaunchScreen.storyboard */; };
 		7FE09A131C08D75000ACB80A /* Yelp_Api_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE09A121C08D75000ACB80A /* Yelp_Api_AppTests.m */; };
 		7FE09A1E1C08D75000ACB80A /* Yelp_Api_AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE09A1D1C08D75000ACB80A /* Yelp_Api_AppUITests.m */; };
-		7FE09A2E1C08DC6500ACB80A /* YANetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE09A2D1C08DC6500ACB80A /* YANetworkManager.m */; };
 		7FE09A321C08DD6600ACB80A /* YAConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE09A311C08DD6600ACB80A /* YAConstants.m */; };
 		7FE09A5B1C08EE1500ACB80A /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE09A5A1C08EE1500ACB80A /* NSURLRequest+OAuth.m */; };
 		7FE09A5E1C08F0EF00ACB80A /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE09A5D1C08F0EF00ACB80A /* UIColor+Hex.m */; };
+		7FE09A621C08F2A400ACB80A /* YANetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE09A611C08F2A400ACB80A /* YANetworkManager.m */; };
 		D9A16A655B06E832161FADDA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AECCCBACEA29E88D592A8D28 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +56,6 @@
 		7FE09A191C08D75000ACB80A /* Yelp Api AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yelp Api AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE09A1D1C08D75000ACB80A /* Yelp_Api_AppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Yelp_Api_AppUITests.m; sourceTree = "<group>"; };
 		7FE09A1F1C08D75000ACB80A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7FE09A2C1C08DC6500ACB80A /* YANetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YANetworkManager.h; sourceTree = "<group>"; };
-		7FE09A2D1C08DC6500ACB80A /* YANetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YANetworkManager.m; sourceTree = "<group>"; };
 		7FE09A301C08DD5000ACB80A /* YAConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAConstants.h; sourceTree = "<group>"; };
 		7FE09A311C08DD6600ACB80A /* YAConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAConstants.m; sourceTree = "<group>"; };
 		7FE09A351C08DE3200ACB80A /* YelpApiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YelpApiApp-Prefix.pch"; sourceTree = "<group>"; };
@@ -65,6 +63,8 @@
 		7FE09A5A1C08EE1500ACB80A /* NSURLRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+OAuth.m"; sourceTree = "<group>"; };
 		7FE09A5C1C08F0EF00ACB80A /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		7FE09A5D1C08F0EF00ACB80A /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		7FE09A601C08F2A400ACB80A /* YANetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YANetworkManager.h; sourceTree = "<group>"; };
+		7FE09A611C08F2A400ACB80A /* YANetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YANetworkManager.m; sourceTree = "<group>"; };
 		AECCCBACEA29E88D592A8D28 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -119,9 +119,9 @@
 		7FE099F71C08D74F00ACB80A /* Yelp Api App */ = {
 			isa = PBXGroup;
 			children = (
+				7FE09A5F1C08F2A400ACB80A /* Network Manager */,
 				7FE09A581C08EDEC00ACB80A /* Categories */,
 				7FE09A2F1C08DD3800ACB80A /* Constants */,
-				7FE09A2B1C08DC1F00ACB80A /* Yelp Api Manager */,
 				7FE099FB1C08D74F00ACB80A /* AppDelegate.h */,
 				7FE099FC1C08D74F00ACB80A /* AppDelegate.m */,
 				7FE099FE1C08D74F00ACB80A /* YARootViewController.h */,
@@ -161,15 +161,6 @@
 			path = "Yelp Api AppUITests";
 			sourceTree = "<group>";
 		};
-		7FE09A2B1C08DC1F00ACB80A /* Yelp Api Manager */ = {
-			isa = PBXGroup;
-			children = (
-				7FE09A2C1C08DC6500ACB80A /* YANetworkManager.h */,
-				7FE09A2D1C08DC6500ACB80A /* YANetworkManager.m */,
-			);
-			path = "Yelp Api Manager";
-			sourceTree = "<group>";
-		};
 		7FE09A2F1C08DD3800ACB80A /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +179,15 @@
 				7FE09A5D1C08F0EF00ACB80A /* UIColor+Hex.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		7FE09A5F1C08F2A400ACB80A /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				7FE09A601C08F2A400ACB80A /* YANetworkManager.h */,
+				7FE09A611C08F2A400ACB80A /* YANetworkManager.m */,
+			);
+			path = "Network Manager";
 			sourceTree = "<group>";
 		};
 		CF9BB6A4C09111521F7F2C2E /* Pods */ = {
@@ -388,12 +388,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FE09A321C08DD6600ACB80A /* YAConstants.m in Sources */,
-				7FE09A2E1C08DC6500ACB80A /* YANetworkManager.m in Sources */,
 				7FE09A001C08D74F00ACB80A /* YARootViewController.m in Sources */,
 				7FE099FD1C08D74F00ACB80A /* AppDelegate.m in Sources */,
 				7FE09A5E1C08F0EF00ACB80A /* UIColor+Hex.m in Sources */,
 				7FE09A5B1C08EE1500ACB80A /* NSURLRequest+OAuth.m in Sources */,
 				7FE099FA1C08D74F00ACB80A /* main.m in Sources */,
+				7FE09A621C08F2A400ACB80A /* YANetworkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
