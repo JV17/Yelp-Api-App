@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "YARootViewController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) YARootViewController *rootViewController;
 
 @end
 
@@ -17,6 +20,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window.rootViewController = self.rootViewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -40,6 +47,30 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+#pragma mark - Custom Accessors
+
+- (UIWindow *)window
+{
+    if (!_window)
+    {
+        _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    }
+    
+    return _window;
+}
+
+
+- (YARootViewController *)rootViewController
+{
+    if (!_rootViewController)
+    {
+        _rootViewController = [[YARootViewController alloc] init];
+    }
+    
+    return _rootViewController;
 }
 
 @end
