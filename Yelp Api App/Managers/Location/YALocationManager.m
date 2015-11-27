@@ -31,8 +31,6 @@
     if (!_locationManager)
     {
         _locationManager = [[CLLocationManager alloc] init];
-        _locationManager.delegate = self;
-        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     }
     
     return _locationManager;
@@ -102,6 +100,8 @@
     
     if (([CLLocationManager locationServicesEnabled]))
     {
+        self.locationManager.delegate = self;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         [self.locationManager startUpdatingLocation];
     }
     else

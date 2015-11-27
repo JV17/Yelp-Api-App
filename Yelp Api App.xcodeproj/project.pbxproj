@@ -298,6 +298,7 @@
 				TargetAttributes = {
 					7FE099F41C08D74F00ACB80A = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = XD9P2BC444;
 					};
 					7FE09A0D1C08D74F00ACB80A = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -549,12 +550,15 @@
 			baseConfigurationReference = 038BE9417CB2D15B2BD666B4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Yelp Api App/YelpApiApp-Prefix.pch";
 				INFOPLIST_FILE = "Yelp Api App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jorge-Valbuena.Yelp-Api-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -563,12 +567,15 @@
 			baseConfigurationReference = 2EFF768F07EBE7DCF09F473F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Yelp Api App/YelpApiApp-Prefix.pch";
 				INFOPLIST_FILE = "Yelp Api App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jorge-Valbuena.Yelp-Api-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
