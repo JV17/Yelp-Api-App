@@ -1,0 +1,21 @@
+//
+//  YelpApiApp-Prefix.pch
+//  Yelp Api App
+//
+//  Created by Jorge Valbuena on 2015-11-27.
+//  Copyright © 2015 Jorge Valbuena. All rights reserved.
+//
+
+#ifndef YelpApiApp_Prefix_pch
+#define YelpApiApp_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "YAConstants.h"
+#endif
+
+#endif /* YelpApiApp_Prefix_pch */

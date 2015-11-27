@@ -14,6 +14,8 @@
 		7FE09A081C08D74F00ACB80A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FE09A061C08D74F00ACB80A /* LaunchScreen.storyboard */; };
 		7FE09A131C08D75000ACB80A /* Yelp_Api_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE09A121C08D75000ACB80A /* Yelp_Api_AppTests.m */; };
 		7FE09A1E1C08D75000ACB80A /* Yelp_Api_AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE09A1D1C08D75000ACB80A /* Yelp_Api_AppUITests.m */; };
+		7FE09A2E1C08DC6500ACB80A /* YANetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE09A2D1C08DC6500ACB80A /* YANetworkManager.m */; };
+		7FE09A321C08DD6600ACB80A /* YAConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE09A311C08DD6600ACB80A /* YAConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,11 @@
 		7FE09A191C08D75000ACB80A /* Yelp Api AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yelp Api AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE09A1D1C08D75000ACB80A /* Yelp_Api_AppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Yelp_Api_AppUITests.m; sourceTree = "<group>"; };
 		7FE09A1F1C08D75000ACB80A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FE09A2C1C08DC6500ACB80A /* YANetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YANetworkManager.h; sourceTree = "<group>"; };
+		7FE09A2D1C08DC6500ACB80A /* YANetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YANetworkManager.m; sourceTree = "<group>"; };
+		7FE09A301C08DD5000ACB80A /* YAConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAConstants.h; sourceTree = "<group>"; };
+		7FE09A311C08DD6600ACB80A /* YAConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAConstants.m; sourceTree = "<group>"; };
+		7FE09A351C08DE3200ACB80A /* YelpApiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YelpApiApp-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +106,13 @@
 		7FE099F71C08D74F00ACB80A /* Yelp Api App */ = {
 			isa = PBXGroup;
 			children = (
+				7FE09A2F1C08DD3800ACB80A /* Constants */,
+				7FE09A2B1C08DC1F00ACB80A /* Yelp Api Manager */,
 				7FE099FB1C08D74F00ACB80A /* AppDelegate.h */,
 				7FE099FC1C08D74F00ACB80A /* AppDelegate.m */,
 				7FE099FE1C08D74F00ACB80A /* YARootViewController.h */,
 				7FE099FF1C08D74F00ACB80A /* YARootViewController.m */,
+				7FE09A351C08DE3200ACB80A /* YelpApiApp-Prefix.pch */,
 				7FE09A041C08D74F00ACB80A /* Assets.xcassets */,
 				7FE09A061C08D74F00ACB80A /* LaunchScreen.storyboard */,
 				7FE09A091C08D74F00ACB80A /* Info.plist */,
@@ -135,6 +145,24 @@
 				7FE09A1F1C08D75000ACB80A /* Info.plist */,
 			);
 			path = "Yelp Api AppUITests";
+			sourceTree = "<group>";
+		};
+		7FE09A2B1C08DC1F00ACB80A /* Yelp Api Manager */ = {
+			isa = PBXGroup;
+			children = (
+				7FE09A2C1C08DC6500ACB80A /* YANetworkManager.h */,
+				7FE09A2D1C08DC6500ACB80A /* YANetworkManager.m */,
+			);
+			path = "Yelp Api Manager";
+			sourceTree = "<group>";
+		};
+		7FE09A2F1C08DD3800ACB80A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7FE09A301C08DD5000ACB80A /* YAConstants.h */,
+				7FE09A311C08DD6600ACB80A /* YAConstants.m */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE09A321C08DD6600ACB80A /* YAConstants.m in Sources */,
+				7FE09A2E1C08DC6500ACB80A /* YANetworkManager.m in Sources */,
 				7FE09A001C08D74F00ACB80A /* YARootViewController.m in Sources */,
 				7FE099FD1C08D74F00ACB80A /* AppDelegate.m in Sources */,
 				7FE099FA1C08D74F00ACB80A /* main.m in Sources */,
@@ -401,6 +431,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Yelp Api App/YelpApiApp-Prefix.pch";
 				INFOPLIST_FILE = "Yelp Api App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jorge-Valbuena.Yelp-Api-App";
@@ -412,6 +444,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Yelp Api App/YelpApiApp-Prefix.pch";
 				INFOPLIST_FILE = "Yelp Api App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jorge-Valbuena.Yelp-Api-App";
