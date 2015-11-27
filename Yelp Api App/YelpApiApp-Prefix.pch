@@ -18,6 +18,8 @@
     #import "YAConstants.h"
     #import "NSURLRequest+OAuth.h"
     #import "UIColor+Hex.h"
+    #import "YALocationManager.h"
+    #import "YANetworkManager.h"
 #endif
 
 #endif /* YelpApiApp_Prefix_pch */
