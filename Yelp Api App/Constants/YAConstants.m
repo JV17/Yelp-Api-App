@@ -8,3 +8,7 @@
 
 #import "YAConstants.h"
 
+
+NSString *const YALocationManagerErrorMessage = @"We couldn't find your current location.";
+NSString *const YALocationManagerErrorTitle = @"Location Services Unavailable";
+

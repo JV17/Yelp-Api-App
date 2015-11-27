@@ -11,6 +11,7 @@
 #ifndef YAConstants_h
 #define YAConstants_h
 
-
+FOUNDATION_EXTERN NSString *const YALocationManagerErrorMessage;
+FOUNDATION_EXTERN NSString *const YALocationManagerErrorTitle;
 
 #endif /* YAConstants_h */
