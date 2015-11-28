@@ -7,12 +7,15 @@
 //
 
 #import "YALocationManager.h"
+#import "YALocation.h"
 #import <CoreLocation/CoreLocation.h>
 
 
 @interface YALocationManager() <CLLocationManagerDelegate>
 
 @property (nonatomic, strong, readwrite) CLLocationManager *locationManager;
+
+@property (nonatomic, strong, readwrite) YALocation *location;
 
 @property (nonatomic, strong) CLGeocoder *geoCoder;
 
@@ -50,6 +53,17 @@ static NSInteger const kErrorCode = 0;
     }
     
     return _geoCoder;
+}
+
+
+- (YALocation *)location
+{
+    if (!_location)
+    {
+        _location = [[YALocation alloc] init];
+    }
+    
+    return _location;
 }
 
 
@@ -143,9 +157,14 @@ static NSInteger const kErrorCode = 0;
         return;
     }
     
-    if ([self.delegate respondsToSelector:@selector(locationFinishedUpdatingWithCity:state:country:countryCode:)])
+    self.location.city = placeMark.locality;
+    self.location.state = placeMark.administrativeArea;
+    self.location.country = placeMark.country;
+    self.location.countryCode = placeMark.ISOcountryCode;
+    
+    if ([self.delegate respondsToSelector:@selector(locationFinishedUpdatingWithLocation:)])
     {
-        [self.delegate locationFinishedUpdatingWithCity:placeMark.locality state:placeMark.administrativeArea country:placeMark.country countryCode:placeMark.ISOcountryCode];
+        [self.delegate locationFinishedUpdatingWithLocation:self.location];
     }
 }
 

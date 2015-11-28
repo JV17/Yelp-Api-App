@@ -8,23 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@class CLLocationManager;
+@class CLLocationManager, YALocation;
 
 @protocol YALocationManagerDelegate <NSObject>
 
 /**
  This delegate tells you when we have received a new location update with city, state, country and country code.
  
- @param city
-    The current location city.
- @param state
-    The current location state.
- @param country
-    The current location country.
- @param countryCode
-    The current location country code.
+ @param location
+    The current user's location E.g. city, state, country and country code.
  */
-- (void)locationFinishedUpdatingWithCity:(NSString *)city state:(NSString *)state country:(NSString *)country countryCode:(NSString *)countryCode;
+- (void)locationFinishedUpdatingWithLocation:(YALocation *)location;
 
 
 /**
@@ -42,8 +36,21 @@
 
 @interface YALocationManager : NSObject
 
+/**
+ The current location manager use to load user's location.
+ */
 @property (nonatomic, strong, readonly) CLLocationManager *locationManager;
 
+
+/**
+ The current user's location.
+ */
+@property (nonatomic, strong, readonly) YALocation *location;
+
+
+/**
+ Location manager delegate.
+ */
 @property (nonatomic, weak) id <YALocationManagerDelegate> delegate;
 
 
