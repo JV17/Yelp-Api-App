@@ -15,7 +15,7 @@
 #pragma mark - Public Methods
 
 /**
- Query the Yelp API with a given term and location.
+ Query the Yelp's API with a given term and location.
  
  @param term 
     The term of the search, e.g: dinner.
@@ -25,6 +25,17 @@
     A completion block that takes a @NSDictionary and a @NSError.
  */
 - (void)queryBusinessInformationWithTerm:(NSString *)term location:(NSString *)location completionHandler:(void (^)(NSDictionary *jsonDictionary, NSError *error))completionHandler;
+
+
+/**
+ Query the Yelp's API with a given business id.
+ 
+ @param businessID
+    The business id from Yelp's response.
+ @param completionHandler
+    A completion block that takes a @NSDictionary and a @NSError.
+ */
+- (void)queryBusinessInformationWithBusinessId:(NSString *)businessID completionHandler:(void (^)(NSDictionary *jsonDictionary, NSError *error))completionHandler;
 
 
 /**

@@ -77,14 +77,6 @@ static NSString *const kBusinessIdKey = @"id";
 }
 
 
-/**
- Query business information from Yelp query response.
- 
- @param businessID
-    The business id from Yelp's response.
- @param completionHandler
-    A completion block that takes a @NSDictionary and a @NSError.
- */
 - (void)queryBusinessInformationWithBusinessId:(NSString *)businessID completionHandler:(void (^)(NSDictionary *jsonDictionary, NSError *error))completionHandler
 {
     NSURLSession *session = [NSURLSession sharedSession];
