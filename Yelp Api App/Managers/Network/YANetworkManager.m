@@ -57,7 +57,7 @@ static NSString *const kBusinessIdKey = @"id";
                 NSDictionary *businessDictionary = [NSDictionary responseDictionaryWithKeyPrefix:YABusinessKey arrayDictionary:businessArray];
                 NSLog(@"%@", businessDictionary);
                 
-                completionHandler(businessDictionary, error);                
+                completionHandler(businessDictionary, error);
             }
             else
             {
@@ -89,7 +89,7 @@ static NSString *const kBusinessIdKey = @"id";
         }
         else
         {
-            completionHandler(nil, error);
+            completionHandler(nil, error); // An error happened or the HTTP response is not a 200 OK
         }
     }]
      resume];
