@@ -23,4 +23,7 @@ FOUNDATION_EXTERN NSString *const YAConsumerSecret;
 FOUNDATION_EXTERN NSString *const YAToken;
 FOUNDATION_EXTERN NSString *const YATokenSecret;
 
+
+FOUNDATION_EXTERN NSString *const YABusinessKey;
+
 #endif /* YAConstants_h */

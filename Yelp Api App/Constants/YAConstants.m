@@ -21,3 +21,5 @@ NSString *const YAToken = @"fn6YdCulEzqo-tMmuaAPZzgHetNy1hsp";
 NSString *const YATokenSecret = @"JRgisR2SPIvCF1gcK9bfL3g1j3E";
 
 
+NSString *const YABusinessKey = @"business";
+
