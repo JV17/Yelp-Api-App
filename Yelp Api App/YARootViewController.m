@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) YALocationManager *location;
 
+@property (nonatomic, strong) YANetworkManager *network;
+
 @end
 
 
@@ -22,10 +24,15 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithHexString:@"1AD6FD"];
+
     
-    self.location = [[YALocationManager alloc] init];
-    self.location.delegate = self;
     [self.location requestLocation];
+    
+    
+    [self.network queryBusinessInformationWithTerm:@"dinner" location:@"Toronto, ON" completionHandler:^(NSDictionary *jsonDictionary, NSError *error)
+    {
+        NSLog(@"json: %@", jsonDictionary);
+    }];
 }
 
 
@@ -44,6 +51,31 @@
 - (void)locationFinishedWithError:(NSError *)error errorMessage:(NSString *)errorMessages
 {
     NSLog(@"error: %@ error message: %@", error, errorMessages);
+}
+
+
+#pragma mark - Custom Accessors
+
+- (YALocationManager *)location
+{
+    if (!_location)
+    {
+        _location = [[YALocationManager alloc] init];
+        _location.delegate = self;
+    }
+    
+    return _location;
+}
+
+
+- (YANetworkManager *)network
+{
+    if (!_network)
+    {
+        _network = [[YANetworkManager alloc] init];
+    }
+    
+    return _network;
 }
 
 @end

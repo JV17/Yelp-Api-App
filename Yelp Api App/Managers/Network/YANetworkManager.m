@@ -56,6 +56,8 @@ static NSString *const kBusinessIdKey = @"id";
             {
                 NSDictionary *firstBusiness = [businessArray firstObject];
                 
+                NSLog(@"%@", [businessArray firstObject]);
+                
                 NSString *firstBusinessID = firstBusiness[kBusinessIdKey];
                 NSLog(@"%lu businesses found, querying business info for the top result: %@", (unsigned long)[businessArray count], firstBusinessID);
                 
@@ -152,5 +154,6 @@ static NSString *const kBusinessIdKey = @"id";
 {
     return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:kIsYelpAppInstalledKey]];
 }
+
 
 @end
