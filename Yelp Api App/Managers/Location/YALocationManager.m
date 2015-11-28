@@ -21,6 +21,11 @@
 @end
 
 
+static NSString *const kErrorMessage = @"We couldn't find your current location at this time.";
+static NSString *const kErrorTitle = @"Location Services Unavailable";
+static NSInteger const kErrorCode = 0;
+
+
 @implementation YALocationManager
 
 
@@ -58,7 +63,7 @@
         {
             if ([self.delegate respondsToSelector:@selector(locationFinishedWithError:errorMessage:)])
             {
-                [self.delegate locationFinishedWithError:error errorMessage:YALocationManagerErrorMessage];
+                [self.delegate locationFinishedWithError:error errorMessage:kErrorMessage];
             }
         }
         
@@ -69,11 +74,15 @@
         }
         else
         {
-            NSError *placemarksError = [NSError errorWithDomain:YALocationManagerErrorTitle code:1 userInfo:nil];
+            NSDictionary *userInfo = [NSDictionary errorDictionaryWithDescription:kErrorMessage
+                                                                           reason:@"Location services might be disabled or not reachable."
+                                                                       suggestion:@"Please enabled your location services or move to another place to get better signal."];
+            
+            NSError *placemarksError = [NSError errorWithDomain:kErrorTitle code:YAErrorCode userInfo:userInfo];
             
             if ([self.delegate respondsToSelector:@selector(locationFinishedWithError:errorMessage:)])
             {
-                [self.delegate locationFinishedWithError:placemarksError errorMessage:YALocationManagerErrorMessage];
+                [self.delegate locationFinishedWithError:placemarksError errorMessage:kErrorMessage];
             }
         }
     }];
@@ -106,11 +115,15 @@
     }
     else
     {
-        NSError *error = [NSError errorWithDomain:YALocationManagerErrorTitle code:1 userInfo:nil];
+        NSDictionary *userInfo = [NSDictionary errorDictionaryWithDescription:@"We couldn't find your location due to unenabled location services."
+                                                                       reason:@"Location services are disabled."
+                                                                   suggestion:@"Please enabled your location services."];
+        
+        NSError *error = [NSError errorWithDomain:kErrorTitle code:YAErrorCode userInfo:userInfo];
         
         if ([self.delegate respondsToSelector:@selector(locationFinishedWithError:errorMessage:)])
         {
-            [self.delegate locationFinishedWithError:error errorMessage:YALocationManagerErrorMessage];
+            [self.delegate locationFinishedWithError:error errorMessage:kErrorMessage];
         }
     }
 }
