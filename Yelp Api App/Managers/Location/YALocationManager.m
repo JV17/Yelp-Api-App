@@ -78,7 +78,7 @@ static NSInteger const kErrorCode = 0;
                                                                            reason:@"Location services might be disabled or not reachable."
                                                                        suggestion:@"Please enabled your location services or move to another place to get better signal."];
             
-            NSError *placemarksError = [NSError errorWithDomain:kErrorTitle code:YAErrorCode userInfo:userInfo];
+            NSError *placemarksError = [NSError errorWithDomain:kErrorTitle code:kErrorCode userInfo:userInfo];
             
             if ([self.delegate respondsToSelector:@selector(locationFinishedWithError:errorMessage:)])
             {
@@ -119,7 +119,7 @@ static NSInteger const kErrorCode = 0;
                                                                        reason:@"Location services are disabled."
                                                                    suggestion:@"Please enabled your location services."];
         
-        NSError *error = [NSError errorWithDomain:kErrorTitle code:YAErrorCode userInfo:userInfo];
+        NSError *error = [NSError errorWithDomain:kErrorTitle code:kErrorCode userInfo:userInfo];
         
         if ([self.delegate respondsToSelector:@selector(locationFinishedWithError:errorMessage:)])
         {
