@@ -54,10 +54,10 @@ static NSString *const kBusinessIdKey = @"id";
             
             if (businessArray.count)
             {
+                NSDictionary *businessDictionary = [NSDictionary responseDictionaryWithKeyPrefix:YABusinessKey arrayDictionary:businessArray];
+                NSLog(@"%@", businessDictionary);
+                
                 NSDictionary *firstBusiness = [businessArray firstObject];
-                
-                NSLog(@"%@", [businessArray firstObject]);
-                
                 NSString *firstBusinessID = firstBusiness[kBusinessIdKey];
                 NSLog(@"%lu businesses found, querying business info for the top result: %@", (unsigned long)[businessArray count], firstBusinessID);
                 
