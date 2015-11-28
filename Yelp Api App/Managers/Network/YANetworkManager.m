@@ -57,11 +57,7 @@ static NSString *const kBusinessIdKey = @"id";
                 NSDictionary *businessDictionary = [NSDictionary responseDictionaryWithKeyPrefix:YABusinessKey arrayDictionary:businessArray];
                 NSLog(@"%@", businessDictionary);
                 
-                NSDictionary *firstBusiness = [businessArray firstObject];
-                NSString *firstBusinessID = firstBusiness[kBusinessIdKey];
-                NSLog(@"%lu businesses found, querying business info for the top result: %@", (unsigned long)[businessArray count], firstBusinessID);
-                
-                [self queryBusinessInformationWithBusinessId:firstBusinessID completionHandler:completionHandler];
+                completionHandler(businessDictionary, error);                
             }
             else
             {
