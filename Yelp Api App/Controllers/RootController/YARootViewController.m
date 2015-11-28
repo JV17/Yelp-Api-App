@@ -7,6 +7,7 @@
 //
 
 #import "YARootViewController.h"
+#import "YALocation.h"
 
 @interface YARootViewController () <YALocationManagerDelegate>
 
@@ -39,9 +40,11 @@
 
 #pragma mark - YALocationManagerDelegate
 
-- (void)locationFinishedUpdatingWithCity:(NSString *)city state:(NSString *)state country:(NSString *)country countryCode:(NSString *)countryCode
+- (void)locationFinishedUpdatingWithLocation:(YALocation *)location
 {
-    [self.network queryBusinessInformationWithTerm:@"dinner" location:@"Toronto, ON" completionHandler:^(NSDictionary *jsonDictionary, NSError *error)
+    NSString *userLocation = [NSString stringWithFormat:@"%@, %@", location.city, location.state];
+    
+    [self.network queryBusinessInformationWithTerm:@"dinner" location:userLocation completionHandler:^(NSDictionary *jsonDictionary, NSError *error)
      {
          NSLog(@"json: %@", jsonDictionary);
     }];
