@@ -54,9 +54,7 @@ static NSString *const kBusinessIdKey = @"id";
             
             if (businessArray.count)
             {
-                NSDictionary *businessDictionary = [NSDictionary responseDictionaryWithKeyPrefix:YABusinessKey arrayDictionary:businessArray];
-                NSLog(@"%@", businessDictionary);
-                
+                NSDictionary *businessDictionary = [NSDictionary responseDictionaryWithKeyPrefix:YABusinessKey arrayDictionary:businessArray];                
                 completionHandler(businessDictionary, error);
             }
             else
