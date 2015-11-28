@@ -27,14 +27,7 @@
     
     self.view.backgroundColor = [UIColor colorWithHexString:@"1AD6FD"];
 
-    
     [self.location requestLocation];
-    
-    
-    [self.network queryBusinessInformationWithTerm:@"dinner" location:@"Toronto, ON" completionHandler:^(NSDictionary *jsonDictionary, NSError *error)
-    {
-        NSLog(@"json: %@", jsonDictionary);
-    }];
 }
 
 
@@ -44,10 +37,14 @@
 }
 
 
-#warning Testing location manager (REMOVE!)
+#pragma mark - YALocationManagerDelegate
+
 - (void)locationFinishedUpdatingWithCity:(NSString *)city state:(NSString *)state country:(NSString *)country countryCode:(NSString *)countryCode
 {
-    NSLog(@"city:%@ state:%@ country:%@ country code:%@", city, state, country, countryCode);
+    [self.network queryBusinessInformationWithTerm:@"dinner" location:@"Toronto, ON" completionHandler:^(NSDictionary *jsonDictionary, NSError *error)
+     {
+         NSLog(@"json: %@", jsonDictionary);
+    }];
 }
 
 - (void)locationFinishedWithError:(NSError *)error errorMessage:(NSString *)errorMessages
