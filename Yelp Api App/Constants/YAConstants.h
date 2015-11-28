@@ -11,9 +11,11 @@
 #ifndef YAConstants_h
 #define YAConstants_h
 
-// Location Manager
-FOUNDATION_EXTERN NSString *const YALocationManagerErrorMessage;
-FOUNDATION_EXTERN NSString *const YALocationManagerErrorTitle;
+
+// generic error
+FOUNDATION_EXTERN NSString *const YAErrorDomain;
+FOUNDATION_EXTERN NSInteger const YAErrorCode;
+
 
 // NSURL Request Category
 FOUNDATION_EXTERN NSString *const YAConsumerKey;
