@@ -18,7 +18,7 @@
     #import "YAConstants.h"
     #import "NSURLRequest+OAuth.h"
     #import "UIColor+Hex.h"
-    #import "NSDictionary+Error.h"
+    #import "NSDictionary+Addons.h"
     #import "YALocationManager.h"
     #import "YANetworkManager.h"
 #endif
