@@ -30,7 +30,14 @@
 + (UIImage *)imageWithURL:(NSString *)url
 {
     NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:url]];
-    return [UIImage imageWithData:data];
+    UIImage *image = [UIImage imageWithData:data];
+    
+    if (!image)
+    {
+        return [UIImage imageNamed:YANoImageName];
+    }
+    
+    return image;
 }
 
 @end
