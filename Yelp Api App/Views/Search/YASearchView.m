@@ -22,6 +22,7 @@
 static CGFloat const kTextFieldHeight = 50;
 static CGFloat const kTextFieldFontSize = 22;
 static NSString *const kTextFieldPlaceHolder = @"Enter your search";
+static NSString *const kTextFieldValidCharacters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789";
 
 // left padding view
 static CGFloat const kLeftPaddingWidth = 10;
@@ -116,14 +117,29 @@ static CGFloat const kLeftPaddingWidth = 10;
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [textField resignFirstResponder];
+    return [self checkForValidInputWithText:textField.text];
+}
+
+
+- (BOOL)checkForValidInputWithText:(NSString *)text
+{
+    NSCharacterSet *characterSet = [[NSCharacterSet characterSetWithCharactersInString:kTextFieldValidCharacters] invertedSet];
+    
+    if ([text rangeOfCharacterFromSet:characterSet].location != NSNotFound)
+    {
+        return NO;
+    }
     
     if ([self.delegate respondsToSelector:@selector(searchViewFinishedWithSearchString:)])
     {
-        [self.delegate searchViewFinishedWithSearchString:textField.text];
+        [self.textField resignFirstResponder];
+        [self.delegate searchViewFinishedWithSearchString:text];
+        
+        return YES;
     }
     
-    return YES;
+    return NO;
 }
+
 
 @end
