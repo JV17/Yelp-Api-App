@@ -167,7 +167,7 @@ static CGFloat const kLabelHeight = 20;
 {
     if (!_copyRightView)
     {
-        _copyRightView = [[YACopyRightView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - kLabelHeight, self.view.frame.size.width, kLabelHeight) copyrightText:@"Powered by " copyrightImage:[UIImage imageNamed:@"yelp-logo"]];
+        _copyRightView = [[YACopyRightView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - kLabelHeight, self.view.frame.size.width, kLabelHeight) copyrightText:YACopyrightText copyrightImage:[UIImage imageNamed:YACopyrightImageName]];
         _copyRightView.backgroundColor = [UIColor clearColor];
     }
     

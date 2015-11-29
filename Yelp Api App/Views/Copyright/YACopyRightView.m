@@ -15,11 +15,13 @@
 
 @property (nonatomic, strong) UILabel *label;
 
+@property (nonatomic, assign, readwrite) CGFloat contentViewWidth;
+
 @end
 
 
 // labels font
-static CGFloat const kFontSize = 12;
+static CGFloat const kYelpImagePercentage = 0.1;
 
 
 @implementation YACopyRightView
@@ -57,6 +59,7 @@ static CGFloat const kFontSize = 12;
 {
     [self addSubview:self.label];
     [self addSubview:self.imageView];
+    [self centerContentInView];
 }
 
 
@@ -68,7 +71,7 @@ static CGFloat const kFontSize = 12;
     {
         _imageView = [[UIImageView alloc] initWithFrame:self.imageViewFrame];
         _imageView.backgroundColor = [UIColor clearColor];
-        _imageView.image = [UIImage imageWithSourceImage:self.copyrightImage scaledToWidth:self.frame.size.width * 0.25];
+        _imageView.image = [UIImage imageWithSourceImage:self.copyrightImage scaledToWidth:self.imageWidth];
     }
     
     return _imageView;
@@ -77,7 +80,13 @@ static CGFloat const kFontSize = 12;
 
 - (CGRect)imageViewFrame
 {
-    return CGRectMake(CGRectGetMaxX(self.label.frame), 0, (self.frame.size.width * 0.25), self.frame.size.height);
+    return CGRectMake(CGRectGetMaxX(self.label.frame), 0, self.imageWidth, self.frame.size.height);
+}
+
+
+- (CGFloat)imageWidth
+{
+    return (self.frame.size.width * kYelpImagePercentage);
 }
 
 
@@ -88,7 +97,8 @@ static CGFloat const kFontSize = 12;
     if (self.copyrightImage)
     {
         self.imageView.frame = self.imageViewFrame;
-        self.imageView.image = [UIImage imageWithSourceImage:self.copyrightImage scaledToWidth:self.frame.size.width * 0.25];
+        self.imageView.image = [UIImage imageWithSourceImage:self.copyrightImage scaledToWidth:self.imageWidth];
+        [self centerContentInView];
     }
 }
 
@@ -99,8 +109,8 @@ static CGFloat const kFontSize = 12;
     {
         _label = [[UILabel alloc] init];
         _label.backgroundColor = [UIColor clearColor];
-        _label.font = [UIFont fontWithName:YALatoLightFont size:kFontSize];
-        _label.textColor = [UIColor whiteColor];
+        _label.font = [UIFont fontWithName:YALatoRegular size:YACopyrightLabelFontSize];
+        _label.textColor = [UIColor colorWithHexString:YACopyrightLabelColor];
         _label.text = self.copyrightText;
         _label.frame = self.labelFrame;
     }
@@ -123,6 +133,27 @@ static CGFloat const kFontSize = 12;
     if (self.copyrightText.length)
     {
         self.label.text = self.copyrightText;
+        self.label.frame = self.labelFrame;
+        [self centerContentInView];
+    }
+}
+
+
+- (CGFloat)contentViewWidth
+{
+    return self.label.frame.size.width + self.imageView.frame.size.width;
+}
+
+
+#pragma mark - Helper Functions
+
+- (void)centerContentInView
+{
+    if (self.frame.size.width > self.contentViewWidth)
+    {
+        CGFloat originX = ((self.frame.size.width / 2) - (self.contentViewWidth / 2));
+        self.label.frame = CGRectMake(originX, 0, self.label.frame.size.width, self.label.frame.size.height);
+        self.imageView.frame = self.imageViewFrame;
     }
 }
 

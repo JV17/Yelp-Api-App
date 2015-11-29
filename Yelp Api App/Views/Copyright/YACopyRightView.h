@@ -25,6 +25,12 @@
 @property (nonatomic, strong) UIImage *copyrightImage;
 
 
+/**
+ The content view width.
+ */
+@property (nonatomic, assign, readonly) CGFloat contentViewWidth;
+
+
 #pragma mark - Custom Intializers
 
 /**
