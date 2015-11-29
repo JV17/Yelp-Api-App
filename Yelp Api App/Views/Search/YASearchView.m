@@ -98,6 +98,32 @@ static CGFloat const kLeftPaddingWidth = 10;
 }
 
 
+- (void)setBecomeFirstResponder:(BOOL)becomeFirstResponder
+{
+    _becomeFirstResponder = becomeFirstResponder;
+    
+    if (self.becomeFirstResponder)
+    {
+        [self.textField becomeFirstResponder];
+    }
+    else
+    {
+        [self.textField resignFirstResponder];
+    }
+}
+
+
+- (void)setClearTextField:(BOOL)clearTextField
+{
+    _clearTextField = clearTextField;
+    
+    if (self.clearTextField)
+    {
+        self.textField.text = @"";
+    }
+}
+
+
 #pragma mark - AutoLayout
 
 - (void)applyTextFieldLayout

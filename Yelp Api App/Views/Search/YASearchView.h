@@ -24,6 +24,18 @@
 
 @interface YASearchView : UIView
 
+/**
+ Triggers the search view to become first responder or not.
+ */
+@property (nonatomic, assign) BOOL becomeFirstResponder;
+
+
+/**
+ Clears all input from text field.
+ */
+@property (nonatomic, assign) BOOL clearTextField;
+
+
 @property (nonatomic, weak) id <YASearchViewDelegate> delegate;
 
 @end
