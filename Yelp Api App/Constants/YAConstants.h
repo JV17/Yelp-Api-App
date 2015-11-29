@@ -50,4 +50,8 @@ FOUNDATION_EXTERN NSString *const YARootControllerFirstBgColor;
 FOUNDATION_EXTERN NSString *const YARootControllerSecondBgColor;
 
 
+// UIImage category
+FOUNDATION_EXTERN NSString *const YANoImageName;
+
+
 #endif /* YAConstants_h */

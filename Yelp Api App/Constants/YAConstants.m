@@ -44,3 +44,7 @@ NSString *const YADemoImageName = @"rbc-logo";
 // Root Controller
 NSString *const YARootControllerFirstBgColor = @"1AD6FD";
 NSString *const YARootControllerSecondBgColor = @"007AFF";
+
+
+// UIImage category
+NSString *const YANoImageName = @"no-image";
