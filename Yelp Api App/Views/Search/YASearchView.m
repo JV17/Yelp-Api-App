@@ -160,7 +160,7 @@ static CGFloat const kLeftPaddingWidth = 10;
  */
 - (BOOL)checkForValidInputWithText:(NSString *)text
 {
-    if (!text.length)
+    if (!text.length || text.length < 4)
     {
         return NO;
     }
