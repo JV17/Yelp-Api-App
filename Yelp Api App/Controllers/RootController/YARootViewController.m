@@ -15,6 +15,8 @@
 
 @property (nonatomic, strong) YALocationManager *location;
 
+@property (nonatomic ,strong) YALocation *userLocation;
+
 @property (nonatomic, strong) YANetworkManager *network;
 
 @property (nonatomic, strong) YASearchView *searchView;
@@ -48,13 +50,9 @@
 
 - (void)locationFinishedUpdatingWithLocation:(YALocation *)location
 {
-    NSString *userLocation = [NSString stringWithFormat:@"%@, %@", location.city, location.state];
-    
-    [self.network queryBusinessInformationWithTerm:@"dinner" location:userLocation completionHandler:^(NSDictionary *jsonDictionary, NSError *error)
-     {
-         NSLog(@"json: %@", jsonDictionary);
-    }];
+    self.userLocation = location;
 }
+
 
 - (void)locationFinishedWithError:(NSError *)error errorMessage:(NSString *)errorMessages
 {
@@ -67,6 +65,13 @@
 - (void)searchViewFinishedWithSearchString:(NSString *)searchString
 {
     NSLog(@"%@", searchString);
+    
+    NSString *userLocation = [NSString stringWithFormat:@"%@, %@", self.userLocation.city, self.userLocation.state];
+    
+    [self.network queryBusinessInformationWithTerm:searchString location:userLocation completionHandler:^(NSDictionary *jsonDictionary, NSError *error)
+    {
+         NSLog(@"json: %@", jsonDictionary);
+    }];
 }
 
 
