@@ -20,6 +20,7 @@
 
 // label
 static NSString *const kDemoLabelColor = @"2B2B2B";
+static NSString *const kDemoLabelShadowColor = @"4A4A4A";
 static CGFloat const kDemoLabelFontSize = 20;
 static CGFloat const kDemoLabelHeight = 40;
 static CGFloat const kDemoLabelY = 22;
@@ -106,6 +107,11 @@ static CGFloat const kDemoLabelY = 22;
         _label.textColor = [UIColor colorWithHexString:kDemoLabelColor];
         _label.textAlignment = NSTextAlignmentCenter;
         _label.text = self.demoName;
+
+        _label.layer.shadowOffset = CGSizeMake(2, 2);
+        _label.layer.shadowRadius = 2;
+        _label.layer.shadowColor = [UIColor colorWithHexString:kDemoLabelShadowColor].CGColor;
+        _label.layer.shadowOpacity = 0.6;
     }
     
     return _label;
