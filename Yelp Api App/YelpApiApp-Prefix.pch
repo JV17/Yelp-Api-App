@@ -21,6 +21,7 @@
     #import "NSDictionary+Addons.h"
     #import "UIImage+Addons.h"
     #import "UIView+Addons.h"
+    #import "NSArray+Addons.h"
     #import "YALocationManager.h"
     #import "YANetworkManager.h"
 #endif
