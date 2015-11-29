@@ -25,6 +25,11 @@ static CGFloat const kDemoLabelFontSize = 20;
 static CGFloat const kDemoLabelHeight = 40;
 static CGFloat const kDemoLabelY = 22;
 
+// image
+static CGFloat const kMaxImageWidth = 140;
+static CGFloat const kImagePadding = 16;
+static NSString *const kImageShadowColor = @"2B2B2B";
+
 
 @implementation YADemoView
 
@@ -48,7 +53,11 @@ static CGFloat const kDemoLabelY = 22;
     
     if (self)
     {
-        _demoImage = demoImage;
+        if (demoImage)
+        {
+            _demoImage = [UIImage imageWithSourceImage:demoImage scaledToWidth:kMaxImageWidth];
+        }
+        
         _demoName = demoName;
         [self setupDemoView];
     }
@@ -72,7 +81,12 @@ static CGFloat const kDemoLabelY = 22;
     {
         _imageView = [[UIImageView alloc] initWithFrame:self.imageViewFrame];
         _imageView.backgroundColor = [UIColor clearColor];
-        _imageView.image = self.demoImage;
+        _imageView.image = [UIImage imageWithSourceImage:self.demoImage scaledToWidth:kMaxImageWidth];
+        
+        _imageView.layer.shadowOffset = CGSizeMake(4, 4);
+        _imageView.layer.shadowRadius = 4;
+        _imageView.layer.shadowColor = [UIColor colorWithHexString:kImageShadowColor].CGColor;
+        _imageView.layer.shadowOpacity = 0.8;
     }
     
     return _imageView;
@@ -81,7 +95,7 @@ static CGFloat const kDemoLabelY = 22;
 
 - (CGRect)imageViewFrame
 {
-    return CGRectMake(((self.frame.size.width / 2) - (self.demoImage.size.width /2)), ((self.frame.size.height / 2) - (self.demoImage.size.height /2)), self.demoImage.size.width, self.demoImage.size.height);
+    return CGRectMake(((self.frame.size.width / 2) - (self.demoImage.size.width /2)), ((self.frame.size.height / 2) - (self.demoImage.size.height /2)), self.demoImage.size.width, self.demoImage.size.height + kImagePadding);
 }
 
 
@@ -92,7 +106,7 @@ static CGFloat const kDemoLabelY = 22;
     if (self.demoImage)
     {
         self.imageView.frame = self.imageViewFrame;
-        self.imageView.image = self.demoImage;
+        self.imageView.image = [UIImage imageWithSourceImage:self.demoImage scaledToWidth:kMaxImageWidth];
     }
 }
 
