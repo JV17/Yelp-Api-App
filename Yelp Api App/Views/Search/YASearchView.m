@@ -31,22 +31,33 @@ static CGFloat const kLeftPaddingWidth = 10;
 
 #pragma mark - Lifecycle
 
+- (instancetype)init
+{
+    return [self initWithFrame:CGRectZero];
+}
+
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     
     if (self)
     {
-        [self setupSearchView];
+        [self loadSearchView];
     }
     
     return self;
 }
 
 
-- (void)setupSearchView
+- (void)loadSearchView
 {
     [self addSubview:self.textField];
+    
+    if (self.frame.size.width == 0 || self.frame.size.height == 0)
+    {
+        [self applyTextFieldLayout];
+    }
 }
 
 
@@ -66,6 +77,7 @@ static CGFloat const kLeftPaddingWidth = 10;
         _textField.returnKeyType = UIReturnKeySearch;
         _textField.clearButtonMode = UITextFieldViewModeNever;
         _textField.tintColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
+        _textField.translatesAutoresizingMaskIntoConstraints = NO;
     }
     
     return _textField;
@@ -81,6 +93,22 @@ static CGFloat const kLeftPaddingWidth = 10;
     }
     
     return _leftPaddingView;
+}
+
+
+#pragma mark - AutoLayout
+
+- (void)applyTextFieldLayout
+{
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_textField]|"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:NSDictionaryOfVariableBindings(_textField)]];
+
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_textField]|"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:NSDictionaryOfVariableBindings(_textField)]];
 }
 
 
