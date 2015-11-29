@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class YAResultsData;
 
 @interface YAResultsView : UIView
+
+@property (nonatomic, strong) YAResultsData *resultsData;
 
 @end

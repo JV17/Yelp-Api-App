@@ -7,6 +7,7 @@
 //
 
 #import "YAResultsView.h"
+#import "YAResultsData.h"
 
 
 @interface YAResultsView()
