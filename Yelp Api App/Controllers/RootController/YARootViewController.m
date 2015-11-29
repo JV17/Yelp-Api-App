@@ -80,6 +80,8 @@ static NSString *const kSearchButtonImageName = @"plus-48";
 {
     NSLog(@"%@", searchString);
     
+    [self showOrHideSearchView];
+    
     NSString *userLocation = [NSString stringWithFormat:@"%@, %@", self.userLocation.city, self.userLocation.state];
     
     [self.network queryBusinessInformationWithTerm:searchString location:userLocation completionHandler:^(NSDictionary *jsonDictionary, NSError *error)
@@ -147,7 +149,7 @@ static NSString *const kSearchButtonImageName = @"plus-48";
         _searchButton.backgroundColor = [UIColor clearColor];
         _searchButton.tag = 1;
         [_searchButton setImage:[UIImage imageNamed:kSearchButtonImageName] forState:UIControlStateNormal];
-        [_searchButton addTarget:self action:@selector(showOrHideSearchView:) forControlEvents:UIControlEventTouchUpInside];
+        [_searchButton addTarget:self action:@selector(showOrHideSearchView) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return _searchButton;
@@ -156,7 +158,7 @@ static NSString *const kSearchButtonImageName = @"plus-48";
 
 #pragma mark - Show SearchView
 
-- (void)showOrHideSearchView:(UIButton *)button
+- (void)showOrHideSearchView
 {
     if (self.searchButton.tag == 1)
     {
