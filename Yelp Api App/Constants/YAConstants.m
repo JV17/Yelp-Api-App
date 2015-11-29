@@ -34,8 +34,8 @@ CGFloat const YADefautlFontSize = 14;
 // Copyright
 NSString *const YACopyrightLabelColor = @"2B2B2B";
 CGFloat const YACopyrightLabelFontSize = 12;
-NSString *const YACopyrightText = @"Powered by ";
-NSString *const YACopyrightImageName = @"yelp-logo";
+NSString *const YACopyrightText = @"Powered by";
+NSString *const YACopyrightImageName = @"yelp-red";
 
 
 // Root Controller

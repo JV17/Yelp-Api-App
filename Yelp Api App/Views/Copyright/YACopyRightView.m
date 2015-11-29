@@ -21,7 +21,7 @@
 
 
 // labels font
-static CGFloat const kYelpImagePercentage = 0.1;
+static CGFloat const kYelpImagePercentage = 0.05;
 
 
 @implementation YACopyRightView
