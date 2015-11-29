@@ -11,6 +11,7 @@
 #import "YASearchView.h"
 #import "YACopyRightView.h"
 #import "YADemoView.h"
+#import "YAResultsView.h"
 
 
 @interface YARootViewController () <YALocationManagerDelegate, YASearchViewDelegate>
@@ -29,6 +30,10 @@
 
 @property (nonatomic, strong) YADemoView *demoView;
 
+@property (nonatomic, strong) YAResultsView *resultsView;
+
+@property (nonatomic, strong) NSArray<YAResultsData *> *resultsData;
+
 @end
 
 
@@ -44,6 +49,10 @@ static NSString *const kSearchButtonImageName = @"plus-black";
 
 // copy right label
 static CGFloat const kLabelHeight = 20;
+
+
+// resutls view
+static CGFloat const kResutlsViewPadding = 20;
 
 
 @implementation YARootViewController
@@ -97,7 +106,11 @@ static CGFloat const kLabelHeight = 20;
     
     [self.network queryBusinessInformationWithTerm:searchString location:userLocation completionHandler:^(NSDictionary *jsonDictionary, NSError *error)
     {
-         NSLog(@"json: %@", jsonDictionary);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.resultsData = [NSArray arrayFromResultsDictionary:jsonDictionary];
+            NSLog(@"%@", self.resultsData);
+            [self.view addSubview:self.resultsView];
+        });
     }];
 }
 
@@ -191,6 +204,47 @@ static CGFloat const kLabelHeight = 20;
 }
 
 
+- (YAResultsView *)resultsView
+{
+    if (!_resultsView)
+    {
+        _resultsView = [[YAResultsView alloc] initWithFrame:self.resultsViewFrame resultsData:self.resultsData];
+        _resultsView.backgroundColor = [UIColor clearColor];
+    }
+    
+    return _resultsView;
+}
+
+
+- (CGRect)resultsViewFrame
+{
+    return CGRectMake(kResutlsViewPadding, self.resultsViewY, self.view.frame.size.width - (kResutlsViewPadding * 2), self.resultsViewHeight);
+}
+
+
+- (CGFloat)resultsViewY
+{
+    return (self.searchButton.frame.size.height + kResutlsViewPadding);
+}
+
+
+- (CGFloat)resultsViewHeight
+{
+    return (self.view.frame.size.height - self.searchButton.frame.size.height - self.copyRightView.frame.size.height - (kResutlsViewPadding * 2));
+}
+
+
+- (void)setResultsData:(NSArray<YAResultsData *> *)resultsData
+{
+    _resultsData = resultsData;
+    
+    if (self.resultsData.count)
+    {
+        self.resultsView.data = self.resultsData;
+    }
+}
+
+
 #pragma mark - Show SearchView
 
 - (void)showOrHideSearchView
@@ -204,6 +258,11 @@ static CGFloat const kLabelHeight = 20;
             self.searchView.frame = self.showSearchViewFrame;
             CGFloat transform = ((M_PI * 3) / 4);
             self.searchButton.transform = CGAffineTransformRotate(CGAffineTransformIdentity, transform);
+            
+            if (_resultsView)
+            {
+                [self.resultsView hideResultsViewAnimated];
+            }
         }
         completion:^(BOOL finished) {
             if (finished)
@@ -221,6 +280,11 @@ static CGFloat const kLabelHeight = 20;
             self.searchView.frame = self.hideSearchViewFrame;
             CGFloat transform = ((-M_PI * 3) / 4);
             self.searchButton.transform = CGAffineTransformRotate(self.searchButton.transform, transform);
+            
+            if (_resultsView)
+            {
+                [self.resultsView showResultsViewAnimated];
+            }
         }
         completion:^(BOOL finished) {
             if (finished)
