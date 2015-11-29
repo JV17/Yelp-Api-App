@@ -37,7 +37,7 @@ static CGFloat const kSearchViewHeight = 50;
 static CGFloat const kSearchButtonPadding = 60;
 static CGFloat const kSearchButtonY = 20;
 static CGFloat const kSearchButtonSize = 50;
-static NSString *const kSearchButtonImageName = @"plus-48";
+static NSString *const kSearchButtonImageName = @"plus-black";
 
 // copy right label
 static CGFloat const kLabelHeight = 20;
