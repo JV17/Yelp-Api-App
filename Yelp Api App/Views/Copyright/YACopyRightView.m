@@ -21,6 +21,10 @@
 
 
 // labels font
+static NSString *const kLabelColor = @"2B2B2B";
+static CGFloat const kLabelFontSize = 12;
+
+// image
 static CGFloat const kYelpImagePercentage = 0.05;
 
 
@@ -109,8 +113,8 @@ static CGFloat const kYelpImagePercentage = 0.05;
     {
         _label = [[UILabel alloc] init];
         _label.backgroundColor = [UIColor clearColor];
-        _label.font = [UIFont fontWithName:YALatoRegular size:YACopyrightLabelFontSize];
-        _label.textColor = [UIColor colorWithHexString:YACopyrightLabelColor];
+        _label.font = [UIFont fontWithName:YALatoRegular size:kLabelFontSize];
+        _label.textColor = [UIColor colorWithHexString:kLabelColor];
         _label.text = self.copyrightText;
         _label.frame = self.labelFrame;
     }

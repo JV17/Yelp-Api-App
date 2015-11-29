@@ -35,8 +35,6 @@ FOUNDATION_EXTERN CGFloat const YADefautlFontSize;
 
 
 // Copyright
-FOUNDATION_EXTERN NSString *const YACopyrightLabelColor;
-FOUNDATION_EXTERN CGFloat const YACopyrightLabelFontSize;
 FOUNDATION_EXTERN NSString *const YACopyrightText;
 FOUNDATION_EXTERN NSString *const YACopyrightImageName;
 
