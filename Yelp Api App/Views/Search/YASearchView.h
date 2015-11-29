@@ -9,8 +9,21 @@
 #import <UIKit/UIKit.h>
 
 
+@protocol YASearchViewDelegate <NSObject>
+
+/**
+ Tells the string searched by the user.
+ 
+ @param searchString
+    The string searched by the user.
+ */
+- (void)searchViewFinishedWithSearchString:(NSString *)searchString;
+
+@end
+
+
 @interface YASearchView : UIView
 
-
+@property (nonatomic, weak) id <YASearchViewDelegate> delegate;
 
 @end
