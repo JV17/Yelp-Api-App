@@ -21,13 +21,20 @@
 
 @property (nonatomic, strong) YASearchView *searchView;
 
+@property (nonatomic, strong) UIButton *searchButton;
+
 @end
 
 
 // search view
 static CGFloat const kSearchViewX = 20;
-static CGFloat const kSearchViewY = 30;
 static CGFloat const kSearchViewHeight = 50;
+
+// search button
+static CGFloat const kSearchButtonPadding = 60;
+static CGFloat const kSearchButtonY = 20;
+static CGFloat const kSearchButtonSize = 50;
+static NSString *const kSearchButtonImageName = @"plus-48";
 
 
 @implementation YARootViewController
@@ -40,6 +47,7 @@ static CGFloat const kSearchViewHeight = 50;
     
     self.view.backgroundColor = [UIColor colorWithHexString:@"1AD6FD"];
 
+    [self.view addSubview:self.searchButton];
     [self.view addSubview:self.searchView];
     
     [self.location requestLocation];
@@ -110,12 +118,81 @@ static CGFloat const kSearchViewHeight = 50;
 {
     if (!_searchView)
     {
-        _searchView = [[YASearchView alloc] initWithFrame:CGRectMake(kSearchViewX, kSearchViewY, self.view.frame.size.width - (kSearchViewX * 2), kSearchViewHeight)];
+        _searchView = [[YASearchView alloc] initWithFrame:self.hideSearchViewFrame];
         _searchView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
         _searchView.delegate = self;
     }
     
     return _searchView;
+}
+
+
+- (CGRect)showSearchViewFrame
+{
+    return CGRectMake(kSearchViewX, CGRectGetMaxY(self.searchButton.frame), (self.view.frame.size.width - (kSearchViewX * 2)), kSearchViewHeight);
+}
+
+
+- (CGRect)hideSearchViewFrame
+{
+    return CGRectMake(kSearchViewX, -(kSearchViewHeight * 1.5), self.view.frame.size.width - (kSearchViewX * 2), kSearchViewHeight);
+}
+
+
+- (UIButton *)searchButton
+{
+    if (!_searchButton)
+    {
+        _searchButton = [[UIButton alloc] initWithFrame:CGRectMake((CGRectGetMaxX(self.view.frame) - kSearchButtonPadding), kSearchButtonY, kSearchButtonSize, kSearchButtonSize)];
+        _searchButton.backgroundColor = [UIColor clearColor];
+        _searchButton.tag = 1;
+        [_searchButton setImage:[UIImage imageNamed:kSearchButtonImageName] forState:UIControlStateNormal];
+        [_searchButton addTarget:self action:@selector(showOrHideSearchView:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    return _searchButton;
+}
+
+
+#pragma mark - Show SearchView
+
+- (void)showOrHideSearchView:(UIButton *)button
+{
+    if (self.searchButton.tag == 1)
+    {
+        self.searchView.becomeFirstResponder = YES;
+        
+        [UIView animateWithDuration:0.4 delay:0.0 usingSpringWithDamping:1.0 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            // animations
+            self.searchView.frame = self.showSearchViewFrame;
+            CGFloat transform = ((M_PI * 3) / 4);
+            self.searchButton.transform = CGAffineTransformRotate(CGAffineTransformIdentity, transform);
+        }
+        completion:^(BOOL finished) {
+            if (finished)
+            {
+                self.searchButton.tag = 2;
+            }
+        }];
+    }
+    else
+    {
+        self.searchView.becomeFirstResponder = NO;
+        
+        [UIView animateWithDuration:0.4 delay:0.0 usingSpringWithDamping:1.0 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            // animations
+            self.searchView.frame = self.hideSearchViewFrame;
+            CGFloat transform = ((-M_PI * 3) / 4);
+            self.searchButton.transform = CGAffineTransformRotate(self.searchButton.transform, transform);
+        }
+        completion:^(BOOL finished) {
+            if (finished)
+            {
+                self.searchButton.tag = 1;
+                self.searchView.clearTextField = YES;
+            }
+        }];
+    }
 }
 
 @end
