@@ -11,6 +11,7 @@
 #ifndef YAConstants_h
 #define YAConstants_h
 
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 // generic error
 FOUNDATION_EXTERN NSString *const YAErrorDomain;
