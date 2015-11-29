@@ -134,6 +134,11 @@ static CGFloat const kLeftPaddingWidth = 10;
  */
 - (BOOL)checkForValidInputWithText:(NSString *)text
 {
+    if (!text.length)
+    {
+        return NO;
+    }
+    
     NSCharacterSet *characterSet = [[NSCharacterSet characterSetWithCharactersInString:kTextFieldValidCharacters] invertedSet];
     
     if ([text rangeOfCharacterFromSet:characterSet].location != NSNotFound)
@@ -151,6 +156,5 @@ static CGFloat const kLeftPaddingWidth = 10;
     
     return NO;
 }
-
 
 @end
