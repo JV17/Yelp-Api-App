@@ -86,12 +86,6 @@ static CGFloat const kLeftPaddingWidth = 10;
 
 #pragma mark - UITextFieldDelegate
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    return YES;
-}
-
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
@@ -103,18 +97,5 @@ static CGFloat const kLeftPaddingWidth = 10;
     
     return YES;
 }
-
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    // user started typing
-}
-
-
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-    // user finished editing
-}
-
 
 @end
