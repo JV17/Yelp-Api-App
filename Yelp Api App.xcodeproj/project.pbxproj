@@ -17,6 +17,8 @@
 		3C49A5001C0A4653001107C5 /* YARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C49A4FF1C0A4653001107C5 /* YARootViewController.m */; };
 		3C49A5031C0A46C2001107C5 /* YAGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C49A5021C0A46C2001107C5 /* YAGridViewController.m */; };
 		3C49A5061C0A475F001107C5 /* YALocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C49A5051C0A475F001107C5 /* YALocation.m */; };
+		3CA29E8B1C0ACC5C00FF0039 /* YACopyRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA29E8A1C0ACC5C00FF0039 /* YACopyRightView.m */; };
+		3CA29E8F1C0AD28200FF0039 /* UIImage+Addons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA29E8E1C0AD28200FF0039 /* UIImage+Addons.m */; };
 		7FE099FA1C08D74F00ACB80A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE099F91C08D74F00ACB80A /* main.m */; };
 		7FE099FD1C08D74F00ACB80A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE099FC1C08D74F00ACB80A /* AppDelegate.m */; };
 		7FE09A051C08D74F00ACB80A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FE09A041C08D74F00ACB80A /* Assets.xcassets */; };
@@ -66,6 +68,10 @@
 		3C49A5021C0A46C2001107C5 /* YAGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAGridViewController.m; sourceTree = "<group>"; };
 		3C49A5041C0A475F001107C5 /* YALocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YALocation.h; sourceTree = "<group>"; };
 		3C49A5051C0A475F001107C5 /* YALocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YALocation.m; sourceTree = "<group>"; };
+		3CA29E891C0ACC5C00FF0039 /* YACopyRightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACopyRightView.h; sourceTree = "<group>"; };
+		3CA29E8A1C0ACC5C00FF0039 /* YACopyRightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACopyRightView.m; sourceTree = "<group>"; };
+		3CA29E8D1C0AD28200FF0039 /* UIImage+Addons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Addons.h"; sourceTree = "<group>"; };
+		3CA29E8E1C0AD28200FF0039 /* UIImage+Addons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Addons.m"; sourceTree = "<group>"; };
 		7FE099F51C08D74F00ACB80A /* Yelp Api App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yelp Api App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE099F91C08D74F00ACB80A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FE099FB1C08D74F00ACB80A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 		3C1C56791C0A968D0099DC9E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3CA29E881C0ACC4800FF0039 /* Copyright */,
 				3C1C567D1C0A976D0099DC9E /* Search */,
 			);
 			path = Views;
@@ -194,6 +201,24 @@
 				3C49A4FF1C0A4653001107C5 /* YARootViewController.m */,
 			);
 			path = RootController;
+			sourceTree = "<group>";
+		};
+		3CA29E881C0ACC4800FF0039 /* Copyright */ = {
+			isa = PBXGroup;
+			children = (
+				3CA29E891C0ACC5C00FF0039 /* YACopyRightView.h */,
+				3CA29E8A1C0ACC5C00FF0039 /* YACopyRightView.m */,
+			);
+			path = Copyright;
+			sourceTree = "<group>";
+		};
+		3CA29E8C1C0AD26D00FF0039 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				3CA29E8D1C0AD28200FF0039 /* UIImage+Addons.h */,
+				3CA29E8E1C0AD28200FF0039 /* UIImage+Addons.m */,
+			);
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 		7FE099EC1C08D74F00ACB80A = {
@@ -276,6 +301,7 @@
 		7FE09A581C08EDEC00ACB80A /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				3CA29E8C1C0AD26D00FF0039 /* UIImage */,
 				3C1C566D1C0A913F0099DC9E /* NSDictionary */,
 				3C1C56701C0A913F0099DC9E /* NSURLRequest */,
 				3C1C56731C0A913F0099DC9E /* UIColor */,
@@ -517,6 +543,7 @@
 				3C1C56761C0A913F0099DC9E /* NSDictionary+Addons.m in Sources */,
 				3C49A5061C0A475F001107C5 /* YALocation.m in Sources */,
 				3C49A5001C0A4653001107C5 /* YARootViewController.m in Sources */,
+				3CA29E8B1C0ACC5C00FF0039 /* YACopyRightView.m in Sources */,
 				7FE09A321C08DD6600ACB80A /* YAConstants.m in Sources */,
 				3C49A5031C0A46C2001107C5 /* YAGridViewController.m in Sources */,
 				7FE099FD1C08D74F00ACB80A /* AppDelegate.m in Sources */,
@@ -524,6 +551,7 @@
 				7FE099FA1C08D74F00ACB80A /* main.m in Sources */,
 				3C1C56781C0A913F0099DC9E /* UIColor+Hex.m in Sources */,
 				3C1C56771C0A913F0099DC9E /* NSURLRequest+OAuth.m in Sources */,
+				3CA29E8F1C0AD28200FF0039 /* UIImage+Addons.m in Sources */,
 				7FE09A681C08F34500ACB80A /* YANetworkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

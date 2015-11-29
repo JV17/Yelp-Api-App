@@ -19,6 +19,7 @@
     #import "NSURLRequest+OAuth.h"
     #import "UIColor+Hex.h"
     #import "NSDictionary+Addons.h"
+    #import "UIImage+Addons.h"
     #import "YALocationManager.h"
     #import "YANetworkManager.h"
 #endif

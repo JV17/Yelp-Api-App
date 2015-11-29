@@ -9,6 +9,7 @@
 #import "YARootViewController.h"
 #import "YALocation.h"
 #import "YASearchView.h"
+#import "YACopyRightView.h"
 
 
 @interface YARootViewController () <YALocationManagerDelegate, YASearchViewDelegate>
@@ -23,6 +24,8 @@
 
 @property (nonatomic, strong) UIButton *searchButton;
 
+@property (nonatomic, strong) YACopyRightView *copyRightView;
+
 @end
 
 
@@ -35,6 +38,9 @@ static CGFloat const kSearchButtonPadding = 60;
 static CGFloat const kSearchButtonY = 20;
 static CGFloat const kSearchButtonSize = 50;
 static NSString *const kSearchButtonImageName = @"plus-48";
+
+// copy right label
+static CGFloat const kLabelHeight = 20;
 
 
 @implementation YARootViewController
@@ -49,6 +55,7 @@ static NSString *const kSearchButtonImageName = @"plus-48";
 
     [self.view addSubview:self.searchButton];
     [self.view addSubview:self.searchView];
+    [self.view addSubview:self.copyRightView];
     
     [self.location requestLocation];
 }
@@ -153,6 +160,18 @@ static NSString *const kSearchButtonImageName = @"plus-48";
     }
     
     return _searchButton;
+}
+
+
+- (YACopyRightView *)copyRightView
+{
+    if (!_copyRightView)
+    {
+        _copyRightView = [[YACopyRightView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - kLabelHeight, self.view.frame.size.width, kLabelHeight) copyrightText:@"Powered by " copyrightImage:[UIImage imageNamed:@"yelp-logo"]];
+        _copyRightView.backgroundColor = [UIColor clearColor];
+    }
+    
+    return _copyRightView;
 }
 
 
