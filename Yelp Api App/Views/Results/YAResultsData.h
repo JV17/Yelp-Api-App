@@ -26,6 +26,12 @@
 
 
 /**
+ The business rating image.
+ */
+@property (nonatomic, strong) UIImage *ratingImage;
+
+
+/**
  The business category.
  */
 @property (nonatomic, strong) NSString *businessCategory;
@@ -58,6 +64,8 @@
     The business name.
  @param image
     The business image preview.
+ @param ratingImage
+    The business rating image.
  @param category
     The business category.
  @param phone
@@ -68,9 +76,9 @@
     The business short description.
  
  @return
-    An instancetype of @YAResultsData with business name, category, phone number, address and short description.
+    An instancetype of @YAResultsData with image preview, ratingImage, business name, category, phone number, address and short description.
  */
-- (instancetype)initWithName:(NSString *)name imagePreview:(UIImage *)image businessCategory:(NSString *)category phoneNumber:(NSString *)phone address:(NSString *)address shortDescription:(NSString *)description;
+- (instancetype)initWithName:(NSString *)name imagePreview:(UIImage *)image ratingImage:(UIImage *)ratingImage businessCategory:(NSString *)category phoneNumber:(NSString *)phone address:(NSString *)address shortDescription:(NSString *)description;
 
 
 @end

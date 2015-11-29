@@ -11,12 +11,14 @@
 
 @implementation YAResultsData
 
-- (instancetype)initWithName:(NSString *)name imagePreview:(UIImage *)image businessCategory:(NSString *)category phoneNumber:(NSString *)phone address:(NSString *)address shortDescription:(NSString *)description
+- (instancetype)initWithName:(NSString *)name imagePreview:(UIImage *)image ratingImage:(UIImage *)ratingImage businessCategory:(NSString *)category phoneNumber:(NSString *)phone address:(NSString *)address shortDescription:(NSString *)description
 {
     self = [super init];
     
     if (self)
     {
+        _imagePreview = image;
+        _ratingImage = ratingImage;
         _name = name;
         _businessCategory = category;
         _phoneNumber = phone;
