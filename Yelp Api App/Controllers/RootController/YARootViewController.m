@@ -51,7 +51,7 @@ static CGFloat const kLabelHeight = 20;
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithHexString:@"1AD6FD"];
+    [self.view gradientBackgroundWithFirstColor:[UIColor colorWithHexString:YARootControllerFirstBgColor] secondColor:[UIColor colorWithHexString:YARootControllerSecondBgColor]];
 
     [self.view addSubview:self.searchButton];
     [self.view addSubview:self.searchView];

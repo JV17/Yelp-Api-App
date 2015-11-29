@@ -41,4 +41,9 @@ FOUNDATION_EXTERN NSString *const YACopyrightText;
 FOUNDATION_EXTERN NSString *const YACopyrightImageName;
 
 
+// Root Controller
+FOUNDATION_EXTERN NSString *const YARootControllerFirstBgColor;
+FOUNDATION_EXTERN NSString *const YARootControllerSecondBgColor;
+
+
 #endif /* YAConstants_h */
