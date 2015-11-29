@@ -8,12 +8,16 @@
 
 #import "YARootViewController.h"
 #import "YALocation.h"
+#import "YASearchView.h"
 
-@interface YARootViewController () <YALocationManagerDelegate>
+
+@interface YARootViewController () <YALocationManagerDelegate, YASearchViewDelegate>
 
 @property (nonatomic, strong) YALocationManager *location;
 
 @property (nonatomic, strong) YANetworkManager *network;
+
+@property (nonatomic, strong) YASearchView *searchView;
 
 @end
 
@@ -28,6 +32,8 @@
     
     self.view.backgroundColor = [UIColor colorWithHexString:@"1AD6FD"];
 
+    [self.view addSubview:self.searchView];
+    
     [self.location requestLocation];
 }
 
@@ -56,6 +62,14 @@
 }
 
 
+#pragma mark - YASearchViewDelegate
+
+- (void)searchViewFinishedWithSearchString:(NSString *)searchString
+{
+    NSLog(@"%@", searchString);
+}
+
+
 #pragma mark - Custom Accessors
 
 - (YALocationManager *)location
@@ -78,6 +92,19 @@
     }
     
     return _network;
+}
+
+
+- (YASearchView *)searchView
+{
+    if (!_searchView)
+    {
+        _searchView = [[YASearchView alloc] initWithFrame:CGRectMake(20, 30, self.view.frame.size.width - 40, 50)];
+        _searchView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+        _searchView.delegate = self;
+    }
+    
+    return _searchView;
 }
 
 @end
