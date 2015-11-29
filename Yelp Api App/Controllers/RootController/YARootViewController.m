@@ -132,7 +132,7 @@ static CGFloat const kLabelHeight = 20;
     if (!_searchView)
     {
         _searchView = [[YASearchView alloc] initWithFrame:self.hideSearchViewFrame];
-        _searchView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+        _searchView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
         _searchView.delegate = self;
     }
     
