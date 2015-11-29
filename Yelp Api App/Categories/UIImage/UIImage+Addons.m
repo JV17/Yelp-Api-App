@@ -26,4 +26,11 @@
     return newImage;
 }
 
+
++ (UIImage *)imageWithURL:(NSString *)url
+{
+    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:url]];
+    return [UIImage imageWithData:data];
+}
+
 @end

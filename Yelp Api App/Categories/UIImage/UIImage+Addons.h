@@ -24,4 +24,7 @@
  */
 + (UIImage *)imageWithSourceImage:(UIImage *)sourceImage scaledToWidth:(CGFloat)newWidth;
 
+
++ (UIImage *)imageWithURL:(NSString *)url;
+
 @end
