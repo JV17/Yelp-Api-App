@@ -36,6 +36,11 @@ NSString *const YACopyrightText = @"Powered by";
 NSString *const YACopyrightImageName = @"yelp-red";
 
 
+// Demo
+NSString *const YADemoText = @"RBC Demo App";
+NSString *const YADemoImageName = @"rbc-logo";
+
+
 // Root Controller
 NSString *const YARootControllerFirstBgColor = @"1AD6FD";
 NSString *const YARootControllerSecondBgColor = @"007AFF";

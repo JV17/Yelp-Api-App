@@ -10,6 +10,7 @@
 #import "YALocation.h"
 #import "YASearchView.h"
 #import "YACopyRightView.h"
+#import "YADemoView.h"
 
 
 @interface YARootViewController () <YALocationManagerDelegate, YASearchViewDelegate>
@@ -25,6 +26,8 @@
 @property (nonatomic, strong) UIButton *searchButton;
 
 @property (nonatomic, strong) YACopyRightView *copyRightView;
+
+@property (nonatomic, strong) YADemoView *demoView;
 
 @end
 
@@ -53,6 +56,7 @@ static CGFloat const kLabelHeight = 20;
     
     [self.view gradientBackgroundWithFirstColor:[UIColor colorWithHexString:YARootControllerFirstBgColor] secondColor:[UIColor colorWithHexString:YARootControllerSecondBgColor]];
 
+    [self.view addSubview:self.demoView];
     [self.view addSubview:self.searchButton];
     [self.view addSubview:self.searchView];
     [self.view addSubview:self.copyRightView];
@@ -172,6 +176,18 @@ static CGFloat const kLabelHeight = 20;
     }
     
     return _copyRightView;
+}
+
+
+- (YADemoView *)demoView
+{
+    if (!_demoView)
+    {
+        _demoView = [[YADemoView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) demoImage:[UIImage imageNamed:YADemoImageName] demoName:YADemoText];
+        _demoView.backgroundColor = [UIColor clearColor];
+    }
+    
+    return _demoView;
 }
 
 
