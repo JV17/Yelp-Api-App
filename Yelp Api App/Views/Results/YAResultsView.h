@@ -12,6 +12,41 @@
 
 @interface YAResultsView : UIView
 
-@property (nonatomic, strong) YAResultsData *resultsData;
+#pragma mark - Properties
+
+/**
+ The results array of @YAResultsData.
+ */
+@property (nonatomic, strong) NSArray<YAResultsData *> *data;
+
+
+#pragma mark - Initializers
+
+/**
+ Custom initializer with frame and results array of @YAResultsData.
+ 
+ @param frame
+    The @CGGeometry where the view drawn.
+ @param results
+    The results array of @YAResultsData.
+ 
+ @return
+    An instancetype of @YAResutlsView.
+ */
+- (instancetype)initWithFrame:(CGRect)frame resultsData:(NSArray<YAResultsData *> *)results;
+
+
+#pragma mark - Hide & Show
+
+/**
+ Shows the results view animated. Fade in animation.
+ */
+- (void)showResultsViewAnimated;
+
+
+/**
+ Hides the results view animated. Fade out animation.
+ */
+- (void)hideResultsViewAnimated;
 
 @end
