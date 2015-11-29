@@ -24,6 +24,12 @@
 @end
 
 
+// search view
+static CGFloat const kSearchViewX = 20;
+static CGFloat const kSearchViewY = 30;
+static CGFloat const kSearchViewHeight = 50;
+
+
 @implementation YARootViewController
 
 #pragma mark - Lifecycle
@@ -104,7 +110,7 @@
 {
     if (!_searchView)
     {
-        _searchView = [[YASearchView alloc] initWithFrame:CGRectMake(20, 30, self.view.frame.size.width - 40, 50)];
+        _searchView = [[YASearchView alloc] initWithFrame:CGRectMake(kSearchViewX, kSearchViewY, self.view.frame.size.width - (kSearchViewX * 2), kSearchViewHeight)];
         _searchView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
         _searchView.delegate = self;
     }
