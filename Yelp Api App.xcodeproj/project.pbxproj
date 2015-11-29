@@ -11,6 +11,9 @@
 		3C1C56771C0A913F0099DC9E /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C56721C0A913F0099DC9E /* NSURLRequest+OAuth.m */; };
 		3C1C56781C0A913F0099DC9E /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C56751C0A913F0099DC9E /* UIColor+Hex.m */; };
 		3C1C56801C0A976D0099DC9E /* YASearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C567F1C0A976D0099DC9E /* YASearchView.m */; };
+		3C1C56851C0A9C130099DC9E /* Lato-Hairline.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1C56821C0A9C130099DC9E /* Lato-Hairline.otf */; };
+		3C1C56861C0A9C130099DC9E /* Lato-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1C56831C0A9C130099DC9E /* Lato-Light.otf */; };
+		3C1C56871C0A9C130099DC9E /* Lato-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1C56841C0A9C130099DC9E /* Lato-Regular.otf */; };
 		3C49A5001C0A4653001107C5 /* YARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C49A4FF1C0A4653001107C5 /* YARootViewController.m */; };
 		3C49A5031C0A46C2001107C5 /* YAGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C49A5021C0A46C2001107C5 /* YAGridViewController.m */; };
 		3C49A5061C0A475F001107C5 /* YALocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C49A5051C0A475F001107C5 /* YALocation.m */; };
@@ -54,6 +57,9 @@
 		3C1C56751C0A913F0099DC9E /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		3C1C567E1C0A976D0099DC9E /* YASearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YASearchView.h; sourceTree = "<group>"; };
 		3C1C567F1C0A976D0099DC9E /* YASearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YASearchView.m; sourceTree = "<group>"; };
+		3C1C56821C0A9C130099DC9E /* Lato-Hairline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.otf"; sourceTree = "<group>"; };
+		3C1C56831C0A9C130099DC9E /* Lato-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.otf"; sourceTree = "<group>"; };
+		3C1C56841C0A9C130099DC9E /* Lato-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.otf"; sourceTree = "<group>"; };
 		3C49A4FE1C0A4653001107C5 /* YARootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YARootViewController.h; sourceTree = "<group>"; };
 		3C49A4FF1C0A4653001107C5 /* YARootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YARootViewController.m; sourceTree = "<group>"; };
 		3C49A5011C0A46C2001107C5 /* YAGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAGridViewController.h; sourceTree = "<group>"; };
@@ -153,6 +159,16 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		3C1C56811C0A9C130099DC9E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3C1C56821C0A9C130099DC9E /* Lato-Hairline.otf */,
+				3C1C56831C0A9C130099DC9E /* Lato-Light.otf */,
+				3C1C56841C0A9C130099DC9E /* Lato-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		3C49A4FB1C0A4653001107C5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +221,7 @@
 		7FE099F71C08D74F00ACB80A /* Yelp Api App */ = {
 			isa = PBXGroup;
 			children = (
+				3C1C56811C0A9C130099DC9E /* Fonts */,
 				3C1C56791C0A968D0099DC9E /* Views */,
 				3C49A4FB1C0A4653001107C5 /* Controllers */,
 				7FE09A631C08F34500ACB80A /* Managers */,
@@ -421,6 +438,9 @@
 			files = (
 				7FE09A081C08D74F00ACB80A /* LaunchScreen.storyboard in Resources */,
 				7FE09A051C08D74F00ACB80A /* Assets.xcassets in Resources */,
+				3C1C56871C0A9C130099DC9E /* Lato-Regular.otf in Resources */,
+				3C1C56861C0A9C130099DC9E /* Lato-Light.otf in Resources */,
+				3C1C56851C0A9C130099DC9E /* Lato-Hairline.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

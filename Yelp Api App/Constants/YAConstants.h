@@ -26,4 +26,11 @@ FOUNDATION_EXTERN NSString *const YATokenSecret;
 
 FOUNDATION_EXTERN NSString *const YABusinessKey;
 
+
+// Fonts
+FOUNDATION_EXTERN NSString *const YALatoHairlineFont;
+FOUNDATION_EXTERN NSString *const YALatoLightFont;
+FOUNDATION_EXTERN NSString *const YALatoRegular;
+FOUNDATION_EXTERN CGFloat const YADefautlFontSize;
+
 #endif /* YAConstants_h */

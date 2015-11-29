@@ -23,3 +23,10 @@ NSString *const YATokenSecret = @"JRgisR2SPIvCF1gcK9bfL3g1j3E";
 
 NSString *const YABusinessKey = @"business";
 
+
+// Fonts
+NSString *const YALatoHairlineFont = @"Lato-Hairline";
+NSString *const YALatoLightFont = @"Lato-Light";
+NSString *const YALatoRegular = @"Lato-Regular";
+CGFloat const YADefautlFontSize = 14;
+
