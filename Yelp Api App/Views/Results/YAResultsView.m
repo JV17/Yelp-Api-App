@@ -87,6 +87,17 @@ static CGFloat const kDuration = 0.3;
 }
 
 
+- (void)setData:(NSArray<YAResultsData *> *)data
+{
+    _data = data;
+    
+    if (data.count)
+    {
+        [self.tableView reloadData];
+    }
+}
+
+
 #pragma mark - UITableViewDelegate & UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
