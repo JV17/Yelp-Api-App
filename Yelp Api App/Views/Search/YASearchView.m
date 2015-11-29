@@ -55,6 +55,7 @@ static CGFloat const kLeftPaddingWidth = 10;
 {
     [self addSubview:self.textField];
     
+    // don't apply autolayout if is not required
     if (self.frame.size.width == 0 || self.frame.size.height == 0)
     {
         [self applyTextFieldLayout];
@@ -121,6 +122,16 @@ static CGFloat const kLeftPaddingWidth = 10;
 }
 
 
+/**
+ Checks for invalid inputs from the user like special characters.
+ @discussion We don't want to allow any special characters from the user's input before making an api request, which could return an error.
+ 
+ @param text 
+    The text field text.
+ 
+ @return 
+    A Boolean if the text is valid or not.
+ */
 - (BOOL)checkForValidInputWithText:(NSString *)text
 {
     NSCharacterSet *characterSet = [[NSCharacterSet characterSetWithCharactersInString:kTextFieldValidCharacters] invertedSet];
