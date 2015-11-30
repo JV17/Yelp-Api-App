@@ -12,7 +12,7 @@
 
 @interface YAResultsTableViewCell()
 
-@property (nonatomic, strong) UIView *boderView;
+@property (nonatomic, strong) UIView *borderView;
 
 @property (nonatomic, strong) UIImageView *previewImageView;
 
@@ -26,7 +26,7 @@
 
 
 // border view
-static CGFloat const kBoderWidth = 10;
+static CGFloat const kBorderWidth = 10;
 static NSString *const kBorderColor = @"FF1300";
 
 // preview image
@@ -53,6 +53,18 @@ static CGFloat const kRatingImageHeight = 14;
 }
 
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.borderView.frame = self.borderViewFrame;
+    self.previewImageView.frame = self.previewImageViewFrame;
+    self.titleLabel.frame = self.titleLabelFrame;
+    self.descriptionLabel.frame = self.descriptionLabelFrame;
+    self.ratingImageView.frame = self.ratingImageViewFrame;
+}
+
+
 #pragma mark - Custom Accessors
 
 - (void)setData:(YAResultsData *)data
@@ -61,7 +73,7 @@ static CGFloat const kRatingImageHeight = 14;
     
     if (data)
     {
-        [self addSubview:self.boderView];
+        [self addSubview:self.borderView];
         
         self.previewImageView.image = self.data.imagePreview;
         [self addSubview:self.previewImageView];
@@ -78,15 +90,21 @@ static CGFloat const kRatingImageHeight = 14;
 }
 
 
-- (UIView *)boderView
+- (UIView *)borderView
 {
-    if (!_boderView)
+    if (!_borderView)
     {
-        _boderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kBoderWidth, self.frame.size.height)];
-        _boderView.backgroundColor = [UIColor colorWithHexString:kBorderColor];
+        _borderView = [[UIView alloc] initWithFrame:self.borderViewFrame];
+        _borderView.backgroundColor = [UIColor colorWithHexString:kBorderColor];
     }
     
-    return _boderView;
+    return _borderView;
+}
+
+
+- (CGRect)borderViewFrame
+{
+    return CGRectMake(0, 0, kBorderWidth, self.frame.size.height);
 }
 
 
@@ -94,10 +112,16 @@ static CGFloat const kRatingImageHeight = 14;
 {
     if (!_previewImageView)
     {
-        _previewImageView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.boderView.frame), 0, kPreviewImageWidth, self.frame.size.height)];
+        _previewImageView = [[UIImageView alloc] initWithFrame:self.previewImageViewFrame];
     }
     
     return _previewImageView;
+}
+
+
+- (CGRect)previewImageViewFrame
+{
+    return CGRectMake(CGRectGetMaxX(self.borderView.frame), 0, kPreviewImageWidth, self.frame.size.height);
 }
 
 
@@ -105,7 +129,7 @@ static CGFloat const kRatingImageHeight = 14;
 {
     if (!_titleLabel)
     {
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.previewImageView.frame) + kLeftPadding, 2, (self.frame.size.width - self.previewImageView.frame.size.width - self.boderView.frame.size.width - kLeftPadding), kLabelHeight)];
+        _titleLabel = [[UILabel alloc] initWithFrame:self.titleLabelFrame];
         _titleLabel.backgroundColor = [UIColor clearColor];
         _titleLabel.font = [UIFont fontWithName:YALatoRegular size:kLabelFontSize];
         _titleLabel.textColor = [UIColor colorWithHexString:kLabelTextColor];
@@ -115,11 +139,17 @@ static CGFloat const kRatingImageHeight = 14;
 }
 
 
+- (CGRect)titleLabelFrame
+{
+    return CGRectMake(CGRectGetMaxX(self.previewImageView.frame) + kLeftPadding, 2, (self.frame.size.width - self.previewImageView.frame.size.width - self.borderView.frame.size.width - kLeftPadding), kLabelHeight);
+}
+
+
 - (UILabel *)descriptionLabel
 {
     if (!_descriptionLabel)
     {
-        _descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.previewImageView.frame) + kLeftPadding, CGRectGetMaxY(self.titleLabel.frame), self.titleLabel.frame.size.width, (kLabelHeight * 2))];
+        _descriptionLabel = [[UILabel alloc] initWithFrame:self.descriptionLabelFrame];
         _descriptionLabel.backgroundColor = [UIColor clearColor];
         _descriptionLabel.font = [UIFont fontWithName:YALatoLightFont size:kLabelFontSize];
         _descriptionLabel.textColor = [UIColor colorWithHexString:kLabelTextColor];
@@ -131,14 +161,26 @@ static CGFloat const kRatingImageHeight = 14;
 }
 
 
+- (CGRect)descriptionLabelFrame
+{
+    return CGRectMake(CGRectGetMaxX(self.previewImageView.frame) + kLeftPadding, CGRectGetMaxY(self.titleLabel.frame), self.titleLabel.frame.size.width, (kLabelHeight * 2));
+}
+
+
 - (UIImageView *)ratingImageView
 {
     if (!_ratingImageView)
     {
-        _ratingImageView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.previewImageView.frame) + kLeftPadding, CGRectGetMaxY(self.descriptionLabel.frame) + 4, kRatingImageWidth, kRatingImageHeight)];
+        _ratingImageView = [[UIImageView alloc] initWithFrame:self.ratingImageViewFrame];
     }
     
     return _ratingImageView;
+}
+
+
+- (CGRect)ratingImageViewFrame
+{
+    return CGRectMake(CGRectGetMaxX(self.previewImageView.frame) + kLeftPadding, CGRectGetMaxY(self.descriptionLabel.frame) + 4, kRatingImageWidth, kRatingImageHeight);
 }
 
 @end
