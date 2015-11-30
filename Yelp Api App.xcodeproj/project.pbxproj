@@ -21,6 +21,7 @@
 		3C756EC81C0B9C7300738189 /* YAResultsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C756EC71C0B9C7300738189 /* YAResultsView.m */; };
 		3C756ECB1C0B9D3700738189 /* YAResultsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C756ECA1C0B9D3700738189 /* YAResultsData.m */; };
 		3C756ED21C0BAC1D00738189 /* NSArray+Addons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C756ED11C0BAC1D00738189 /* NSArray+Addons.m */; };
+		3C756ED51C0BC6A800738189 /* YAResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C756ED41C0BC6A800738189 /* YAResultsTableViewCell.m */; };
 		3CA29E8B1C0ACC5C00FF0039 /* YACopyRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA29E8A1C0ACC5C00FF0039 /* YACopyRightView.m */; };
 		3CA29E8F1C0AD28200FF0039 /* UIImage+Addons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA29E8E1C0AD28200FF0039 /* UIImage+Addons.m */; };
 		7FE099FA1C08D74F00ACB80A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE099F91C08D74F00ACB80A /* main.m */; };
@@ -80,6 +81,8 @@
 		3C756ECA1C0B9D3700738189 /* YAResultsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAResultsData.m; sourceTree = "<group>"; };
 		3C756ED01C0BAC1D00738189 /* NSArray+Addons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Addons.h"; sourceTree = "<group>"; };
 		3C756ED11C0BAC1D00738189 /* NSArray+Addons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Addons.m"; sourceTree = "<group>"; };
+		3C756ED31C0BC6A800738189 /* YAResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAResultsTableViewCell.h; sourceTree = "<group>"; };
+		3C756ED41C0BC6A800738189 /* YAResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAResultsTableViewCell.m; sourceTree = "<group>"; };
 		3CA29E891C0ACC5C00FF0039 /* YACopyRightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACopyRightView.h; sourceTree = "<group>"; };
 		3CA29E8A1C0ACC5C00FF0039 /* YACopyRightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACopyRightView.m; sourceTree = "<group>"; };
 		3CA29E8D1C0AD28200FF0039 /* UIImage+Addons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Addons.h"; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 				3C756EC71C0B9C7300738189 /* YAResultsView.m */,
 				3C756EC91C0B9D3700738189 /* YAResultsData.h */,
 				3C756ECA1C0B9D3700738189 /* YAResultsData.m */,
+				3C756ED31C0BC6A800738189 /* YAResultsTableViewCell.h */,
+				3C756ED41C0BC6A800738189 /* YAResultsTableViewCell.m */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -599,6 +604,7 @@
 				3C1C56781C0A913F0099DC9E /* UIColor+Hex.m in Sources */,
 				3C1C56771C0A913F0099DC9E /* NSURLRequest+OAuth.m in Sources */,
 				3CA29E8F1C0AD28200FF0039 /* UIImage+Addons.m in Sources */,
+				3C756ED51C0BC6A800738189 /* YAResultsTableViewCell.m in Sources */,
 				7FE09A681C08F34500ACB80A /* YANetworkManager.m in Sources */,
 				3C756EC01C0B690500738189 /* UIView+Addons.m in Sources */,
 			);
