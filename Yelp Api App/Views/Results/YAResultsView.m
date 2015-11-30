@@ -8,6 +8,7 @@
 
 #import "YAResultsView.h"
 #import "YAResultsData.h"
+#import "YAResultsTableViewCell.h"
 
 
 @interface YAResultsView() <UITableViewDelegate, UITableViewDataSource>
@@ -18,11 +19,9 @@
 
 
 // cell
-static CGFloat const kCellFontSize = 14;
-static NSString *const kCellTextColor = @"2B2B2B";
-static CGFloat const kCellHeight = 80;
+static CGFloat const kCellHeight = 70;
 static NSString *const kCellBackgroundColor = @"F7F7F7";
-static CGFloat const kCellHeaderHeight = 12;
+static CGFloat const kCellHeaderHeight = 10;
 static CGFloat const kDuration = 0.3;
 
 
@@ -104,11 +103,11 @@ static CGFloat const kDuration = 0.3;
 {
     static NSString *cellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    YAResultsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[YAResultsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     if ([self.tableView respondsToSelector:@selector(setLayoutMargins:)])
@@ -137,21 +136,12 @@ static CGFloat const kDuration = 0.3;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backgroundColor = [[UIColor colorWithHexString:kCellBackgroundColor] colorWithAlphaComponent:0.9];
     
-    cell.textLabel.font = [UIFont fontWithName:YALatoRegular size:kCellFontSize];
-    cell.textLabel.textColor = [UIColor colorWithHexString:kCellTextColor];
-    
-    cell.detailTextLabel.font = [UIFont fontWithName:YALatoLightFont size:kCellFontSize];
-    cell.detailTextLabel.textColor = [UIColor colorWithHexString:kCellTextColor];
-    
     cell.layer.cornerRadius = 5;
     cell.layer.masksToBounds = YES;
     
     if (indexPath.section < self.data.count)
     {
-        YAResultsData *cellData = (YAResultsData *)[self.data objectAtIndex:indexPath.section];
-        cell.imageView.image = cellData.imagePreview;
-        cell.textLabel.text = cellData.name;
-        cell.detailTextLabel.text = cellData.shortDescription;
+        cell.data = (YAResultsData *)[self.data objectAtIndex:indexPath.section];
     }
     
     return cell;
