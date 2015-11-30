@@ -24,6 +24,7 @@
     #import "NSArray+Addons.h"
     #import "YALocationManager.h"
     #import "YANetworkManager.h"
+    #import <KVNProgress/KVNProgress.h>
 #endif
 
 #endif /* YelpApiApp_Prefix_pch */

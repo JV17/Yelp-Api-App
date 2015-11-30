@@ -7,68 +7,114 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D59C3EAFE980F0CD895D686218340D5 /* OMGHTTPURLRQ-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1990419A7FC3D8A50F9D1A7C0CC5C7E5 /* OMGHTTPURLRQ-dummy.m */; };
-		3DEC7D89D339D61E0B545E9A409960AA /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
-		6228010D39862F98B1E685787AA17A58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		6BA059678A8732487F69EB681733149F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		8A62F0BC14ED1B88952AB731C4A55207 /* TDOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 66DC7D555D33B544339B05188B7730BD /* TDOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1D859ACBD6BE90B5E1EDF939B04F108 /* OMGUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 19921C5E8B581827CA7C9984EC10C6D2 /* OMGUserAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B360DB689209E57E15FCF7AA4295E360 /* TDOAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5B09DF1A1955EBCE6528CD960265A /* TDOAuth-dummy.m */; };
-		C28D46BE5DA4D2A9300A515742F49D23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		DC68B7CA66EBCD395EB7E59A2E487A58 /* OMGUserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B96790658C9024714DC020A0F6C66E1 /* OMGUserAgent.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FD1DA61F49E9D2A428ED516EFBDA1AFA /* TDOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 78292A4CD8377B368E0FE6A6143D9437 /* TDOAuth.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		05B208F7E81623386BBF86340CF804E4 /* UIColor+KVNContrast.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E9501654E953B1791FFED622F998CF0 /* UIColor+KVNContrast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F1D07DE2F6D91F2150EE27EA23F9BE0 /* KVNProgressConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA12C81FFBD39F1FD03EA4E08B7612E /* KVNProgressConfiguration.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		11D7A0337C48EAA060346EAF3F6ECFFB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD77FEBECDB7C42A60E8A649AD234DF /* GLKit.framework */; };
+		130EEA03DA4EE790FBA855365A3A9161 /* UIImage+KVNEmpty.h in Headers */ = {isa = PBXBuildFile; fileRef = 697CF7E7CDFDD6ADFFD13618CF5B8DFB /* UIImage+KVNEmpty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2818C0EDAE6535619F3299149B5C8736 /* UIImage+KVNImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D1A6486E4EAE7FD3BF3D880EC55304 /* UIImage+KVNImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29CD0401C4FAC8A475F11E3084723569 /* UIColor+KVNContrast.m in Sources */ = {isa = PBXBuildFile; fileRef = 109400D9A364DA20D64DDA19A2912A50 /* UIColor+KVNContrast.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2D59C3EAFE980F0CD895D686218340D5 /* OMGHTTPURLRQ-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9770CA0CCF3A024F5918DCDEDA6315E5 /* OMGHTTPURLRQ-dummy.m */; };
+		35F392D30B31563CEF75E04857895B7A /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
+		36BB18B9A6DC264ABE2846001821DA05 /* TDOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D2C080DD0A78D0805D9E8E2DB21923 /* TDOAuth.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		37A7261552A3E5588CF8AAF5D7A81EC0 /* UIImage+KVNEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CD6FA0C42B906295ABF294E5D36427 /* UIImage+KVNEmpty.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4C24631DEE5EC13332BACAA42C96BAF0 /* KVNProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = A974EC1132B7EC2BF942380C36726314 /* KVNProgress.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		59FBC6DCC9B2186785F8E40F1C755C4A /* KVNProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 26A12063CE0E7A670843E4EA2F0A992B /* KVNProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A6A55B39476275E2DE4B704A2BB4A87 /* KVNProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCC0F6BFC32F196614563DD049EA9D8 /* KVNProgress-dummy.m */; };
+		693D0B53AD38E042FF722E1ECC701A4C /* KVNProgressConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 359C03F368718562D55D32A40BC0F60D /* KVNProgressConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BA059678A8732487F69EB681733149F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */; };
+		9B820656FC6593D9C58674EB4FDA002D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */; };
+		A2C13D51B4B1C99A3F7356BAA2D28888 /* TDOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 26C56709D956C7CC57B80B86207139B6 /* TDOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1D859ACBD6BE90B5E1EDF939B04F108 /* OMGUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 2988A8DC624898A93E20D07862761FA2 /* OMGUserAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B257D90F14BEAD1A96CC8DAC91845220 /* UIImage+KVNImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = E41023E155749D404C46ADA2674B7E00 /* UIImage+KVNImageEffects.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CD4C84CC432133FA1BA490D0C2C5B15D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA67F2A9BFD0FE2388B40BD869E59A2 /* QuartzCore.framework */; };
+		D06D00070DCC9485EEE0E519DADB3AE3 /* TDOAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13398495E1CC4089B8D38C79D181E7B9 /* TDOAuth-dummy.m */; };
+		DC68B7CA66EBCD395EB7E59A2E487A58 /* OMGUserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721575A73D63E397BBC237EA12057C5 /* OMGUserAgent.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ECD92BC12AA433F5DCD04C183F8E5A48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */; };
+		FEBE2DEA46250A43A6722893915EB1EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		02113B9150AD8D10F98CFFD4E3099176 /* PBXContainerItemProxy */ = {
+		3FD6BAEDDE902F89E088667E9409F498 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06B2232CE73059846F04E5C3DFEE0D38;
+			remoteInfo = KVNProgress;
+		};
+		4A070AD96BF00C52A45F83495AF58F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FCD660E6CD2216BA204430C04B61EFFF;
 			remoteInfo = OMGHTTPURLRQ;
 		};
-		42D8D1332B7CFFE84743CE8A036A73B7 /* PBXContainerItemProxy */ = {
+		A265B143F2E7864104B57F283F0A0B38 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FCD660E6CD2216BA204430C04B61EFFF;
 			remoteInfo = OMGHTTPURLRQ;
 		};
-		91A3D0592EA9DE1771D5F37BCB20836C /* PBXContainerItemProxy */ = {
+		B0E6338E8B25E074333F835E0400070B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 684C8555DD0F65D78987B0BC0DBC996D;
+			remoteGlobalIDString = 0C90AC4E399D398B344E17BCDE253AD6;
 			remoteInfo = TDOAuth;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		10834806BD7B412BC24F347361FA2C8E /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		1990419A7FC3D8A50F9D1A7C0CC5C7E5 /* OMGHTTPURLRQ-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OMGHTTPURLRQ-dummy.m"; sourceTree = "<group>"; };
-		19921C5E8B581827CA7C9984EC10C6D2 /* OMGUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OMGUserAgent.h; sourceTree = "<group>"; };
+		109400D9A364DA20D64DDA19A2912A50 /* UIColor+KVNContrast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+KVNContrast.m"; path = "KVNProgress/Categories/UIColor+KVNContrast.m"; sourceTree = "<group>"; };
+		13398495E1CC4089B8D38C79D181E7B9 /* TDOAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TDOAuth-dummy.m"; sourceTree = "<group>"; };
+		13D1A6486E4EAE7FD3BF3D880EC55304 /* UIImage+KVNImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KVNImageEffects.h"; path = "KVNProgress/Categories/UIImage+KVNImageEffects.h"; sourceTree = "<group>"; };
+		14061624596E341FA857599C89385E32 /* KVNProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KVNProgress.xcconfig; sourceTree = "<group>"; };
+		15C1126467A0D9DE94FB7ADAB497C96F /* libKVNProgress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKVNProgress.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		23773E71BFA1B7753499FD86D2F9163A /* TDOAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TDOAuth.xcconfig; sourceTree = "<group>"; };
+		26A12063CE0E7A670843E4EA2F0A992B /* KVNProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KVNProgress.h; path = KVNProgress/Classes/KVNProgress.h; sourceTree = "<group>"; };
+		26C56709D956C7CC57B80B86207139B6 /* TDOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDOAuth.h; sourceTree = "<group>"; };
 		272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		2803E3D9111FFE95FFA62E1914A1B42E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2856DE55C6A1E6109480C0B31DF403E0 /* libTDOAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTDOAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2988A8DC624898A93E20D07862761FA2 /* OMGUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OMGUserAgent.h; sourceTree = "<group>"; };
+		2E9501654E953B1791FFED622F998CF0 /* UIColor+KVNContrast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+KVNContrast.h"; path = "KVNProgress/Categories/UIColor+KVNContrast.h"; sourceTree = "<group>"; };
+		359C03F368718562D55D32A40BC0F60D /* KVNProgressConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KVNProgressConfiguration.h; path = KVNProgress/Classes/KVNProgressConfiguration.h; sourceTree = "<group>"; };
+		3721575A73D63E397BBC237EA12057C5 /* OMGUserAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OMGUserAgent.m; sourceTree = "<group>"; };
 		37DB56D75062CC75FCB0966E1C6E8A8E /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3CB5B09DF1A1955EBCE6528CD960265A /* TDOAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TDOAuth-dummy.m"; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4B96790658C9024714DC020A0F6C66E1 /* OMGUserAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OMGUserAgent.m; sourceTree = "<group>"; };
 		4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		5FEA2DB655A4C61036102C79FFBC5797 /* TDOAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TDOAuth.xcconfig; sourceTree = "<group>"; };
-		66DC7D555D33B544339B05188B7730BD /* TDOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDOAuth.h; sourceTree = "<group>"; };
+		52130A90EE7B9634466DE2F68115B630 /* OMGHTTPURLRQ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OMGHTTPURLRQ.xcconfig; sourceTree = "<group>"; };
+		5FCC0F6BFC32F196614563DD049EA9D8 /* KVNProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KVNProgress-dummy.m"; sourceTree = "<group>"; };
+		66643C234A21E1C96F807551431C68FC /* KVNProgressView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = KVNProgressView.xib; path = KVNProgress/Resources/KVNProgressView.xib; sourceTree = "<group>"; };
 		6911BECA35E7518D864239B7E898EEF3 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		7714E17700926E229D0B3ACB0B23B46E /* OMGHTTPURLRQ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OMGHTTPURLRQ.xcconfig; sourceTree = "<group>"; };
-		78292A4CD8377B368E0FE6A6143D9437 /* TDOAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDOAuth.m; sourceTree = "<group>"; };
+		697CF7E7CDFDD6ADFFD13618CF5B8DFB /* UIImage+KVNEmpty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KVNEmpty.h"; path = "KVNProgress/Categories/UIImage+KVNEmpty.h"; sourceTree = "<group>"; };
+		6E4BDC2FB4C39F3AD8AC5B9D3C624D10 /* OMGHTTPURLRQ-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OMGHTTPURLRQ-prefix.pch"; sourceTree = "<group>"; };
+		7AB77D949039C043F30669E3EC1B4B0A /* KVNProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KVNProgress-prefix.pch"; sourceTree = "<group>"; };
+		8BD77FEBECDB7C42A60E8A649AD234DF /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
+		9770CA0CCF3A024F5918DCDEDA6315E5 /* OMGHTTPURLRQ-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OMGHTTPURLRQ-dummy.m"; sourceTree = "<group>"; };
 		98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		9DB9F023FCE317D9E9C0C0093644083C /* libTDOAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTDOAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A36D34413696BE466E2CA0AFF194DA /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		AB499FE43F3D95F708EE9D317E0C7465 /* libOMGHTTPURLRQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOMGHTTPURLRQ.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1FEA36FE5640FF604144A41640F1B1B /* TDOAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TDOAuth-prefix.pch"; sourceTree = "<group>"; };
+		A974EC1132B7EC2BF942380C36726314 /* KVNProgress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KVNProgress.m; path = KVNProgress/Classes/KVNProgress.m; sourceTree = "<group>"; };
+		ABA12C81FFBD39F1FD03EA4E08B7612E /* KVNProgressConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KVNProgressConfiguration.m; path = KVNProgress/Classes/KVNProgressConfiguration.m; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		E19A30784EA08E4F1417D5CB1DC6DD6B /* OMGHTTPURLRQ-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OMGHTTPURLRQ-prefix.pch"; sourceTree = "<group>"; };
-		E7C9A5532B8F2F19F585AB5BB0A5E189 /* TDOAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TDOAuth-prefix.pch"; sourceTree = "<group>"; };
-		F630728528C239FAE8CD3934B3AE74B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAA67F2A9BFD0FE2388B40BD869E59A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E41023E155749D404C46ADA2674B7E00 /* UIImage+KVNImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KVNImageEffects.m"; path = "KVNProgress/Categories/UIImage+KVNImageEffects.m"; sourceTree = "<group>"; };
+		E6D2C080DD0A78D0805D9E8E2DB21923 /* TDOAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDOAuth.m; sourceTree = "<group>"; };
+		E7CD6FA0C42B906295ABF294E5D36427 /* UIImage+KVNEmpty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KVNEmpty.m"; path = "KVNProgress/Categories/UIImage+KVNEmpty.m"; sourceTree = "<group>"; };
+		F55CE80D56EB9D2C6DEE3C125C31F4C0 /* libOMGHTTPURLRQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOMGHTTPURLRQ.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		01F1EFD46C7AC98D72BEE73CF80C2AA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECD92BC12AA433F5DCD04C183F8E5A48 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		06DF07A7F70611A3E1FD76D182EE36DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,25 +123,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AFA2B1B0845F68D156E61278EA20DBC /* Frameworks */ = {
+		7B67021760DF798E3E57CD5E82BFDCFE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6228010D39862F98B1E685787AA17A58 /* Foundation.framework in Frameworks */,
+				FEBE2DEA46250A43A6722893915EB1EC /* Foundation.framework in Frameworks */,
+				11D7A0337C48EAA060346EAF3F6ECFFB /* GLKit.framework in Frameworks */,
+				CD4C84CC432133FA1BA490D0C2C5B15D /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D724C6433B51000CD51DE6FBC3D21A42 /* Frameworks */ = {
+		D90903440F9361592BC25D458F671E56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C28D46BE5DA4D2A9300A515742F49D23 /* Foundation.framework in Frameworks */,
+				9B820656FC6593D9C58674EB4FDA002D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00FAC3D737771E6E52423C2C9C85ACBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15C1126467A0D9DE94FB7ADAB497C96F /* libKVNProgress.a */,
+				F55CE80D56EB9D2C6DEE3C125C31F4C0 /* libOMGHTTPURLRQ.a */,
+				2803E3D9111FFE95FFA62E1914A1B42E /* libPods.a */,
+				2856DE55C6A1E6109480C0B31DF403E0 /* libTDOAuth.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,75 +163,110 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		0EEC3280FB0E8097B46171815551A2BC /* Products */ = {
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AB499FE43F3D95F708EE9D317E0C7465 /* libOMGHTTPURLRQ.a */,
-				F630728528C239FAE8CD3934B3AE74B7 /* libPods.a */,
-				9DB9F023FCE317D9E9C0C0093644083C /* libTDOAuth.a */,
+				B3BE697900F50FFA6B448836E4591321 /* iOS */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2E3A906538D7EE3E7FED833EE546299E /* Support Files */ = {
+		29E888F23FCE033B43C5209AEBCD6B54 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7714E17700926E229D0B3ACB0B23B46E /* OMGHTTPURLRQ.xcconfig */,
-				1990419A7FC3D8A50F9D1A7C0CC5C7E5 /* OMGHTTPURLRQ-dummy.m */,
-				E19A30784EA08E4F1417D5CB1DC6DD6B /* OMGHTTPURLRQ-prefix.pch */,
+				48002FE05B23B9879AE11B7FB2B3BBC4 /* KVNProgress */,
+				5C94702D720E6E0B72ADFDF7ACB8FB54 /* OMGHTTPURLRQ */,
+				EE2EB62804E151B43CE246F3D4C9EFAA /* TDOAuth */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3167CC727EF3BC8BD68431FE7CF49D3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66643C234A21E1C96F807551431C68FC /* KVNProgressView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		48002FE05B23B9879AE11B7FB2B3BBC4 /* KVNProgress */ = {
+			isa = PBXGroup;
+			children = (
+				26A12063CE0E7A670843E4EA2F0A992B /* KVNProgress.h */,
+				A974EC1132B7EC2BF942380C36726314 /* KVNProgress.m */,
+				359C03F368718562D55D32A40BC0F60D /* KVNProgressConfiguration.h */,
+				ABA12C81FFBD39F1FD03EA4E08B7612E /* KVNProgressConfiguration.m */,
+				2E9501654E953B1791FFED622F998CF0 /* UIColor+KVNContrast.h */,
+				109400D9A364DA20D64DDA19A2912A50 /* UIColor+KVNContrast.m */,
+				697CF7E7CDFDD6ADFFD13618CF5B8DFB /* UIImage+KVNEmpty.h */,
+				E7CD6FA0C42B906295ABF294E5D36427 /* UIImage+KVNEmpty.m */,
+				13D1A6486E4EAE7FD3BF3D880EC55304 /* UIImage+KVNImageEffects.h */,
+				E41023E155749D404C46ADA2674B7E00 /* UIImage+KVNImageEffects.m */,
+				3167CC727EF3BC8BD68431FE7CF49D3C /* Resources */,
+				C76F16D46657F6FFC33E2DB5CDF2D295 /* Support Files */,
+			);
+			path = KVNProgress;
+			sourceTree = "<group>";
+		};
+		58CBCD885C3136F9CC4631BC90B8BA3F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				52130A90EE7B9634466DE2F68115B630 /* OMGHTTPURLRQ.xcconfig */,
+				9770CA0CCF3A024F5918DCDEDA6315E5 /* OMGHTTPURLRQ-dummy.m */,
+				6E4BDC2FB4C39F3AD8AC5B9D3C624D10 /* OMGHTTPURLRQ-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/OMGHTTPURLRQ";
 			sourceTree = "<group>";
 		};
-		480930ECCB9677013C006FCA0ED07AAC /* UserAgent */ = {
+		5C94702D720E6E0B72ADFDF7ACB8FB54 /* OMGHTTPURLRQ */ = {
 			isa = PBXGroup;
 			children = (
-				19921C5E8B581827CA7C9984EC10C6D2 /* OMGUserAgent.h */,
-				4B96790658C9024714DC020A0F6C66E1 /* OMGUserAgent.m */,
+				58CBCD885C3136F9CC4631BC90B8BA3F /* Support Files */,
+				9E0DBAD5683566E6EB62E505388EB512 /* UserAgent */,
 			);
-			name = UserAgent;
-			sourceTree = "<group>";
-		};
-		6F9F6ED24E7EBF6EBB08346D4101DDB4 /* TDOAuth */ = {
-			isa = PBXGroup;
-			children = (
-				66DC7D555D33B544339B05188B7730BD /* TDOAuth.h */,
-				78292A4CD8377B368E0FE6A6143D9437 /* TDOAuth.m */,
-				7018DDD187188F414DC68FFF52349F69 /* Support Files */,
-			);
-			path = TDOAuth;
-			sourceTree = "<group>";
-		};
-		7018DDD187188F414DC68FFF52349F69 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5FEA2DB655A4C61036102C79FFBC5797 /* TDOAuth.xcconfig */,
-				3CB5B09DF1A1955EBCE6528CD960265A /* TDOAuth-dummy.m */,
-				E7C9A5532B8F2F19F585AB5BB0A5E189 /* TDOAuth-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/TDOAuth";
-			sourceTree = "<group>";
-		};
-		79DC324FC62BD5296B4EB21B2231821B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E2CDDB17F5CBAF96010565A7EA715BD9 /* OMGHTTPURLRQ */,
-				6F9F6ED24E7EBF6EBB08346D4101DDB4 /* TDOAuth */,
-			);
-			name = Pods;
+			path = OMGHTTPURLRQ;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				79DC324FC62BD5296B4EB21B2231821B /* Pods */,
-				0EEC3280FB0E8097B46171815551A2BC /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				29E888F23FCE033B43C5209AEBCD6B54 /* Pods */,
+				00FAC3D737771E6E52423C2C9C85ACBD /* Products */,
 				037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		849C6D4D99B957C80B9F8B6A18946D8B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				23773E71BFA1B7753499FD86D2F9163A /* TDOAuth.xcconfig */,
+				13398495E1CC4089B8D38C79D181E7B9 /* TDOAuth-dummy.m */,
+				A1FEA36FE5640FF604144A41640F1B1B /* TDOAuth-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TDOAuth";
+			sourceTree = "<group>";
+		};
+		9E0DBAD5683566E6EB62E505388EB512 /* UserAgent */ = {
+			isa = PBXGroup;
+			children = (
+				2988A8DC624898A93E20D07862761FA2 /* OMGUserAgent.h */,
+				3721575A73D63E397BBC237EA12057C5 /* OMGUserAgent.m */,
+			);
+			name = UserAgent;
+			sourceTree = "<group>";
+		};
+		B3BE697900F50FFA6B448836E4591321 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */,
+				8BD77FEBECDB7C42A60E8A649AD234DF /* GLKit.framework */,
+				BAA67F2A9BFD0FE2388B40BD869E59A2 /* QuartzCore.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		B3D1D13E0C6553800746CB8FD61CF946 /* Pods */ = {
@@ -190,29 +284,25 @@
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		C76F16D46657F6FFC33E2DB5CDF2D295 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+				14061624596E341FA857599C89385E32 /* KVNProgress.xcconfig */,
+				5FCC0F6BFC32F196614563DD049EA9D8 /* KVNProgress-dummy.m */,
+				7AB77D949039C043F30669E3EC1B4B0A /* KVNProgress-prefix.pch */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/KVNProgress";
 			sourceTree = "<group>";
 		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+		EE2EB62804E151B43CE246F3D4C9EFAA /* TDOAuth */ = {
 			isa = PBXGroup;
 			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+				26C56709D956C7CC57B80B86207139B6 /* TDOAuth.h */,
+				E6D2C080DD0A78D0805D9E8E2DB21923 /* TDOAuth.m */,
+				849C6D4D99B957C80B9F8B6A18946D8B /* Support Files */,
 			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		E2CDDB17F5CBAF96010565A7EA715BD9 /* OMGHTTPURLRQ */ = {
-			isa = PBXGroup;
-			children = (
-				2E3A906538D7EE3E7FED833EE546299E /* Support Files */,
-				480930ECCB9677013C006FCA0ED07AAC /* UserAgent */,
-			);
-			path = OMGHTTPURLRQ;
+			path = TDOAuth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,51 +316,81 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D22F4DDD215EFFF5472C684693303CF /* Headers */ = {
+		A7D8C431004735E82306FC0920D84A0F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A62F0BC14ED1B88952AB731C4A55207 /* TDOAuth.h in Headers */,
+				59FBC6DCC9B2186785F8E40F1C755C4A /* KVNProgress.h in Headers */,
+				693D0B53AD38E042FF722E1ECC701A4C /* KVNProgressConfiguration.h in Headers */,
+				05B208F7E81623386BBF86340CF804E4 /* UIColor+KVNContrast.h in Headers */,
+				130EEA03DA4EE790FBA855365A3A9161 /* UIImage+KVNEmpty.h in Headers */,
+				2818C0EDAE6535619F3299149B5C8736 /* UIImage+KVNImageEffects.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC761CFDA3DA7F802B5EAE0F4A6D0798 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2C13D51B4B1C99A3F7356BAA2D28888 /* TDOAuth.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		684C8555DD0F65D78987B0BC0DBC996D /* TDOAuth */ = {
+		06B2232CE73059846F04E5C3DFEE0D38 /* KVNProgress */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94D603324B28DD21006312FE06A13912 /* Build configuration list for PBXNativeTarget "TDOAuth" */;
+			buildConfigurationList = 5C42693EBD852E65FECE2D08CB1E3987 /* Build configuration list for PBXNativeTarget "KVNProgress" */;
 			buildPhases = (
-				A9D510C4721EA218A0BD25A2D7C28F1D /* Sources */,
-				9AFA2B1B0845F68D156E61278EA20DBC /* Frameworks */,
-				7D22F4DDD215EFFF5472C684693303CF /* Headers */,
+				5527E2796B1FE46059409D5671EABE15 /* Sources */,
+				7B67021760DF798E3E57CD5E82BFDCFE /* Frameworks */,
+				A7D8C431004735E82306FC0920D84A0F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				03C62E510AF16DA138FB7DAA7E532E1B /* PBXTargetDependency */,
+			);
+			name = KVNProgress;
+			productName = KVNProgress;
+			productReference = 15C1126467A0D9DE94FB7ADAB497C96F /* libKVNProgress.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0C90AC4E399D398B344E17BCDE253AD6 /* TDOAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0257CEF4BA2C1DF1C5E6ACE041AF14B9 /* Build configuration list for PBXNativeTarget "TDOAuth" */;
+			buildPhases = (
+				62E955E4D2A1B0E1AC45E0CBEE646873 /* Sources */,
+				D90903440F9361592BC25D458F671E56 /* Frameworks */,
+				AC761CFDA3DA7F802B5EAE0F4A6D0798 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D847765BBBB9FC62824C3CD458EEFB4 /* PBXTargetDependency */,
 			);
 			name = TDOAuth;
 			productName = TDOAuth;
-			productReference = 9DB9F023FCE317D9E9C0C0093644083C /* libTDOAuth.a */;
+			productReference = 2856DE55C6A1E6109480C0B31DF403E0 /* libTDOAuth.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		E76CEBFF4EA97D5E20AA718C38B65C2A /* Pods */ = {
+		FB2716D49B3219AC9ECECE6BBCD511A4 /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6F3356E428E544AC09E2784E01AA3C59 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 3EE6BB5A0664D71EF76F22B18DC3B64E /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				267018A0E24DCC90541F2127DA780424 /* Sources */,
-				D724C6433B51000CD51DE6FBC3D21A42 /* Frameworks */,
+				AE70A26D4873117F5B703BADF2D5D057 /* Sources */,
+				01F1EFD46C7AC98D72BEE73CF80C2AA8 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AB02E7D5430C86AB8A01C7663BBAACD9 /* PBXTargetDependency */,
-				5718FB0A86BC1421C923154994C50A1B /* PBXTargetDependency */,
+				B0B1A1E44C9EEA0381E3066E45E4EFFF /* PBXTargetDependency */,
+				80BA2CFE690D2BD4A88EB1E1F68A1C2A /* PBXTargetDependency */,
+				86FAAFE3AFA75AAD3090390375F657EC /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = F630728528C239FAE8CD3934B3AE74B7 /* libPods.a */;
+			productReference = 2803E3D9111FFE95FFA62E1914A1B42E /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */ = {
@@ -287,7 +407,7 @@
 			);
 			name = OMGHTTPURLRQ;
 			productName = OMGHTTPURLRQ;
-			productReference = AB499FE43F3D95F708EE9D317E0C7465 /* libOMGHTTPURLRQ.a */;
+			productReference = F55CE80D56EB9D2C6DEE3C125C31F4C0 /* libOMGHTTPURLRQ.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -307,26 +427,19 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 0EEC3280FB0E8097B46171815551A2BC /* Products */;
+			productRefGroup = 00FAC3D737771E6E52423C2C9C85ACBD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				06B2232CE73059846F04E5C3DFEE0D38 /* KVNProgress */,
 				FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */,
-				E76CEBFF4EA97D5E20AA718C38B65C2A /* Pods */,
-				684C8555DD0F65D78987B0BC0DBC996D /* TDOAuth */,
+				FB2716D49B3219AC9ECECE6BBCD511A4 /* Pods */,
+				0C90AC4E399D398B344E17BCDE253AD6 /* TDOAuth */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		267018A0E24DCC90541F2127DA780424 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DEC7D89D339D61E0B545E9A409960AA /* Pods-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3DF85622A099867E15338FC9FAD3CAA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,42 +449,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9D510C4721EA218A0BD25A2D7C28F1D /* Sources */ = {
+		5527E2796B1FE46059409D5671EABE15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B360DB689209E57E15FCF7AA4295E360 /* TDOAuth-dummy.m in Sources */,
-				FD1DA61F49E9D2A428ED516EFBDA1AFA /* TDOAuth.m in Sources */,
+				5A6A55B39476275E2DE4B704A2BB4A87 /* KVNProgress-dummy.m in Sources */,
+				4C24631DEE5EC13332BACAA42C96BAF0 /* KVNProgress.m in Sources */,
+				0F1D07DE2F6D91F2150EE27EA23F9BE0 /* KVNProgressConfiguration.m in Sources */,
+				29CD0401C4FAC8A475F11E3084723569 /* UIColor+KVNContrast.m in Sources */,
+				37A7261552A3E5588CF8AAF5D7A81EC0 /* UIImage+KVNEmpty.m in Sources */,
+				B257D90F14BEAD1A96CC8DAC91845220 /* UIImage+KVNImageEffects.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62E955E4D2A1B0E1AC45E0CBEE646873 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06D00070DCC9485EEE0E519DADB3AE3 /* TDOAuth-dummy.m in Sources */,
+				36BB18B9A6DC264ABE2846001821DA05 /* TDOAuth.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE70A26D4873117F5B703BADF2D5D057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35F392D30B31563CEF75E04857895B7A /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		03C62E510AF16DA138FB7DAA7E532E1B /* PBXTargetDependency */ = {
+		80BA2CFE690D2BD4A88EB1E1F68A1C2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OMGHTTPURLRQ;
 			target = FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */;
-			targetProxy = 02113B9150AD8D10F98CFFD4E3099176 /* PBXContainerItemProxy */;
+			targetProxy = A265B143F2E7864104B57F283F0A0B38 /* PBXContainerItemProxy */;
 		};
-		5718FB0A86BC1421C923154994C50A1B /* PBXTargetDependency */ = {
+		86FAAFE3AFA75AAD3090390375F657EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TDOAuth;
-			target = 684C8555DD0F65D78987B0BC0DBC996D /* TDOAuth */;
-			targetProxy = 91A3D0592EA9DE1771D5F37BCB20836C /* PBXContainerItemProxy */;
+			target = 0C90AC4E399D398B344E17BCDE253AD6 /* TDOAuth */;
+			targetProxy = B0E6338E8B25E074333F835E0400070B /* PBXContainerItemProxy */;
 		};
-		AB02E7D5430C86AB8A01C7663BBAACD9 /* PBXTargetDependency */ = {
+		8D847765BBBB9FC62824C3CD458EEFB4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OMGHTTPURLRQ;
 			target = FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */;
-			targetProxy = 42D8D1332B7CFFE84743CE8A036A73B7 /* PBXContainerItemProxy */;
+			targetProxy = 4A070AD96BF00C52A45F83495AF58F5B /* PBXContainerItemProxy */;
+		};
+		B0B1A1E44C9EEA0381E3066E45E4EFFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KVNProgress;
+			target = 06B2232CE73059846F04E5C3DFEE0D38 /* KVNProgress */;
+			targetProxy = 3FD6BAEDDE902F89E088667E9409F498 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1F2B43C47903BF2D68108E2E07C405B6 /* Release */ = {
+		04ECAD83601B4CDCA672D6D76B6CB3C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FEA2DB655A4C61036102C79FFBC5797 /* TDOAuth.xcconfig */;
+			baseConfigurationReference = 23773E71BFA1B7753499FD86D2F9163A /* TDOAuth.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/TDOAuth/TDOAuth-prefix.pch";
@@ -387,7 +527,43 @@
 			};
 			name = Release;
 		};
-		463ED27FCBBD0AEEC60523F36391C9F3 /* Debug */ = {
+		2988F3681F668221BF796D36A50AC36D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23773E71BFA1B7753499FD86D2F9163A /* TDOAuth.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TDOAuth/TDOAuth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5E0D110F3CC859ED050C13CEC7B7F6CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14061624596E341FA857599C89385E32 /* KVNProgress.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KVNProgress/KVNProgress-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5E1A5E6B3CACC412DDC71A34CC05F624 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
 			buildSettings = {
@@ -406,7 +582,7 @@
 		};
 		708D741CF0B1F28D97FDA30C269B7EDE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7714E17700926E229D0B3ACB0B23B46E /* OMGHTTPURLRQ.xcconfig */;
+			baseConfigurationReference = 52130A90EE7B9634466DE2F68115B630 /* OMGHTTPURLRQ.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/OMGHTTPURLRQ/OMGHTTPURLRQ-prefix.pch";
@@ -421,24 +597,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
-		};
-		7DE7A42A99A633064CCB1083373C2972 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FEA2DB655A4C61036102C79FFBC5797 /* TDOAuth.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TDOAuth/TDOAuth-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
 		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -481,7 +639,7 @@
 		};
 		AD06024B235DC7F3EF8D521EB2063C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7714E17700926E229D0B3ACB0B23B46E /* OMGHTTPURLRQ.xcconfig */;
+			baseConfigurationReference = 52130A90EE7B9634466DE2F68115B630 /* OMGHTTPURLRQ.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/OMGHTTPURLRQ/OMGHTTPURLRQ-prefix.pch";
@@ -497,7 +655,7 @@
 			};
 			name = Debug;
 		};
-		D125EC6C72F9D17B3B8DA21FA54C0BB5 /* Release */ = {
+		AD2DB9EA60E38894D5EF4B76F652C684 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
 			buildSettings = {
@@ -513,6 +671,24 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		B33741D25826020AE59643BC90F8321C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14061624596E341FA857599C89385E32 /* KVNProgress.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KVNProgress/KVNProgress-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -551,6 +727,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0257CEF4BA2C1DF1C5E6ACE041AF14B9 /* Build configuration list for PBXNativeTarget "TDOAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2988F3681F668221BF796D36A50AC36D /* Debug */,
+				04ECAD83601B4CDCA672D6D76B6CB3C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -560,20 +745,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6F3356E428E544AC09E2784E01AA3C59 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		3EE6BB5A0664D71EF76F22B18DC3B64E /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				463ED27FCBBD0AEEC60523F36391C9F3 /* Debug */,
-				D125EC6C72F9D17B3B8DA21FA54C0BB5 /* Release */,
+				5E1A5E6B3CACC412DDC71A34CC05F624 /* Debug */,
+				AD2DB9EA60E38894D5EF4B76F652C684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94D603324B28DD21006312FE06A13912 /* Build configuration list for PBXNativeTarget "TDOAuth" */ = {
+		5C42693EBD852E65FECE2D08CB1E3987 /* Build configuration list for PBXNativeTarget "KVNProgress" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7DE7A42A99A633064CCB1083373C2972 /* Debug */,
-				1F2B43C47903BF2D68108E2E07C405B6 /* Release */,
+				B33741D25826020AE59643BC90F8321C /* Debug */,
+				5E0D110F3CC859ED050C13CEC7B7F6CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

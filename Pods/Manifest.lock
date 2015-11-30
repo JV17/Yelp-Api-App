@@ -1,12 +1,15 @@
 PODS:
+  - KVNProgress (2.2)
   - OMGHTTPURLRQ/UserAgent (2.1)
   - TDOAuth (1.0.4):
     - OMGHTTPURLRQ/UserAgent
 
 DEPENDENCIES:
+  - KVNProgress
   - TDOAuth
 
 SPEC CHECKSUMS:
+  KVNProgress: 916a1ac50c7d35a7735a583ebbcb0e760788411e
   OMGHTTPURLRQ: f8c515dfd2f57a5d74c710978f600231f52afec5
   TDOAuth: 3d02dc155fcb71572def39c05b80b4fbbe11d4f9
 

@@ -63,13 +63,22 @@ static CGFloat const kLeftPaddingWidth = 10;
 }
 
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.textField.frame = self.textFieldFrame;
+    self.leftPaddingView.frame = self.leftPaddingViewFrame;
+}
+
+
 #pragma mark - Custom Accessors
 
 - (UITextField *)textField
 {
     if (!_textField)
     {
-        _textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, kTextFieldHeight)];
+        _textField = [[UITextField alloc] initWithFrame:self.textFieldFrame];
         _textField.leftView = self.leftPaddingView;
         _textField.delegate = self;
         _textField.font = [UIFont fontWithName:YALatoLightFont size:kTextFieldFontSize];
@@ -86,15 +95,27 @@ static CGFloat const kLeftPaddingWidth = 10;
 }
 
 
+- (CGRect)textFieldFrame
+{
+    return CGRectMake(0, 0, self.frame.size.width, kTextFieldHeight);
+}
+
+
 - (UIView *)leftPaddingView
 {
     if (!_leftPaddingView)
     {
-        _leftPaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kLeftPaddingWidth, kTextFieldHeight)];
+        _leftPaddingView = [[UIView alloc] initWithFrame:self.leftPaddingViewFrame];
         _leftPaddingView.backgroundColor = [UIColor clearColor];
     }
     
     return _leftPaddingView;
+}
+
+
+- (CGRect)leftPaddingViewFrame
+{
+    return CGRectMake(0, 0, kLeftPaddingWidth, kTextFieldHeight);
 }
 
 

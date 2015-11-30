@@ -99,10 +99,13 @@ static CGFloat const kResutlsViewPadding = 10;
 - (void)searchViewFinishedWithSearchString:(NSString *)searchString
 {
     NSLog(@"%@", searchString);
-    
+
     [self showOrHideSearchView];
     
     NSString *userLocation = [NSString stringWithFormat:@"%@, %@", self.userLocation.city, self.userLocation.state];
+    
+    [KVNProgress setConfiguration:[KVNProgressConfiguration defaultConfiguration]];
+    [KVNProgress showWithStatus:@"Loading"];
     
     [self.network queryBusinessInformationWithTerm:searchString location:userLocation completionHandler:^(NSDictionary *jsonDictionary, NSError *error)
     {
@@ -110,6 +113,7 @@ static CGFloat const kResutlsViewPadding = 10;
             self.resultsData = [NSArray arrayFromResultsDictionary:jsonDictionary];
             NSLog(@"%@", self.resultsData);
             [self.view addSubview:self.resultsView];
+            [KVNProgress dismiss];
         });
     }];
 }
@@ -271,7 +275,7 @@ static CGFloat const kResutlsViewPadding = 10;
             }
         }];
     }
-    else
+    else if (self.searchButton.tag == 2)
     {
         self.searchView.becomeFirstResponder = NO;
         
