@@ -10,19 +10,11 @@
 #import "YADetailsView.h"
 
 
-@interface YADetailsViewController ()
+@interface YADetailsViewController () <YADetailsViewDelegate>
 
 @property (nonatomic, strong) YADetailsView *detailsView;
 
-@property (nonatomic, strong) UIButton *backButton;
-
 @end
-
-
-// back button
-static CGFloat const kBackButtonLeftPadding = 10;
-static CGFloat const kBackButtonTopPadding = 20;
-static CGFloat const kBackButtonSize = 50;
 
 
 @implementation YADetailsViewController
@@ -36,7 +28,6 @@ static CGFloat const kBackButtonSize = 50;
     [self.view gradientBackgroundWithFirstColor:[UIColor colorWithHexString:YARootControllerFirstBgColor] secondColor:[UIColor colorWithHexString:YARootControllerSecondBgColor]];
     
     [self.view addSubview:self.detailsView];
-    [self.view addSubview:self.backButton];
 }
 
 
@@ -53,6 +44,7 @@ static CGFloat const kBackButtonSize = 50;
     if (!_detailsView)
     {
         _detailsView = [[YADetailsView alloc] initWithFrame:self.view.frame data:self.detailsData];
+        _detailsView.delegate = self;
     }
     
     return _detailsView;
@@ -67,27 +59,6 @@ static CGFloat const kBackButtonSize = 50;
     {
         self.detailsView.data = self.detailsData;
     }
-}
-
-
-- (UIButton *)backButton
-{
-    if (!_backButton)
-    {
-        _backButton = [[UIButton alloc] initWithFrame:self.backButtonFrame];
-        _backButton.backgroundColor = [UIColor blackColor];
-        [_backButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-        [_backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-
-    }
-    
-    return _backButton;
-}
-
-
-- (CGRect)backButtonFrame
-{
-    return CGRectMake(kBackButtonLeftPadding, kBackButtonTopPadding, kBackButtonSize, kBackButtonSize);
 }
 
 

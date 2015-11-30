@@ -10,6 +10,16 @@
 
 @class YAResultsData;
 
+@protocol YADetailsViewDelegate <NSObject>
+
+/**
+ Tells when the user has pressed the back button.
+ */
+- (void)backButtonPressed;
+
+@end
+
+
 @interface YADetailsView : UIView
 
 /**
@@ -17,6 +27,7 @@
  */
 @property (nonatomic, strong) YAResultsData *data;
 
+@property (nonatomic, weak) id <YADetailsViewDelegate> delegate;
 
 /**
  Custom initializer with frame and view data.

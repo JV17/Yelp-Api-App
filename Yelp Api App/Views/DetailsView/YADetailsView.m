@@ -24,6 +24,8 @@
 
 @property (nonatomic, strong) UILabel *shortDescriptionLabel;
 
+@property (nonatomic, strong) UIButton *backButton;
+
 @end
 
 // view
@@ -37,6 +39,11 @@ static CGFloat const kMaxImageWidth = 120;
 // name label
 static CGFloat const kNameLabelHeight = 30;
 static CGFloat const kNameLabelFontSize = 20;
+
+// back button
+static CGFloat const kBackButtonLeftPadding = 10;
+static CGFloat const kBackButtonTopPadding = 20;
+static CGFloat const kBackButtonSize = 50;
 
 
 @implementation YADetailsView
@@ -71,6 +78,13 @@ static CGFloat const kNameLabelFontSize = 20;
 
 - (void)setupDetailsView
 {
+    if (!self.backButton.window)
+    {
+        [self addSubview:self.backButton];
+    }
+    
+    [self addSubview:self.backButton];
+
     if (!self.nameLabel.window)
     {
         [self addSubview:self.nameLabel];
@@ -143,6 +157,27 @@ static CGFloat const kNameLabelFontSize = 20;
 }
 
 
+- (UIButton *)backButton
+{
+    if (!_backButton)
+    {
+        _backButton = [[UIButton alloc] initWithFrame:self.backButtonFrame];
+        _backButton.backgroundColor = [UIColor blackColor];
+        [_backButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+        [_backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+    
+    return _backButton;
+}
+
+
+- (CGRect)backButtonFrame
+{
+    return CGRectMake(kBackButtonLeftPadding, kBackButtonTopPadding, kBackButtonSize, kBackButtonSize);
+}
+
+
 #pragma mark - View Helper Functions
 
 - (UILabel *)labelWithFrame:(CGRect)frame font:(UIFont *)font shadow:(BOOL)shadow
@@ -162,6 +197,15 @@ static CGFloat const kNameLabelFontSize = 20;
     }
 
     return label;
+}
+
+
+- (void)backButtonPressed
+{
+    if ([self.delegate respondsToSelector:@selector(backButtonPressed)])
+    {
+        [self.delegate backButtonPressed];
+    }
 }
 
 @end
