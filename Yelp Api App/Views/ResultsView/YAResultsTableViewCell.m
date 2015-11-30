@@ -48,15 +48,33 @@ static CGFloat const kRatingImageHeight = 14;
 static CGFloat const kIndicatorSize = 20;
 static NSString *const kIndicatorImageName = @"forward";
 
+// cell highlighted colors
+static NSString *const kCellNotHighlightedColor = @"F7F7F7";
+static NSString *const kCellHighlightedColor = @"1AD6FD";
+
 
 @implementation YAResultsTableViewCell
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
+
+
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+    [super setHighlighted:highlighted animated:animated];
+    
+    if (highlighted)
+    {
+        self.backgroundColor = [[UIColor colorWithHexString:kCellHighlightedColor] colorWithAlphaComponent:0.9];
+    }
+    else
+    {
+        self.backgroundColor = [[UIColor colorWithHexString:kCellNotHighlightedColor] colorWithAlphaComponent:0.9];
+    }
+}
+
 
 
 - (void)layoutSubviews
