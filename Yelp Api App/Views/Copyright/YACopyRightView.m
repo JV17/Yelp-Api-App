@@ -22,7 +22,7 @@
 
 // labels font
 static NSString *const kLabelColor = @"2B2B2B";
-static CGFloat const kLabelFontSize = 12;
+static CGFloat const kLabelFontSize = 13;
 
 // image
 static CGFloat const kYelpImagePercentage = 0.05;
@@ -117,6 +117,11 @@ static CGFloat const kYelpImagePercentage = 0.05;
         _label.textColor = [UIColor colorWithHexString:kLabelColor];
         _label.text = self.copyrightText;
         _label.frame = self.labelFrame;
+        
+        _label.layer.shadowOffset = CGSizeMake(1, 1);
+        _label.layer.shadowRadius = 1;
+        _label.layer.shadowColor = [UIColor colorWithHexString:kLabelColor].CGColor;
+        _label.layer.shadowOpacity = 0.7;
     }
     
     return _label;
