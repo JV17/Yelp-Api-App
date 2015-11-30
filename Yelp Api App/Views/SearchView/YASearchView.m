@@ -22,7 +22,7 @@
 static CGFloat const kTextFieldHeight = 50;
 static CGFloat const kTextFieldFontSize = 22;
 static NSString *const kTextFieldPlaceHolder = @"Enter your search";
-static NSString *const kTextFieldValidCharacters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789";
+static NSString *const kTextFieldValidCharacters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789 ";
 
 // left padding view
 static CGFloat const kLeftPaddingWidth = 10;
