@@ -7,119 +7,160 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05B208F7E81623386BBF86340CF804E4 /* UIColor+KVNContrast.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E9501654E953B1791FFED622F998CF0 /* UIColor+KVNContrast.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0F1D07DE2F6D91F2150EE27EA23F9BE0 /* KVNProgressConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA12C81FFBD39F1FD03EA4E08B7612E /* KVNProgressConfiguration.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		05B208F7E81623386BBF86340CF804E4 /* UIColor+KVNContrast.h in Headers */ = {isa = PBXBuildFile; fileRef = C71BD914F69CA6C9FB15B2C1178AE6D8 /* UIColor+KVNContrast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F1D07DE2F6D91F2150EE27EA23F9BE0 /* KVNProgressConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B6619F26B1B4E80F45049A69B5615C8A /* KVNProgressConfiguration.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		11D7A0337C48EAA060346EAF3F6ECFFB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD77FEBECDB7C42A60E8A649AD234DF /* GLKit.framework */; };
-		130EEA03DA4EE790FBA855365A3A9161 /* UIImage+KVNEmpty.h in Headers */ = {isa = PBXBuildFile; fileRef = 697CF7E7CDFDD6ADFFD13618CF5B8DFB /* UIImage+KVNEmpty.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2818C0EDAE6535619F3299149B5C8736 /* UIImage+KVNImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D1A6486E4EAE7FD3BF3D880EC55304 /* UIImage+KVNImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29CD0401C4FAC8A475F11E3084723569 /* UIColor+KVNContrast.m in Sources */ = {isa = PBXBuildFile; fileRef = 109400D9A364DA20D64DDA19A2912A50 /* UIColor+KVNContrast.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2D59C3EAFE980F0CD895D686218340D5 /* OMGHTTPURLRQ-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9770CA0CCF3A024F5918DCDEDA6315E5 /* OMGHTTPURLRQ-dummy.m */; };
-		35F392D30B31563CEF75E04857895B7A /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
-		36BB18B9A6DC264ABE2846001821DA05 /* TDOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D2C080DD0A78D0805D9E8E2DB21923 /* TDOAuth.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		37A7261552A3E5588CF8AAF5D7A81EC0 /* UIImage+KVNEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CD6FA0C42B906295ABF294E5D36427 /* UIImage+KVNEmpty.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4C24631DEE5EC13332BACAA42C96BAF0 /* KVNProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = A974EC1132B7EC2BF942380C36726314 /* KVNProgress.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		59FBC6DCC9B2186785F8E40F1C755C4A /* KVNProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 26A12063CE0E7A670843E4EA2F0A992B /* KVNProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A6A55B39476275E2DE4B704A2BB4A87 /* KVNProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCC0F6BFC32F196614563DD049EA9D8 /* KVNProgress-dummy.m */; };
-		693D0B53AD38E042FF722E1ECC701A4C /* KVNProgressConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 359C03F368718562D55D32A40BC0F60D /* KVNProgressConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		130EEA03DA4EE790FBA855365A3A9161 /* UIImage+KVNEmpty.h in Headers */ = {isa = PBXBuildFile; fileRef = 30B11310E69C604C50D804B53BE3FAD5 /* UIImage+KVNEmpty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CA5E5B427016F8F21C95D7088C3FA48 /* OMGHTTPURLRQ-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCD043ABB1C64D08D8287003AD68FB0 /* OMGHTTPURLRQ-dummy.m */; };
+		2818C0EDAE6535619F3299149B5C8736 /* UIImage+KVNImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B5639DEDEF6E7D4ABFEBDDD47AD0064 /* UIImage+KVNImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29CD0401C4FAC8A475F11E3084723569 /* UIColor+KVNContrast.m in Sources */ = {isa = PBXBuildFile; fileRef = E323EDF5B81A2105E0653917C135C105 /* UIColor+KVNContrast.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		37A7261552A3E5588CF8AAF5D7A81EC0 /* UIImage+KVNEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EDEDADA94C4C656BFE84A3DB8A33C /* UIImage+KVNEmpty.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4848A4CD44C65EF751468827904100B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */; };
+		4C24631DEE5EC13332BACAA42C96BAF0 /* KVNProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 19737DC954C6A8AB2C97A6F721645A6E /* KVNProgress.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		59FBC6DCC9B2186785F8E40F1C755C4A /* KVNProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ED6FCE2533F0C767C849B58267FEBD4 /* KVNProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A6A55B39476275E2DE4B704A2BB4A87 /* KVNProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D5F4B694BE7D822338D491F5278914 /* KVNProgress-dummy.m */; };
+		693D0B53AD38E042FF722E1ECC701A4C /* KVNProgressConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = C0067F28C374D1B74BB98239CB2B8C19 /* KVNProgressConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BA059678A8732487F69EB681733149F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */; };
-		9B820656FC6593D9C58674EB4FDA002D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */; };
-		A2C13D51B4B1C99A3F7356BAA2D28888 /* TDOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 26C56709D956C7CC57B80B86207139B6 /* TDOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1D859ACBD6BE90B5E1EDF939B04F108 /* OMGUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 2988A8DC624898A93E20D07862761FA2 /* OMGUserAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B257D90F14BEAD1A96CC8DAC91845220 /* UIImage+KVNImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = E41023E155749D404C46ADA2674B7E00 /* UIImage+KVNImageEffects.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6BF34447E372D84B9C5D8B8001CC98F0 /* OMGUserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7AD6F74484BCB9E5CD831711C64626 /* OMGUserAgent.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		706F9508A73A155F3776604C086AA7ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */; };
+		A133DFD060DE10BDAA6D8A3912A62F2E /* JVTransitionAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = F5C10B8504A1F4B718EFC7A855CC546F /* JVTransitionAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A57F67323F483FA7A960169692D701E0 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
+		ADDD5F997E302414659547019EE60C27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */; };
+		B257D90F14BEAD1A96CC8DAC91845220 /* UIImage+KVNImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FDCFCD3A79EFBC616D61FA1D3D8D36F4 /* UIImage+KVNImageEffects.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C2EF7F312507C8B272E27CCBF7B91E41 /* JVTransitionAnimator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E08B805E5DE24A1618E7ABCA9CBC54D /* JVTransitionAnimator-dummy.m */; };
 		CD4C84CC432133FA1BA490D0C2C5B15D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA67F2A9BFD0FE2388B40BD869E59A2 /* QuartzCore.framework */; };
-		D06D00070DCC9485EEE0E519DADB3AE3 /* TDOAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13398495E1CC4089B8D38C79D181E7B9 /* TDOAuth-dummy.m */; };
-		DC68B7CA66EBCD395EB7E59A2E487A58 /* OMGUserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721575A73D63E397BBC237EA12057C5 /* OMGUserAgent.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		ECD92BC12AA433F5DCD04C183F8E5A48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */; };
+		CE987A7FB11A950F1F0710742D54AF14 /* TDOAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A54CACC17D66CDE3902EF1DF297EE5 /* TDOAuth-dummy.m */; };
+		D1D08AE6061DEDA6B7B7DA706C4CD285 /* TDOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C15CDFA0F96CE50E8A83B1C62516C1 /* TDOAuth.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F29C6CB87595941B74EE3F238D78B367 /* OMGUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B96F3147B92A862E385E34B28EB928 /* OMGUserAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F456D68DDAA9D3BC3D3BBDECFD88B18A /* JVTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F15D1022A7CA5FC1C58D5FC97D599B14 /* JVTransitionAnimator.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FDCF4B40F046902D8D0BC13CACE13A81 /* TDOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 6448C7A1571C37833E6BD0826A50E80A /* TDOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEBE2DEA46250A43A6722893915EB1EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3FD6BAEDDE902F89E088667E9409F498 /* PBXContainerItemProxy */ = {
+		24F0133F6958E373102A2E5C9E58EB23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCD660E6CD2216BA204430C04B61EFFF;
+			remoteInfo = OMGHTTPURLRQ;
+		};
+		55DCF050304689705C0304BFD83CF94C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 06B2232CE73059846F04E5C3DFEE0D38;
 			remoteInfo = KVNProgress;
 		};
-		4A070AD96BF00C52A45F83495AF58F5B /* PBXContainerItemProxy */ = {
+		5F35D7DAC4136DBA2D90D081AB09A5B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FCD660E6CD2216BA204430C04B61EFFF;
 			remoteInfo = OMGHTTPURLRQ;
 		};
-		A265B143F2E7864104B57F283F0A0B38 /* PBXContainerItemProxy */ = {
+		7D56B5E16C8F6C0ED266B94DDCDF1596 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FCD660E6CD2216BA204430C04B61EFFF;
-			remoteInfo = OMGHTTPURLRQ;
+			remoteGlobalIDString = 091B5AD65ED49A4447D32A00F2ED8144;
+			remoteInfo = "JVTransitionAnimator-JVTransitionAnimator";
 		};
-		B0E6338E8B25E074333F835E0400070B /* PBXContainerItemProxy */ = {
+		7E6B148AE93C98AD92E6EDDFCFD7332B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0C90AC4E399D398B344E17BCDE253AD6;
+			remoteGlobalIDString = CC36DA93EBE61A102F8E77D2AD3E54B4;
 			remoteInfo = TDOAuth;
+		};
+		D2703C4DB37687226B9F24B4A09E19FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B6B70A23754CB44155E8658C1FE4093;
+			remoteInfo = JVTransitionAnimator;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		064A5E83A09009239ECF5BF6E8A56636 /* TDOAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TDOAuth-prefix.pch"; sourceTree = "<group>"; };
+		0B5639DEDEF6E7D4ABFEBDDD47AD0064 /* UIImage+KVNImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KVNImageEffects.h"; path = "KVNProgress/Categories/UIImage+KVNImageEffects.h"; sourceTree = "<group>"; };
 		10834806BD7B412BC24F347361FA2C8E /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		109400D9A364DA20D64DDA19A2912A50 /* UIColor+KVNContrast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+KVNContrast.m"; path = "KVNProgress/Categories/UIColor+KVNContrast.m"; sourceTree = "<group>"; };
-		13398495E1CC4089B8D38C79D181E7B9 /* TDOAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TDOAuth-dummy.m"; sourceTree = "<group>"; };
-		13D1A6486E4EAE7FD3BF3D880EC55304 /* UIImage+KVNImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KVNImageEffects.h"; path = "KVNProgress/Categories/UIImage+KVNImageEffects.h"; sourceTree = "<group>"; };
-		14061624596E341FA857599C89385E32 /* KVNProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KVNProgress.xcconfig; sourceTree = "<group>"; };
-		15C1126467A0D9DE94FB7ADAB497C96F /* libKVNProgress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKVNProgress.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		23773E71BFA1B7753499FD86D2F9163A /* TDOAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TDOAuth.xcconfig; sourceTree = "<group>"; };
-		26A12063CE0E7A670843E4EA2F0A992B /* KVNProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KVNProgress.h; path = KVNProgress/Classes/KVNProgress.h; sourceTree = "<group>"; };
-		26C56709D956C7CC57B80B86207139B6 /* TDOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDOAuth.h; sourceTree = "<group>"; };
+		14CAD0BA718FEEA537BAFA88CBA27332 /* libJVTransitionAnimator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJVTransitionAnimator.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		19737DC954C6A8AB2C97A6F721645A6E /* KVNProgress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KVNProgress.m; path = KVNProgress/Classes/KVNProgress.m; sourceTree = "<group>"; };
 		272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		2803E3D9111FFE95FFA62E1914A1B42E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2856DE55C6A1E6109480C0B31DF403E0 /* libTDOAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTDOAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2988A8DC624898A93E20D07862761FA2 /* OMGUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OMGUserAgent.h; sourceTree = "<group>"; };
-		2E9501654E953B1791FFED622F998CF0 /* UIColor+KVNContrast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+KVNContrast.h"; path = "KVNProgress/Categories/UIColor+KVNContrast.h"; sourceTree = "<group>"; };
-		359C03F368718562D55D32A40BC0F60D /* KVNProgressConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KVNProgressConfiguration.h; path = KVNProgress/Classes/KVNProgressConfiguration.h; sourceTree = "<group>"; };
-		3721575A73D63E397BBC237EA12057C5 /* OMGUserAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OMGUserAgent.m; sourceTree = "<group>"; };
+		28A54CACC17D66CDE3902EF1DF297EE5 /* TDOAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TDOAuth-dummy.m"; sourceTree = "<group>"; };
+		30B11310E69C604C50D804B53BE3FAD5 /* UIImage+KVNEmpty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KVNEmpty.h"; path = "KVNProgress/Categories/UIImage+KVNEmpty.h"; sourceTree = "<group>"; };
+		32201F542EB22EF7FD872CAB1AB580ED /* TDOAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TDOAuth.xcconfig; sourceTree = "<group>"; };
 		37DB56D75062CC75FCB0966E1C6E8A8E /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3B2EDEDADA94C4C656BFE84A3DB8A33C /* UIImage+KVNEmpty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KVNEmpty.m"; path = "KVNProgress/Categories/UIImage+KVNEmpty.m"; sourceTree = "<group>"; };
+		3ED6FCE2533F0C767C849B58267FEBD4 /* KVNProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KVNProgress.h; path = KVNProgress/Classes/KVNProgress.h; sourceTree = "<group>"; };
+		416BE838AFA64F2DB54CD14F073851C8 /* KVNProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KVNProgress-prefix.pch"; sourceTree = "<group>"; };
 		4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		52130A90EE7B9634466DE2F68115B630 /* OMGHTTPURLRQ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OMGHTTPURLRQ.xcconfig; sourceTree = "<group>"; };
-		5FCC0F6BFC32F196614563DD049EA9D8 /* KVNProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KVNProgress-dummy.m"; sourceTree = "<group>"; };
-		66643C234A21E1C96F807551431C68FC /* KVNProgressView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = KVNProgressView.xib; path = KVNProgress/Resources/KVNProgressView.xib; sourceTree = "<group>"; };
+		58D5F4B694BE7D822338D491F5278914 /* KVNProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KVNProgress-dummy.m"; sourceTree = "<group>"; };
+		5B4EFAD616C03ADF644F8503953A9362 /* JVTransitionAnimator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVTransitionAnimator.xcconfig; sourceTree = "<group>"; };
+		5E08B805E5DE24A1618E7ABCA9CBC54D /* JVTransitionAnimator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVTransitionAnimator-dummy.m"; sourceTree = "<group>"; };
+		6448C7A1571C37833E6BD0826A50E80A /* TDOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDOAuth.h; sourceTree = "<group>"; };
 		6911BECA35E7518D864239B7E898EEF3 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		697CF7E7CDFDD6ADFFD13618CF5B8DFB /* UIImage+KVNEmpty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KVNEmpty.h"; path = "KVNProgress/Categories/UIImage+KVNEmpty.h"; sourceTree = "<group>"; };
-		6E4BDC2FB4C39F3AD8AC5B9D3C624D10 /* OMGHTTPURLRQ-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OMGHTTPURLRQ-prefix.pch"; sourceTree = "<group>"; };
-		7AB77D949039C043F30669E3EC1B4B0A /* KVNProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KVNProgress-prefix.pch"; sourceTree = "<group>"; };
+		6BC59F0948496650C5401BBA6C4B3064 /* KVNProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KVNProgress.xcconfig; sourceTree = "<group>"; };
+		6FCD043ABB1C64D08D8287003AD68FB0 /* OMGHTTPURLRQ-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OMGHTTPURLRQ-dummy.m"; sourceTree = "<group>"; };
+		75B96F3147B92A862E385E34B28EB928 /* OMGUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMGUserAgent.h; path = Sources/OMGUserAgent.h; sourceTree = "<group>"; };
+		79DC5A8BAB572343C9AF08E12727E538 /* OMGHTTPURLRQ-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OMGHTTPURLRQ-prefix.pch"; sourceTree = "<group>"; };
+		7C5ADC3A6940FDE1E3CC76F7AD4B5354 /* libOMGHTTPURLRQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOMGHTTPURLRQ.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8315E325278F9431564B695F6DECD9DF /* JVTransitionAnimator.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JVTransitionAnimator.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B8937DC70FC3C9A52891C711FB7886 /* libKVNProgress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKVNProgress.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		87FD33D8DAC01E2B141DE3F38488E5CA /* OMGHTTPURLRQ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OMGHTTPURLRQ.xcconfig; sourceTree = "<group>"; };
 		8BD77FEBECDB7C42A60E8A649AD234DF /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
-		9770CA0CCF3A024F5918DCDEDA6315E5 /* OMGHTTPURLRQ-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OMGHTTPURLRQ-dummy.m"; sourceTree = "<group>"; };
+		94C15CDFA0F96CE50E8A83B1C62516C1 /* TDOAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDOAuth.m; sourceTree = "<group>"; };
 		98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
 		A1A36D34413696BE466E2CA0AFF194DA /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		A1FEA36FE5640FF604144A41640F1B1B /* TDOAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TDOAuth-prefix.pch"; sourceTree = "<group>"; };
-		A974EC1132B7EC2BF942380C36726314 /* KVNProgress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KVNProgress.m; path = KVNProgress/Classes/KVNProgress.m; sourceTree = "<group>"; };
-		ABA12C81FFBD39F1FD03EA4E08B7612E /* KVNProgressConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KVNProgressConfiguration.m; path = KVNProgress/Classes/KVNProgressConfiguration.m; sourceTree = "<group>"; };
+		B5588BEBE6DFF9131B5E0B6799A7742A /* libTDOAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTDOAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6619F26B1B4E80F45049A69B5615C8A /* KVNProgressConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KVNProgressConfiguration.m; path = KVNProgress/Classes/KVNProgressConfiguration.m; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BAA67F2A9BFD0FE2388B40BD869E59A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		C0067F28C374D1B74BB98239CB2B8C19 /* KVNProgressConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KVNProgressConfiguration.h; path = KVNProgress/Classes/KVNProgressConfiguration.h; sourceTree = "<group>"; };
+		C1B933C012DC1C84355A34964FC29348 /* KVNProgressView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = KVNProgressView.xib; path = KVNProgress/Resources/KVNProgressView.xib; sourceTree = "<group>"; };
+		C71BD914F69CA6C9FB15B2C1178AE6D8 /* UIColor+KVNContrast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+KVNContrast.h"; path = "KVNProgress/Categories/UIColor+KVNContrast.h"; sourceTree = "<group>"; };
 		C8E1D525FC60D38299B8AA6FE3B91778 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E41023E155749D404C46ADA2674B7E00 /* UIImage+KVNImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KVNImageEffects.m"; path = "KVNProgress/Categories/UIImage+KVNImageEffects.m"; sourceTree = "<group>"; };
-		E6D2C080DD0A78D0805D9E8E2DB21923 /* TDOAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDOAuth.m; sourceTree = "<group>"; };
-		E7CD6FA0C42B906295ABF294E5D36427 /* UIImage+KVNEmpty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KVNEmpty.m"; path = "KVNProgress/Categories/UIImage+KVNEmpty.m"; sourceTree = "<group>"; };
-		F55CE80D56EB9D2C6DEE3C125C31F4C0 /* libOMGHTTPURLRQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOMGHTTPURLRQ.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1C32E82B054312C1AC9E7A1D0A22DA3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E323EDF5B81A2105E0653917C135C105 /* UIColor+KVNContrast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+KVNContrast.m"; path = "KVNProgress/Categories/UIColor+KVNContrast.m"; sourceTree = "<group>"; };
+		F15D1022A7CA5FC1C58D5FC97D599B14 /* JVTransitionAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVTransitionAnimator.m; path = Pod/Classes/JVTransitionAnimator.m; sourceTree = "<group>"; };
+		F42F492CE9F8628437EE9858D42A9738 /* JVTransitionAnimator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVTransitionAnimator-prefix.pch"; sourceTree = "<group>"; };
+		F5C10B8504A1F4B718EFC7A855CC546F /* JVTransitionAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVTransitionAnimator.h; path = Pod/Classes/JVTransitionAnimator.h; sourceTree = "<group>"; };
+		FDCFCD3A79EFBC616D61FA1D3D8D36F4 /* UIImage+KVNImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KVNImageEffects.m"; path = "KVNProgress/Categories/UIImage+KVNImageEffects.m"; sourceTree = "<group>"; };
+		FE7AD6F74484BCB9E5CD831711C64626 /* OMGUserAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMGUserAgent.m; path = Sources/OMGUserAgent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		01F1EFD46C7AC98D72BEE73CF80C2AA8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECD92BC12AA433F5DCD04C183F8E5A48 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		06DF07A7F70611A3E1FD76D182EE36DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6BA059678A8732487F69EB681733149F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1112F6F7024D7A1E284097CBAC4E2F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				706F9508A73A155F3776604C086AA7ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF3F9859C0CAD01FAF30C182F6CF5C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDD5F997E302414659547019EE60C27 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59AABBCD8EB331C728B185E849AF142F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4848A4CD44C65EF751468827904100B7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,26 +174,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D90903440F9361592BC25D458F671E56 /* Frameworks */ = {
+		CDB9FB9122C95DC73553DACC9AAD9785 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B820656FC6593D9C58674EB4FDA002D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00FAC3D737771E6E52423C2C9C85ACBD /* Products */ = {
+		0165AB779CC4C9E38E331B5B5F057419 /* TDOAuth */ = {
 			isa = PBXGroup;
 			children = (
-				15C1126467A0D9DE94FB7ADAB497C96F /* libKVNProgress.a */,
-				F55CE80D56EB9D2C6DEE3C125C31F4C0 /* libOMGHTTPURLRQ.a */,
-				2803E3D9111FFE95FFA62E1914A1B42E /* libPods.a */,
-				2856DE55C6A1E6109480C0B31DF403E0 /* libTDOAuth.a */,
+				6448C7A1571C37833E6BD0826A50E80A /* TDOAuth.h */,
+				94C15CDFA0F96CE50E8A83B1C62516C1 /* TDOAuth.m */,
+				E600152B6E1551C0E77A608736F60201 /* Support Files */,
 			);
-			name = Products;
+			path = TDOAuth;
 			sourceTree = "<group>";
 		};
 		037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */ = {
@@ -163,6 +202,23 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		0909284BA0C566563EDD8FEDA84CE0A1 /* OMGHTTPURLRQ */ = {
+			isa = PBXGroup;
+			children = (
+				C7AE6460E283069849907D232623C476 /* Support Files */,
+				E0ECDD841368B774D4C284F0E6884C26 /* UserAgent */,
+			);
+			path = OMGHTTPURLRQ;
+			sourceTree = "<group>";
+		};
+		0C592C64FC2FC0B5E3763DBADB105126 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C1B933C012DC1C84355A34964FC29348 /* KVNProgressView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,61 +227,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		29E888F23FCE033B43C5209AEBCD6B54 /* Pods */ = {
+		187F595109F49678D7F7E7CE6C110BFB /* JVTransitionAnimator */ = {
 			isa = PBXGroup;
 			children = (
-				48002FE05B23B9879AE11B7FB2B3BBC4 /* KVNProgress */,
-				5C94702D720E6E0B72ADFDF7ACB8FB54 /* OMGHTTPURLRQ */,
-				EE2EB62804E151B43CE246F3D4C9EFAA /* TDOAuth */,
+				F5C10B8504A1F4B718EFC7A855CC546F /* JVTransitionAnimator.h */,
+				F15D1022A7CA5FC1C58D5FC97D599B14 /* JVTransitionAnimator.m */,
+				D95483D1572E43DFC21E39132BBAC67A /* Support Files */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		3167CC727EF3BC8BD68431FE7CF49D3C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				66643C234A21E1C96F807551431C68FC /* KVNProgressView.xib */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		48002FE05B23B9879AE11B7FB2B3BBC4 /* KVNProgress */ = {
-			isa = PBXGroup;
-			children = (
-				26A12063CE0E7A670843E4EA2F0A992B /* KVNProgress.h */,
-				A974EC1132B7EC2BF942380C36726314 /* KVNProgress.m */,
-				359C03F368718562D55D32A40BC0F60D /* KVNProgressConfiguration.h */,
-				ABA12C81FFBD39F1FD03EA4E08B7612E /* KVNProgressConfiguration.m */,
-				2E9501654E953B1791FFED622F998CF0 /* UIColor+KVNContrast.h */,
-				109400D9A364DA20D64DDA19A2912A50 /* UIColor+KVNContrast.m */,
-				697CF7E7CDFDD6ADFFD13618CF5B8DFB /* UIImage+KVNEmpty.h */,
-				E7CD6FA0C42B906295ABF294E5D36427 /* UIImage+KVNEmpty.m */,
-				13D1A6486E4EAE7FD3BF3D880EC55304 /* UIImage+KVNImageEffects.h */,
-				E41023E155749D404C46ADA2674B7E00 /* UIImage+KVNImageEffects.m */,
-				3167CC727EF3BC8BD68431FE7CF49D3C /* Resources */,
-				C76F16D46657F6FFC33E2DB5CDF2D295 /* Support Files */,
-			);
-			path = KVNProgress;
-			sourceTree = "<group>";
-		};
-		58CBCD885C3136F9CC4631BC90B8BA3F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				52130A90EE7B9634466DE2F68115B630 /* OMGHTTPURLRQ.xcconfig */,
-				9770CA0CCF3A024F5918DCDEDA6315E5 /* OMGHTTPURLRQ-dummy.m */,
-				6E4BDC2FB4C39F3AD8AC5B9D3C624D10 /* OMGHTTPURLRQ-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/OMGHTTPURLRQ";
-			sourceTree = "<group>";
-		};
-		5C94702D720E6E0B72ADFDF7ACB8FB54 /* OMGHTTPURLRQ */ = {
-			isa = PBXGroup;
-			children = (
-				58CBCD885C3136F9CC4631BC90B8BA3F /* Support Files */,
-				9E0DBAD5683566E6EB62E505388EB512 /* UserAgent */,
-			);
-			path = OMGHTTPURLRQ;
+			path = JVTransitionAnimator;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -233,30 +242,53 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				29E888F23FCE033B43C5209AEBCD6B54 /* Pods */,
-				00FAC3D737771E6E52423C2C9C85ACBD /* Products */,
+				84766DD945ADD3E2EAC07C1F7054EB0D /* Pods */,
+				8CB2437B4B390AC4F5D82014E0BBA362 /* Products */,
 				037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		849C6D4D99B957C80B9F8B6A18946D8B /* Support Files */ = {
+		7F0F90267F19DE263A0A1C3DE904D954 /* KVNProgress */ = {
 			isa = PBXGroup;
 			children = (
-				23773E71BFA1B7753499FD86D2F9163A /* TDOAuth.xcconfig */,
-				13398495E1CC4089B8D38C79D181E7B9 /* TDOAuth-dummy.m */,
-				A1FEA36FE5640FF604144A41640F1B1B /* TDOAuth-prefix.pch */,
+				3ED6FCE2533F0C767C849B58267FEBD4 /* KVNProgress.h */,
+				19737DC954C6A8AB2C97A6F721645A6E /* KVNProgress.m */,
+				C0067F28C374D1B74BB98239CB2B8C19 /* KVNProgressConfiguration.h */,
+				B6619F26B1B4E80F45049A69B5615C8A /* KVNProgressConfiguration.m */,
+				C71BD914F69CA6C9FB15B2C1178AE6D8 /* UIColor+KVNContrast.h */,
+				E323EDF5B81A2105E0653917C135C105 /* UIColor+KVNContrast.m */,
+				30B11310E69C604C50D804B53BE3FAD5 /* UIImage+KVNEmpty.h */,
+				3B2EDEDADA94C4C656BFE84A3DB8A33C /* UIImage+KVNEmpty.m */,
+				0B5639DEDEF6E7D4ABFEBDDD47AD0064 /* UIImage+KVNImageEffects.h */,
+				FDCFCD3A79EFBC616D61FA1D3D8D36F4 /* UIImage+KVNImageEffects.m */,
+				0C592C64FC2FC0B5E3763DBADB105126 /* Resources */,
+				DFE292E27B1F2B7F8B7C69896CEAE104 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/TDOAuth";
+			path = KVNProgress;
 			sourceTree = "<group>";
 		};
-		9E0DBAD5683566E6EB62E505388EB512 /* UserAgent */ = {
+		84766DD945ADD3E2EAC07C1F7054EB0D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2988A8DC624898A93E20D07862761FA2 /* OMGUserAgent.h */,
-				3721575A73D63E397BBC237EA12057C5 /* OMGUserAgent.m */,
+				187F595109F49678D7F7E7CE6C110BFB /* JVTransitionAnimator */,
+				7F0F90267F19DE263A0A1C3DE904D954 /* KVNProgress */,
+				0909284BA0C566563EDD8FEDA84CE0A1 /* OMGHTTPURLRQ */,
+				0165AB779CC4C9E38E331B5B5F057419 /* TDOAuth */,
 			);
-			name = UserAgent;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8CB2437B4B390AC4F5D82014E0BBA362 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8315E325278F9431564B695F6DECD9DF /* JVTransitionAnimator.bundle */,
+				14CAD0BA718FEEA537BAFA88CBA27332 /* libJVTransitionAnimator.a */,
+				83B8937DC70FC3C9A52891C711FB7886 /* libKVNProgress.a */,
+				7C5ADC3A6940FDE1E3CC76F7AD4B5354 /* libOMGHTTPURLRQ.a */,
+				D1C32E82B054312C1AC9E7A1D0A22DA3 /* libPods.a */,
+				B5588BEBE6DFF9131B5E0B6799A7742A /* libTDOAuth.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		B3BE697900F50FFA6B448836E4591321 /* iOS */ = {
@@ -284,35 +316,67 @@
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		C76F16D46657F6FFC33E2DB5CDF2D295 /* Support Files */ = {
+		C7AE6460E283069849907D232623C476 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				14061624596E341FA857599C89385E32 /* KVNProgress.xcconfig */,
-				5FCC0F6BFC32F196614563DD049EA9D8 /* KVNProgress-dummy.m */,
-				7AB77D949039C043F30669E3EC1B4B0A /* KVNProgress-prefix.pch */,
+				87FD33D8DAC01E2B141DE3F38488E5CA /* OMGHTTPURLRQ.xcconfig */,
+				6FCD043ABB1C64D08D8287003AD68FB0 /* OMGHTTPURLRQ-dummy.m */,
+				79DC5A8BAB572343C9AF08E12727E538 /* OMGHTTPURLRQ-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OMGHTTPURLRQ";
+			sourceTree = "<group>";
+		};
+		D95483D1572E43DFC21E39132BBAC67A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B4EFAD616C03ADF644F8503953A9362 /* JVTransitionAnimator.xcconfig */,
+				5E08B805E5DE24A1618E7ABCA9CBC54D /* JVTransitionAnimator-dummy.m */,
+				F42F492CE9F8628437EE9858D42A9738 /* JVTransitionAnimator-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JVTransitionAnimator";
+			sourceTree = "<group>";
+		};
+		DFE292E27B1F2B7F8B7C69896CEAE104 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BC59F0948496650C5401BBA6C4B3064 /* KVNProgress.xcconfig */,
+				58D5F4B694BE7D822338D491F5278914 /* KVNProgress-dummy.m */,
+				416BE838AFA64F2DB54CD14F073851C8 /* KVNProgress-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/KVNProgress";
 			sourceTree = "<group>";
 		};
-		EE2EB62804E151B43CE246F3D4C9EFAA /* TDOAuth */ = {
+		E0ECDD841368B774D4C284F0E6884C26 /* UserAgent */ = {
 			isa = PBXGroup;
 			children = (
-				26C56709D956C7CC57B80B86207139B6 /* TDOAuth.h */,
-				E6D2C080DD0A78D0805D9E8E2DB21923 /* TDOAuth.m */,
-				849C6D4D99B957C80B9F8B6A18946D8B /* Support Files */,
+				75B96F3147B92A862E385E34B28EB928 /* OMGUserAgent.h */,
+				FE7AD6F74484BCB9E5CD831711C64626 /* OMGUserAgent.m */,
 			);
-			path = TDOAuth;
+			name = UserAgent;
+			sourceTree = "<group>";
+		};
+		E600152B6E1551C0E77A608736F60201 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				32201F542EB22EF7FD872CAB1AB580ED /* TDOAuth.xcconfig */,
+				28A54CACC17D66CDE3902EF1DF297EE5 /* TDOAuth-dummy.m */,
+				064A5E83A09009239ECF5BF6E8A56636 /* TDOAuth-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TDOAuth";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		07C6F3490DDEBBAA0D073D1A42121996 /* Headers */ = {
+		7B3B687A46B9C4F288B1DBD8A7C183C9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1D859ACBD6BE90B5E1EDF939B04F108 /* OMGUserAgent.h in Headers */,
+				A133DFD060DE10BDAA6D8A3912A62F2E /* JVTransitionAnimator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,11 +392,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC761CFDA3DA7F802B5EAE0F4A6D0798 /* Headers */ = {
+		C46B1B2248038D58B7A9923C26B11B29 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C13D51B4B1C99A3F7356BAA2D28888 /* TDOAuth.h in Headers */,
+				F29C6CB87595941B74EE3F238D78B367 /* OMGUserAgent.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E598E6870E97B285B51174FD56794551 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCF4B40F046902D8D0BC13CACE13A81 /* TDOAuth.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,53 +425,89 @@
 			);
 			name = KVNProgress;
 			productName = KVNProgress;
-			productReference = 15C1126467A0D9DE94FB7ADAB497C96F /* libKVNProgress.a */;
+			productReference = 83B8937DC70FC3C9A52891C711FB7886 /* libKVNProgress.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		0C90AC4E399D398B344E17BCDE253AD6 /* TDOAuth */ = {
+		091B5AD65ED49A4447D32A00F2ED8144 /* JVTransitionAnimator-JVTransitionAnimator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0257CEF4BA2C1DF1C5E6ACE041AF14B9 /* Build configuration list for PBXNativeTarget "TDOAuth" */;
+			buildConfigurationList = E649550E85FF0A29386CACE72668683C /* Build configuration list for PBXNativeTarget "JVTransitionAnimator-JVTransitionAnimator" */;
 			buildPhases = (
-				62E955E4D2A1B0E1AC45E0CBEE646873 /* Sources */,
-				D90903440F9361592BC25D458F671E56 /* Frameworks */,
-				AC761CFDA3DA7F802B5EAE0F4A6D0798 /* Headers */,
+				B7F7CD518841E7068D0413D1D3F4EB1A /* Sources */,
+				CDB9FB9122C95DC73553DACC9AAD9785 /* Frameworks */,
+				1FF45C55DA111771B4E0E44395145D57 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8D847765BBBB9FC62824C3CD458EEFB4 /* PBXTargetDependency */,
 			);
-			name = TDOAuth;
-			productName = TDOAuth;
-			productReference = 2856DE55C6A1E6109480C0B31DF403E0 /* libTDOAuth.a */;
-			productType = "com.apple.product-type.library.static";
+			name = "JVTransitionAnimator-JVTransitionAnimator";
+			productName = "JVTransitionAnimator-JVTransitionAnimator";
+			productReference = 8315E325278F9431564B695F6DECD9DF /* JVTransitionAnimator.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
-		FB2716D49B3219AC9ECECE6BBCD511A4 /* Pods */ = {
+		2B6B70A23754CB44155E8658C1FE4093 /* JVTransitionAnimator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3EE6BB5A0664D71EF76F22B18DC3B64E /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = F27F24385AFF8C566CD287EFE133297E /* Build configuration list for PBXNativeTarget "JVTransitionAnimator" */;
 			buildPhases = (
-				AE70A26D4873117F5B703BADF2D5D057 /* Sources */,
-				01F1EFD46C7AC98D72BEE73CF80C2AA8 /* Frameworks */,
+				A76F3B3250CF062F96532A2F4C02FC19 /* Sources */,
+				1112F6F7024D7A1E284097CBAC4E2F3C /* Frameworks */,
+				7B3B687A46B9C4F288B1DBD8A7C183C9 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B0B1A1E44C9EEA0381E3066E45E4EFFF /* PBXTargetDependency */,
-				80BA2CFE690D2BD4A88EB1E1F68A1C2A /* PBXTargetDependency */,
-				86FAAFE3AFA75AAD3090390375F657EC /* PBXTargetDependency */,
+				4022C393397F21DBE7B2F91A335DE620 /* PBXTargetDependency */,
+			);
+			name = JVTransitionAnimator;
+			productName = JVTransitionAnimator;
+			productReference = 14CAD0BA718FEEA537BAFA88CBA27332 /* libJVTransitionAnimator.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5A4A870ABD72916A47322AD95960286A /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB2AFF0EF40FF66AE30778FD3F8B83CC /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				3BFB107FEA1D4954566503EF15EA608A /* Sources */,
+				59AABBCD8EB331C728B185E849AF142F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				544D9B98081C0985AD7397EA63C29428 /* PBXTargetDependency */,
+				8620D03BA5A1B5A12C392E42D46419F8 /* PBXTargetDependency */,
+				5623DBFADAE001ED2285CD5C88051D82 /* PBXTargetDependency */,
+				DCF2672CC6598EBD43E77A0E644C887D /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = 2803E3D9111FFE95FFA62E1914A1B42E /* libPods.a */;
+			productReference = D1C32E82B054312C1AC9E7A1D0A22DA3 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CC36DA93EBE61A102F8E77D2AD3E54B4 /* TDOAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA87B2645E5AC2BBDF0CD429D62AD131 /* Build configuration list for PBXNativeTarget "TDOAuth" */;
+			buildPhases = (
+				8AC29A6EC7D1EB7E2A85CA8005BBF774 /* Sources */,
+				1EF3F9859C0CAD01FAF30C182F6CF5C3 /* Frameworks */,
+				E598E6870E97B285B51174FD56794551 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CB27DE7EDA176C098FF8EE69D48F7CF /* PBXTargetDependency */,
+			);
+			name = TDOAuth;
+			productName = TDOAuth;
+			productReference = B5588BEBE6DFF9131B5E0B6799A7742A /* libTDOAuth.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCDAA84180B46191D5FDD1F3233A04FE /* Build configuration list for PBXNativeTarget "OMGHTTPURLRQ" */;
 			buildPhases = (
-				3DF85622A099867E15338FC9FAD3CAA5 /* Sources */,
+				5AE69805046AB1822BAFEC93CBB54CA1 /* Sources */,
 				06DF07A7F70611A3E1FD76D182EE36DE /* Frameworks */,
-				07C6F3490DDEBBAA0D073D1A42121996 /* Headers */,
+				C46B1B2248038D58B7A9923C26B11B29 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -407,7 +515,7 @@
 			);
 			name = OMGHTTPURLRQ;
 			productName = OMGHTTPURLRQ;
-			productReference = F55CE80D56EB9D2C6DEE3C125C31F4C0 /* libOMGHTTPURLRQ.a */;
+			productReference = 7C5ADC3A6940FDE1E3CC76F7AD4B5354 /* libOMGHTTPURLRQ.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -427,25 +535,36 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 00FAC3D737771E6E52423C2C9C85ACBD /* Products */;
+			productRefGroup = 8CB2437B4B390AC4F5D82014E0BBA362 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				2B6B70A23754CB44155E8658C1FE4093 /* JVTransitionAnimator */,
+				091B5AD65ED49A4447D32A00F2ED8144 /* JVTransitionAnimator-JVTransitionAnimator */,
 				06B2232CE73059846F04E5C3DFEE0D38 /* KVNProgress */,
 				FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */,
-				FB2716D49B3219AC9ECECE6BBCD511A4 /* Pods */,
-				0C90AC4E399D398B344E17BCDE253AD6 /* TDOAuth */,
+				5A4A870ABD72916A47322AD95960286A /* Pods */,
+				CC36DA93EBE61A102F8E77D2AD3E54B4 /* TDOAuth */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		1FF45C55DA111771B4E0E44395145D57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		3DF85622A099867E15338FC9FAD3CAA5 /* Sources */ = {
+		3BFB107FEA1D4954566503EF15EA608A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D59C3EAFE980F0CD895D686218340D5 /* OMGHTTPURLRQ-dummy.m in Sources */,
-				DC68B7CA66EBCD395EB7E59A2E487A58 /* OMGUserAgent.m in Sources */,
+				A57F67323F483FA7A960169692D701E0 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,56 +581,85 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		62E955E4D2A1B0E1AC45E0CBEE646873 /* Sources */ = {
+		5AE69805046AB1822BAFEC93CBB54CA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D06D00070DCC9485EEE0E519DADB3AE3 /* TDOAuth-dummy.m in Sources */,
-				36BB18B9A6DC264ABE2846001821DA05 /* TDOAuth.m in Sources */,
+				1CA5E5B427016F8F21C95D7088C3FA48 /* OMGHTTPURLRQ-dummy.m in Sources */,
+				6BF34447E372D84B9C5D8B8001CC98F0 /* OMGUserAgent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE70A26D4873117F5B703BADF2D5D057 /* Sources */ = {
+		8AC29A6EC7D1EB7E2A85CA8005BBF774 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F392D30B31563CEF75E04857895B7A /* Pods-dummy.m in Sources */,
+				CE987A7FB11A950F1F0710742D54AF14 /* TDOAuth-dummy.m in Sources */,
+				D1D08AE6061DEDA6B7B7DA706C4CD285 /* TDOAuth.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76F3B3250CF062F96532A2F4C02FC19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2EF7F312507C8B272E27CCBF7B91E41 /* JVTransitionAnimator-dummy.m in Sources */,
+				F456D68DDAA9D3BC3D3BBDECFD88B18A /* JVTransitionAnimator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7F7CD518841E7068D0413D1D3F4EB1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		80BA2CFE690D2BD4A88EB1E1F68A1C2A /* PBXTargetDependency */ = {
+		2CB27DE7EDA176C098FF8EE69D48F7CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OMGHTTPURLRQ;
 			target = FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */;
-			targetProxy = A265B143F2E7864104B57F283F0A0B38 /* PBXContainerItemProxy */;
+			targetProxy = 5F35D7DAC4136DBA2D90D081AB09A5B1 /* PBXContainerItemProxy */;
 		};
-		86FAAFE3AFA75AAD3090390375F657EC /* PBXTargetDependency */ = {
+		4022C393397F21DBE7B2F91A335DE620 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = TDOAuth;
-			target = 0C90AC4E399D398B344E17BCDE253AD6 /* TDOAuth */;
-			targetProxy = B0E6338E8B25E074333F835E0400070B /* PBXContainerItemProxy */;
+			name = "JVTransitionAnimator-JVTransitionAnimator";
+			target = 091B5AD65ED49A4447D32A00F2ED8144 /* JVTransitionAnimator-JVTransitionAnimator */;
+			targetProxy = 7D56B5E16C8F6C0ED266B94DDCDF1596 /* PBXContainerItemProxy */;
 		};
-		8D847765BBBB9FC62824C3CD458EEFB4 /* PBXTargetDependency */ = {
+		544D9B98081C0985AD7397EA63C29428 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JVTransitionAnimator;
+			target = 2B6B70A23754CB44155E8658C1FE4093 /* JVTransitionAnimator */;
+			targetProxy = D2703C4DB37687226B9F24B4A09E19FC /* PBXContainerItemProxy */;
+		};
+		5623DBFADAE001ED2285CD5C88051D82 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OMGHTTPURLRQ;
 			target = FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */;
-			targetProxy = 4A070AD96BF00C52A45F83495AF58F5B /* PBXContainerItemProxy */;
+			targetProxy = 24F0133F6958E373102A2E5C9E58EB23 /* PBXContainerItemProxy */;
 		};
-		B0B1A1E44C9EEA0381E3066E45E4EFFF /* PBXTargetDependency */ = {
+		8620D03BA5A1B5A12C392E42D46419F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KVNProgress;
 			target = 06B2232CE73059846F04E5C3DFEE0D38 /* KVNProgress */;
-			targetProxy = 3FD6BAEDDE902F89E088667E9409F498 /* PBXContainerItemProxy */;
+			targetProxy = 55DCF050304689705C0304BFD83CF94C /* PBXContainerItemProxy */;
+		};
+		DCF2672CC6598EBD43E77A0E644C887D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TDOAuth;
+			target = CC36DA93EBE61A102F8E77D2AD3E54B4 /* TDOAuth */;
+			targetProxy = 7E6B148AE93C98AD92E6EDDFCFD7332B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		04ECAD83601B4CDCA672D6D76B6CB3C4 /* Release */ = {
+		39C805E2DFECC0C1DC5CAC3931F1BA3B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23773E71BFA1B7753499FD86D2F9163A /* TDOAuth.xcconfig */;
+			baseConfigurationReference = 32201F542EB22EF7FD872CAB1AB580ED /* TDOAuth.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/TDOAuth/TDOAuth-prefix.pch";
@@ -527,9 +675,9 @@
 			};
 			name = Release;
 		};
-		2988F3681F668221BF796D36A50AC36D /* Debug */ = {
+		4C7227F8CACD60E452ECDE3787A58A8D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23773E71BFA1B7753499FD86D2F9163A /* TDOAuth.xcconfig */;
+			baseConfigurationReference = 32201F542EB22EF7FD872CAB1AB580ED /* TDOAuth.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/TDOAuth/TDOAuth-prefix.pch";
@@ -545,9 +693,26 @@
 			};
 			name = Debug;
 		};
+		4F7F802BBCB22B16D382A4C32DD0A50E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		5E0D110F3CC859ED050C13CEC7B7F6CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14061624596E341FA857599C89385E32 /* KVNProgress.xcconfig */;
+			baseConfigurationReference = 6BC59F0948496650C5401BBA6C4B3064 /* KVNProgress.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/KVNProgress/KVNProgress-prefix.pch";
@@ -563,26 +728,9 @@
 			};
 			name = Release;
 		};
-		5E1A5E6B3CACC412DDC71A34CC05F624 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		708D741CF0B1F28D97FDA30C269B7EDE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52130A90EE7B9634466DE2F68115B630 /* OMGHTTPURLRQ.xcconfig */;
+			baseConfigurationReference = 87FD33D8DAC01E2B141DE3F38488E5CA /* OMGHTTPURLRQ.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/OMGHTTPURLRQ/OMGHTTPURLRQ-prefix.pch";
@@ -597,6 +745,30 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		774646E61635776EBC1C3F22AB891E02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B4EFAD616C03ADF644F8503953A9362 /* JVTransitionAnimator.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = JVTransitionAnimator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		9A5C30F9E282B8DFECF533987A68F240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B4EFAD616C03ADF644F8503953A9362 /* JVTransitionAnimator.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = JVTransitionAnimator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
 		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -639,7 +811,7 @@
 		};
 		AD06024B235DC7F3EF8D521EB2063C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52130A90EE7B9634466DE2F68115B630 /* OMGHTTPURLRQ.xcconfig */;
+			baseConfigurationReference = 87FD33D8DAC01E2B141DE3F38488E5CA /* OMGHTTPURLRQ.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/OMGHTTPURLRQ/OMGHTTPURLRQ-prefix.pch";
@@ -655,26 +827,9 @@
 			};
 			name = Debug;
 		};
-		AD2DB9EA60E38894D5EF4B76F652C684 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		B33741D25826020AE59643BC90F8321C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14061624596E341FA857599C89385E32 /* KVNProgress.xcconfig */;
+			baseConfigurationReference = 6BC59F0948496650C5401BBA6C4B3064 /* KVNProgress.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/KVNProgress/KVNProgress-prefix.pch";
@@ -689,6 +844,41 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		EC4A1389DE8AD5C39C7DA52B83FCEDE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EDBC9A9C7206F7160DAD39E3DFF849BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B4EFAD616C03ADF644F8503953A9362 /* JVTransitionAnimator.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JVTransitionAnimator/JVTransitionAnimator-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -724,32 +914,32 @@
 			};
 			name = Release;
 		};
+		FF8AE28E113BF14CD1E06352C97AEA22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B4EFAD616C03ADF644F8503953A9362 /* JVTransitionAnimator.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JVTransitionAnimator/JVTransitionAnimator-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0257CEF4BA2C1DF1C5E6ACE041AF14B9 /* Build configuration list for PBXNativeTarget "TDOAuth" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2988F3681F668221BF796D36A50AC36D /* Debug */,
-				04ECAD83601B4CDCA672D6D76B6CB3C4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
 				FB45FFD90572718D82AB9092B750F0CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3EE6BB5A0664D71EF76F22B18DC3B64E /* Build configuration list for PBXNativeTarget "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5E1A5E6B3CACC412DDC71A34CC05F624 /* Debug */,
-				AD2DB9EA60E38894D5EF4B76F652C684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -763,11 +953,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BA87B2645E5AC2BBDF0CD429D62AD131 /* Build configuration list for PBXNativeTarget "TDOAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C7227F8CACD60E452ECDE3787A58A8D /* Debug */,
+				39C805E2DFECC0C1DC5CAC3931F1BA3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB2AFF0EF40FF66AE30778FD3F8B83CC /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC4A1389DE8AD5C39C7DA52B83FCEDE1 /* Debug */,
+				4F7F802BBCB22B16D382A4C32DD0A50E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BCDAA84180B46191D5FDD1F3233A04FE /* Build configuration list for PBXNativeTarget "OMGHTTPURLRQ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD06024B235DC7F3EF8D521EB2063C6D /* Debug */,
 				708D741CF0B1F28D97FDA30C269B7EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E649550E85FF0A29386CACE72668683C /* Build configuration list for PBXNativeTarget "JVTransitionAnimator-JVTransitionAnimator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A5C30F9E282B8DFECF533987A68F240 /* Debug */,
+				774646E61635776EBC1C3F22AB891E02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F27F24385AFF8C566CD287EFE133297E /* Build configuration list for PBXNativeTarget "JVTransitionAnimator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF8AE28E113BF14CD1E06352C97AEA22 /* Debug */,
+				EDBC9A9C7206F7160DAD39E3DFF849BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

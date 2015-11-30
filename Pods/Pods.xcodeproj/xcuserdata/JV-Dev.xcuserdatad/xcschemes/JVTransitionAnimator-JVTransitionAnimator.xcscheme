@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '561DB6513D89C73934658902'
-               BlueprintName = 'KVNProgress'
+               BlueprintIdentifier = '6CC306C4211CC4DCB707B77D'
+               BlueprintName = 'JVTransitionAnimator-JVTransitionAnimator'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libKVNProgress.a'>
+               BuildableName = 'JVTransitionAnimator.bundle'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
