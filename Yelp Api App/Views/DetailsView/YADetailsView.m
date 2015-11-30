@@ -190,7 +190,7 @@ static NSString *const kBackButtonImageName = @"back";
 {
     if (!_categoryLabel)
     {
-        _categoryLabel = [self labelWithFrame:self.categoryLabelFrame font:[UIFont fontWithName:YALatoLightFont size:kLabelFontSize] shadow:NO];
+        _categoryLabel = [self labelWithFrame:self.categoryLabelFrame font:[UIFont fontWithName:YALatoRegular size:kLabelFontSize] shadow:NO];
         _categoryLabel.text = self.data.businessCategory;
     }
     
@@ -208,7 +208,7 @@ static NSString *const kBackButtonImageName = @"back";
 {
     if (!_addressLabel)
     {
-        _addressLabel = [self labelWithFrame:self.addressLabelFrame font:[UIFont fontWithName:YALatoLightFont size:kLabelFontSize] shadow:NO];
+        _addressLabel = [self labelWithFrame:self.addressLabelFrame font:[UIFont fontWithName:YALatoRegular size:kLabelFontSize] shadow:NO];
         _addressLabel.text = self.data.address;
     }
     
@@ -226,7 +226,7 @@ static NSString *const kBackButtonImageName = @"back";
 {
     if (!_phoneNumberLabel)
     {
-        _phoneNumberLabel = [self labelWithFrame:self.phoneNumberLabelFrame font:[UIFont fontWithName:YALatoLightFont size:kLabelFontSize] shadow:NO];
+        _phoneNumberLabel = [self labelWithFrame:self.phoneNumberLabelFrame font:[UIFont fontWithName:YALatoRegular size:kLabelFontSize] shadow:NO];
         _phoneNumberLabel.text = self.data.phoneNumber;
     }
     
@@ -244,7 +244,7 @@ static NSString *const kBackButtonImageName = @"back";
 {
     if (!_shortDescriptionLabel)
     {
-        _shortDescriptionLabel = [self labelWithFrame:CGRectZero font:[UIFont fontWithName:YALatoLightFont size:kLabelFontSize] shadow:NO];
+        _shortDescriptionLabel = [self labelWithFrame:CGRectZero font:[UIFont fontWithName:YALatoRegular size:kLabelFontSize] shadow:NO];
         _shortDescriptionLabel.numberOfLines = 0;
         _shortDescriptionLabel.text = self.data.shortDescription;
         _shortDescriptionLabel.frame = self.shortDescriptionLabelFrame;
