@@ -29,7 +29,7 @@
 @end
 
 // view
-static CGFloat const kTopPadding = 20;
+static CGFloat const kTopPadding = 28;
 static CGFloat const kDefaultPadding = 10;
 static NSString *const kTextColor = @"2B2B2B";
 
@@ -44,9 +44,9 @@ static CGFloat const kLabelFontSize = 16;
 static CGFloat const kLabelHeight = 20;
 
 // back button
-static CGFloat const kBackButtonLeftPadding = 10;
 static CGFloat const kBackButtonTopPadding = 20;
 static CGFloat const kBackButtonSize = 50;
+static NSString *const kBackButtonImageName = @"back";
 
 
 @implementation YADetailsView
@@ -152,8 +152,8 @@ static CGFloat const kBackButtonSize = 50;
     if (!_backButton)
     {
         _backButton = [[UIButton alloc] initWithFrame:self.backButtonFrame];
-        _backButton.backgroundColor = [UIColor blackColor];
-        [_backButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+        _backButton.backgroundColor = [UIColor clearColor];
+        [_backButton setImage:[UIImage imageNamed:kBackButtonImageName] forState:UIControlStateNormal];
         [_backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
         
     }
@@ -164,7 +164,7 @@ static CGFloat const kBackButtonSize = 50;
 
 - (CGRect)backButtonFrame
 {
-    return CGRectMake(kBackButtonLeftPadding, kBackButtonTopPadding, kBackButtonSize, kBackButtonSize);
+    return CGRectMake(0, kBackButtonTopPadding, kBackButtonSize, kBackButtonSize);
 }
 
 
@@ -182,7 +182,7 @@ static CGFloat const kBackButtonSize = 50;
 
 - (CGRect)nameLabelFrame
 {
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width + kBackButtonLeftPadding) * 2), kNameLabelHeight);
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width) * 2), kNameLabelHeight);
 }
 
 
@@ -200,7 +200,7 @@ static CGFloat const kBackButtonSize = 50;
 
 - (CGRect)categoryLabelFrame
 {
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.nameLabel.frame), self.frame.size.width - ((self.backButton.frame.size.width + kBackButtonLeftPadding) * 2), kNameLabelHeight);
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.nameLabel.frame), self.frame.size.width - ((self.backButton.frame.size.width) * 2), kNameLabelHeight);
 }
 
 
@@ -218,7 +218,7 @@ static CGFloat const kBackButtonSize = 50;
 
 - (CGRect)addressLabelFrame
 {
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.imageView.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width + kBackButtonLeftPadding) * 2), kLabelHeight);
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.imageView.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width) * 2), kLabelHeight);
 }
 
 
@@ -236,7 +236,7 @@ static CGFloat const kBackButtonSize = 50;
 
 - (CGRect)phoneNumberLabelFrame
 {
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.addressLabel.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width + kBackButtonLeftPadding) * 2), kLabelHeight);
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.addressLabel.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width) * 2), kLabelHeight);
 }
 
 
@@ -257,7 +257,7 @@ static CGFloat const kBackButtonSize = 50;
 - (CGRect)shortDescriptionLabelFrame
 {
     [_shortDescriptionLabel sizeToFit];
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.phoneNumberLabel.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width + kBackButtonLeftPadding) * 2), self.shortDescriptionLabel.frame.size.height);
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.phoneNumberLabel.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width) * 2), self.shortDescriptionLabel.frame.size.height);
 }
 
 
