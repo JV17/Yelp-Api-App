@@ -84,6 +84,12 @@ static CGFloat const kBackButtonSize = 50;
         [self addSubview:self.nameLabel];
     }
     
+#warning fix issue with business categories saving as NSArray.
+//    if (!self.categoryLabel.window)
+//    {
+//        [self addSubview:self.categoryLabel];
+//    }
+    
     if (!self.imageView.window)
     {
         [self addSubview:self.imageView];
@@ -149,8 +155,27 @@ static CGFloat const kBackButtonSize = 50;
 
 - (CGRect)nameLabelFrame
 {
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), kTopPadding, self.frame.size.width - (self.backButton.frame.size.width + kBackButtonLeftPadding), kNameLabelHeight);
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width + kBackButtonLeftPadding) * 2), kNameLabelHeight);
 }
+
+
+- (UILabel *)categoryLabel
+{
+    if (!_categoryLabel)
+    {
+        _categoryLabel = [self labelWithFrame:self.categoryLabelFrame font:[UIFont fontWithName:YALatoLightFont size:kNameLabelFontSize] shadow:NO];
+        _categoryLabel.text = self.data.businessCategory;
+    }
+    
+    return _categoryLabel;
+}
+
+
+- (CGRect)categoryLabelFrame
+{
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.nameLabel.frame), self.frame.size.width - ((self.backButton.frame.size.width + kBackButtonLeftPadding) * 2), kNameLabelHeight);
+}
+
 
 
 - (UIImageView *)imageView
