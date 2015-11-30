@@ -135,7 +135,6 @@ static CGFloat const kDuration = 0.3;
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
 
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backgroundColor = [[UIColor colorWithHexString:kCellBackgroundColor] colorWithAlphaComponent:0.9];
     
     cell.layer.cornerRadius = 5;
@@ -148,6 +147,16 @@ static CGFloat const kDuration = 0.3;
     
     return cell;
 }
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self.delegate respondsToSelector:@selector(resultsViewSelectedBusinessWithData:)])
+    {
+        [self.delegate resultsViewSelectedBusinessWithData:(YAResultsData *)[self.data objectAtIndex:indexPath.section]];
+    }
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

@@ -62,6 +62,7 @@ static CGFloat const kNameLabelFontSize = 20;
     if (self)
     {
         _data = data;
+        [self setupDetailsView];
     }
     
     return self;

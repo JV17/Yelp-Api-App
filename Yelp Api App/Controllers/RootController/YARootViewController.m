@@ -12,9 +12,10 @@
 #import "YACopyRightView.h"
 #import "YADemoView.h"
 #import "YAResultsView.h"
+#import "YADetailsViewController.h"
 
 
-@interface YARootViewController () <YALocationManagerDelegate, YASearchViewDelegate>
+@interface YARootViewController () <YALocationManagerDelegate, YASearchViewDelegate, YAResultsViewDelegate>
 
 @property (nonatomic, strong) YALocationManager *location;
 
@@ -33,6 +34,10 @@
 @property (nonatomic, strong) YAResultsView *resultsView;
 
 @property (nonatomic, strong) NSArray<YAResultsData *> *resultsData;
+
+@property (nonatomic, strong) YADetailsViewController *detatilsViewController;
+
+@property (nonatomic, strong) JVTransitionAnimator *transitionAnimator;
 
 @end
 
@@ -123,6 +128,17 @@ static CGFloat const kResutlsViewPadding = 10;
 - (void)dismissProgress
 {
     [KVNProgress dismiss];
+}
+
+
+#pragma mark - YAResultsViewDelegate
+
+- (void)resultsViewSelectedBusinessWithData:(YAResultsData *)data
+{
+    self.detatilsViewController.data = data;
+    self.detatilsViewController.transitioningDelegate = self.transitionAnimator;
+    
+    [self presentViewController:self.detatilsViewController animated:YES completion:nil];
 }
 
 
@@ -221,6 +237,7 @@ static CGFloat const kResutlsViewPadding = 10;
     {
         _resultsView = [[YAResultsView alloc] initWithFrame:self.resultsViewFrame resultsData:self.resultsData];
         _resultsView.backgroundColor = [UIColor clearColor];
+        _resultsView.delegate = self;
     }
     
     return _resultsView;
@@ -254,6 +271,37 @@ static CGFloat const kResutlsViewPadding = 10;
         self.resultsView.data = self.resultsData;
     }
 }
+
+
+- (YADetailsViewController *)detatilsViewController
+{
+    if (!_detatilsViewController)
+    {
+        _detatilsViewController = [[YADetailsViewController alloc] init];
+    }
+    
+    return _detatilsViewController;
+}
+
+
+- (JVTransitionAnimator *)transitionAnimator
+{
+    if (!_transitionAnimator)
+    {
+        _transitionAnimator = [[JVTransitionAnimator alloc] init];
+        _transitionAnimator.fromViewController = self;
+        _transitionAnimator.toViewController = self.detatilsViewController;
+        _transitionAnimator.slideInOutAnimation = YES;
+//        _transitionAnimator.enabledInteractiveTransitions = YES;
+        _transitionAnimator.animationDuration = 1;
+        _transitionAnimator.animationDelay = 0;
+        _transitionAnimator.animationDamping = 1;
+        _transitionAnimator.animationVelocity = 1;
+    }
+    
+    return _transitionAnimator;
+}
+
 
 
 #pragma mark - Show SearchView

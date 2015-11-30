@@ -10,6 +10,20 @@
 
 @class YAResultsData;
 
+
+@protocol YAResultsViewDelegate <NSObject>
+
+/**
+ Tells the selected business with business data.
+ 
+ @param data
+    The selected business data.
+ */
+- (void)resultsViewSelectedBusinessWithData:(YAResultsData *)data;
+
+@end
+
+
 @interface YAResultsView : UIView
 
 #pragma mark - Properties
@@ -18,6 +32,9 @@
  The results array of @YAResultsData.
  */
 @property (nonatomic, strong) NSArray<YAResultsData *> *data;
+
+
+@property (nonatomic, weak) id <YAResultsViewDelegate> delegate;
 
 
 #pragma mark - Initializers

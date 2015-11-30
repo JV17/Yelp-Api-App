@@ -25,6 +25,7 @@
     #import "YALocationManager.h"
     #import "YANetworkManager.h"
     #import <KVNProgress/KVNProgress.h>
+    #import <JVTransitionAnimator/JVTransitionAnimator.h>
 #endif
 
 #endif /* YelpApiApp_Prefix_pch */
