@@ -113,9 +113,16 @@ static CGFloat const kResutlsViewPadding = 10;
             self.resultsData = [NSArray arrayFromResultsDictionary:jsonDictionary];
             NSLog(@"%@", self.resultsData);
             [self.view addSubview:self.resultsView];
-            [KVNProgress dismiss];
+            [KVNProgress showSuccessWithStatus:@"Success"];
+            [self performSelector:@selector(dismissProgress) withObject:nil afterDelay:0.7];
         });
     }];
+}
+
+
+- (void)dismissProgress
+{
+    [KVNProgress dismiss];
 }
 
 
