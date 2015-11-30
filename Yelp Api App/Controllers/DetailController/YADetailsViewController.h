@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class YAResultsData;
+
 @interface YADetailsViewController : UIViewController
+
+/**
+ The details data to be displayed by the controller.
+ */
+@property (nonatomic, strong) YAResultsData *data;
 
 @end

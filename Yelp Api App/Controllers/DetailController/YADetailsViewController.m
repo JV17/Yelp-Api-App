@@ -8,9 +8,14 @@
 
 #import "YADetailsViewController.h"
 
+
 @interface YADetailsViewController ()
 
+
 @end
+
+
+
 
 @implementation YADetailsViewController
 
@@ -26,5 +31,10 @@
 {
     [super didReceiveMemoryWarning];
 }
+
+
+#pragma mark - Custom Accessors
+
+
 
 @end
