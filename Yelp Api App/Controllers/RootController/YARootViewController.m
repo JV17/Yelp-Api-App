@@ -135,7 +135,8 @@ static CGFloat const kResutlsViewPadding = 10;
 
 - (void)resultsViewSelectedBusinessWithData:(YAResultsData *)data
 {
-    self.detatilsViewController.data = data;
+    self.detatilsViewController = [[YADetailsViewController alloc] init];
+    self.detatilsViewController.detailsData = data;
     self.detatilsViewController.transitioningDelegate = self.transitionAnimator;
     
     [self presentViewController:self.detatilsViewController animated:YES completion:nil];
@@ -273,17 +274,6 @@ static CGFloat const kResutlsViewPadding = 10;
 }
 
 
-- (YADetailsViewController *)detatilsViewController
-{
-    if (!_detatilsViewController)
-    {
-        _detatilsViewController = [[YADetailsViewController alloc] init];
-    }
-    
-    return _detatilsViewController;
-}
-
-
 - (JVTransitionAnimator *)transitionAnimator
 {
     if (!_transitionAnimator)
@@ -292,7 +282,6 @@ static CGFloat const kResutlsViewPadding = 10;
         _transitionAnimator.fromViewController = self;
         _transitionAnimator.toViewController = self.detatilsViewController;
         _transitionAnimator.slideInOutAnimation = YES;
-//        _transitionAnimator.enabledInteractiveTransitions = YES;
         _transitionAnimator.animationDuration = 1;
         _transitionAnimator.animationDelay = 0;
         _transitionAnimator.animationDamping = 1;

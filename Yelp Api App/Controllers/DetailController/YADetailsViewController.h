@@ -15,6 +15,6 @@
 /**
  The details data to be displayed by the controller.
  */
-@property (nonatomic, strong) YAResultsData *data;
+@property (nonatomic, strong) YAResultsData *detailsData;
 
 @end

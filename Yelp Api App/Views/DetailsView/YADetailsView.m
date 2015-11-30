@@ -71,8 +71,15 @@ static CGFloat const kNameLabelFontSize = 20;
 
 - (void)setupDetailsView
 {
-    [self addSubview:self.nameLabel];
-    [self addSubview:self.imageView];
+    if (!self.nameLabel.window)
+    {
+        [self addSubview:self.nameLabel];
+    }
+    
+    if (!self.imageView.window)
+    {
+        [self addSubview:self.imageView];
+    }
 }
 
 
@@ -88,6 +95,8 @@ static CGFloat const kNameLabelFontSize = 20;
         
         self.imageView.frame = self.imageViewFrame;
         self.imageView.image = self.mainImage;
+        
+        [self setupDetailsView];
     }
 }
 
