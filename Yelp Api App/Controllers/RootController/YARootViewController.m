@@ -52,7 +52,7 @@ static CGFloat const kLabelHeight = 20;
 
 
 // resutls view
-static CGFloat const kResutlsViewPadding = 20;
+static CGFloat const kResutlsViewPadding = 10;
 
 
 @implementation YARootViewController

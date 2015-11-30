@@ -70,6 +70,8 @@ static CGFloat const kDuration = 0.3;
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) style:UITableViewStylePlain];
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        _tableView.showsHorizontalScrollIndicator = NO;
+        _tableView.showsVerticalScrollIndicator = NO;
         
         if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0"))
         {

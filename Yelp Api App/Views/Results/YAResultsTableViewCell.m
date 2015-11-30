@@ -22,6 +22,8 @@
 
 @property (nonatomic, strong) UIImageView *ratingImageView;
 
+@property (nonatomic, strong) UIImageView *indicatorImageView;
+
 @end
 
 
@@ -29,8 +31,8 @@
 static CGFloat const kBorderWidth = 10;
 static NSString *const kBorderColor = @"FF1300";
 
-// preview image
-static CGFloat const kPreviewImageWidth = 60;
+// preview image view
+static CGFloat const kPreviewImageWidth = 70;
 
 // title label
 static CGFloat const kLeftPadding = 10;
@@ -38,9 +40,13 @@ static CGFloat const kLabelHeight = 16;
 static CGFloat const kLabelFontSize = 13;
 static NSString *const kLabelTextColor = @"2B2B2B";
 
-// rating image
+// rating image view
 static CGFloat const kRatingImageWidth = 68;
 static CGFloat const kRatingImageHeight = 14;
+
+// indicator image view
+static CGFloat const kIndicatorSize = 20;
+static NSString *const kIndicatorImageName = @"forward";
 
 
 @implementation YAResultsTableViewCell
@@ -62,6 +68,7 @@ static CGFloat const kRatingImageHeight = 14;
     self.titleLabel.frame = self.titleLabelFrame;
     self.descriptionLabel.frame = self.descriptionLabelFrame;
     self.ratingImageView.frame = self.ratingImageViewFrame;
+    self.indicatorImageView.frame = self.indicatorImageViewFrame;
 }
 
 
@@ -86,6 +93,8 @@ static CGFloat const kRatingImageHeight = 14;
         
         self.ratingImageView.image = self.data.ratingImage;
         [self addSubview:self.ratingImageView];
+        
+        [self addSubview:self.indicatorImageView];
     }
 }
 
@@ -141,7 +150,7 @@ static CGFloat const kRatingImageHeight = 14;
 
 - (CGRect)titleLabelFrame
 {
-    return CGRectMake(CGRectGetMaxX(self.previewImageView.frame) + kLeftPadding, 2, (self.frame.size.width - self.previewImageView.frame.size.width - self.borderView.frame.size.width - kLeftPadding), kLabelHeight);
+    return CGRectMake(CGRectGetMaxX(self.previewImageView.frame) + kLeftPadding, 2, (self.frame.size.width - self.previewImageView.frame.size.width - self.borderView.frame.size.width - kLeftPadding - kIndicatorSize - 2), kLabelHeight);
 }
 
 
@@ -181,6 +190,24 @@ static CGFloat const kRatingImageHeight = 14;
 - (CGRect)ratingImageViewFrame
 {
     return CGRectMake(CGRectGetMaxX(self.previewImageView.frame) + kLeftPadding, CGRectGetMaxY(self.descriptionLabel.frame) + 4, kRatingImageWidth, kRatingImageHeight);
+}
+
+
+- (UIImageView *)indicatorImageView
+{
+    if (!_indicatorImageView)
+    {
+        _indicatorImageView = [[UIImageView alloc] initWithFrame:self.indicatorImageViewFrame];
+        _indicatorImageView.image = [UIImage imageNamed:kIndicatorImageName];
+    }
+    
+    return _indicatorImageView;
+}
+
+
+- (CGRect)indicatorImageViewFrame
+{
+    return CGRectMake((CGRectGetMaxX(self.frame) - (kIndicatorSize + 2)), ((self.frame.size.height / 2) - (kIndicatorSize / 2)), kIndicatorSize, kIndicatorSize);
 }
 
 @end
