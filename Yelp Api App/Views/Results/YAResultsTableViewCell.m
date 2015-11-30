@@ -28,7 +28,7 @@
 
 
 // border view
-static CGFloat const kBorderWidth = 10;
+static CGFloat const kBorderWidth = 7;
 static NSString *const kBorderColor = @"FF1300";
 
 // preview image view
