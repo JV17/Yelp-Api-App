@@ -34,7 +34,8 @@ static CGFloat const kDefaultPadding = 10;
 static NSString *const kTextColor = @"2B2B2B";
 
 // image view
-static CGFloat const kMaxImageWidth = 120;
+static CGFloat const kMaxImageWidth = 160;
+static NSString *const kImageBorderColor = @"2B2B2B";
 
 // name label
 static CGFloat const kNameLabelHeight = 30;
@@ -158,6 +159,10 @@ static CGFloat const kBackButtonSize = 50;
     {
         _imageView = [[UIImageView alloc] initWithFrame:self.imageViewFrame];
         _imageView.image = self.mainImage;
+        _imageView.clipsToBounds = YES;
+        _imageView.layer.cornerRadius = kMaxImageWidth / 2;
+        _imageView.layer.borderWidth = 1;
+        _imageView.layer.borderColor = [UIColor colorWithHexString:kImageBorderColor].CGColor;
     }
     
     return _imageView;
@@ -172,7 +177,7 @@ static CGFloat const kBackButtonSize = 50;
 
 - (CGRect)imageViewFrame
 {
-    return CGRectMake(((self.frame.size.width / 2) - (self.data.imagePreview.size.width / 2)), CGRectGetMaxY(self.nameLabel.frame) + kDefaultPadding, kMaxImageWidth, self.data.imagePreview.size.height);
+    return CGRectMake(((self.frame.size.width / 2) - (kMaxImageWidth / 2)), CGRectGetMaxY(self.nameLabel.frame) + kDefaultPadding, kMaxImageWidth, kMaxImageWidth);
 }
 
 
