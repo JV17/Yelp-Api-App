@@ -78,13 +78,6 @@ static CGFloat const kBackButtonSize = 50;
 
 - (void)setupDetailsView
 {
-    if (!self.backButton.window)
-    {
-        [self addSubview:self.backButton];
-    }
-    
-    [self addSubview:self.backButton];
-
     if (!self.nameLabel.window)
     {
         [self addSubview:self.nameLabel];
@@ -93,6 +86,11 @@ static CGFloat const kBackButtonSize = 50;
     if (!self.imageView.window)
     {
         [self addSubview:self.imageView];
+    }
+    
+    if (!self.backButton.window)
+    {
+        [self addSubview:self.backButton];
     }
 }
 
@@ -115,6 +113,27 @@ static CGFloat const kBackButtonSize = 50;
 }
 
 
+- (UIButton *)backButton
+{
+    if (!_backButton)
+    {
+        _backButton = [[UIButton alloc] initWithFrame:self.backButtonFrame];
+        _backButton.backgroundColor = [UIColor blackColor];
+        [_backButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+        [_backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+    
+    return _backButton;
+}
+
+
+- (CGRect)backButtonFrame
+{
+    return CGRectMake(kBackButtonLeftPadding, kBackButtonTopPadding, kBackButtonSize, kBackButtonSize);
+}
+
+
 - (UILabel *)nameLabel
 {
     if (!_nameLabel)
@@ -129,7 +148,7 @@ static CGFloat const kBackButtonSize = 50;
 
 - (CGRect)nameLabelFrame
 {
-    return CGRectMake(0, kTopPadding, self.frame.size.width, kNameLabelHeight);
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), kTopPadding, self.frame.size.width - (self.backButton.frame.size.width + kBackButtonLeftPadding), kNameLabelHeight);
 }
 
 
@@ -154,27 +173,6 @@ static CGFloat const kBackButtonSize = 50;
 - (CGRect)imageViewFrame
 {
     return CGRectMake(((self.frame.size.width / 2) - (self.data.imagePreview.size.width / 2)), CGRectGetMaxY(self.nameLabel.frame) + kDefaultPadding, kMaxImageWidth, self.data.imagePreview.size.height);
-}
-
-
-- (UIButton *)backButton
-{
-    if (!_backButton)
-    {
-        _backButton = [[UIButton alloc] initWithFrame:self.backButtonFrame];
-        _backButton.backgroundColor = [UIColor blackColor];
-        [_backButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-        [_backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-        
-    }
-    
-    return _backButton;
-}
-
-
-- (CGRect)backButtonFrame
-{
-    return CGRectMake(kBackButtonLeftPadding, kBackButtonTopPadding, kBackButtonSize, kBackButtonSize);
 }
 
 
