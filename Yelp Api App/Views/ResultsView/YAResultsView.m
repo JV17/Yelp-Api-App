@@ -82,6 +82,7 @@ static CGFloat const kDuration = 0.3;
         _tableView.scrollEnabled = YES;
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.tableFooterView = [UIView new];
     }
     
     return _tableView;
