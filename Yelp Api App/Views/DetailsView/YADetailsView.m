@@ -40,6 +40,8 @@ static NSString *const kImageBorderColor = @"2B2B2B";
 // name label
 static CGFloat const kNameLabelHeight = 30;
 static CGFloat const kNameLabelFontSize = 20;
+static CGFloat const kLabelFontSize = 16;
+static CGFloat const kLabelHeight = 20;
 
 // back button
 static CGFloat const kBackButtonLeftPadding = 10;
@@ -95,6 +97,21 @@ static CGFloat const kBackButtonSize = 50;
         [self addSubview:self.imageView];
     }
     
+    if (!self.addressLabel.window)
+    {
+        [self addSubview:self.addressLabel];
+    }
+    
+    if (!self.phoneNumberLabel.window)
+    {
+        [self addSubview:self.phoneNumberLabel];
+    }
+
+    if (!self.shortDescriptionLabel.window)
+    {
+        [self addSubview:self.shortDescriptionLabel];
+    }
+    
     if (!self.backButton.window)
     {
         [self addSubview:self.backButton];
@@ -104,6 +121,7 @@ static CGFloat const kBackButtonSize = 50;
 
 #pragma mark - Custom Accessors
 
+//TODO: add business category update
 - (void)setData:(YAResultsData *)data
 {
     _data = data;
@@ -114,6 +132,15 @@ static CGFloat const kBackButtonSize = 50;
         
         self.imageView.frame = self.imageViewFrame;
         self.imageView.image = self.mainImage;
+        
+        self.shortDescriptionLabel.text = self.data.shortDescription;
+        self.shortDescriptionLabel.frame = self.shortDescriptionLabelFrame;
+
+        self.phoneNumberLabel.text = self.data.phoneNumber;
+        self.phoneNumberLabel.frame = self.phoneNumberLabelFrame;
+
+        self.addressLabel.text = self.data.address;
+        self.addressLabel.frame = self.addressLabelFrame;
         
         [self setupDetailsView];
     }
@@ -163,7 +190,7 @@ static CGFloat const kBackButtonSize = 50;
 {
     if (!_categoryLabel)
     {
-        _categoryLabel = [self labelWithFrame:self.categoryLabelFrame font:[UIFont fontWithName:YALatoLightFont size:kNameLabelFontSize] shadow:NO];
+        _categoryLabel = [self labelWithFrame:self.categoryLabelFrame font:[UIFont fontWithName:YALatoLightFont size:kLabelFontSize] shadow:NO];
         _categoryLabel.text = self.data.businessCategory;
     }
     
@@ -176,6 +203,62 @@ static CGFloat const kBackButtonSize = 50;
     return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.nameLabel.frame), self.frame.size.width - ((self.backButton.frame.size.width + kBackButtonLeftPadding) * 2), kNameLabelHeight);
 }
 
+
+- (UILabel *)addressLabel
+{
+    if (!_addressLabel)
+    {
+        _addressLabel = [self labelWithFrame:self.addressLabelFrame font:[UIFont fontWithName:YALatoLightFont size:kLabelFontSize] shadow:NO];
+        _addressLabel.text = self.data.address;
+    }
+    
+    return _addressLabel;
+}
+
+
+- (CGRect)addressLabelFrame
+{
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.imageView.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width + kBackButtonLeftPadding) * 2), kLabelHeight);
+}
+
+
+- (UILabel *)phoneNumberLabel
+{
+    if (!_phoneNumberLabel)
+    {
+        _phoneNumberLabel = [self labelWithFrame:self.phoneNumberLabelFrame font:[UIFont fontWithName:YALatoLightFont size:kLabelFontSize] shadow:NO];
+        _phoneNumberLabel.text = self.data.phoneNumber;
+    }
+    
+    return _phoneNumberLabel;
+}
+
+
+- (CGRect)phoneNumberLabelFrame
+{
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.addressLabel.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width + kBackButtonLeftPadding) * 2), kLabelHeight);
+}
+
+
+- (UILabel *)shortDescriptionLabel
+{
+    if (!_shortDescriptionLabel)
+    {
+        _shortDescriptionLabel = [self labelWithFrame:CGRectZero font:[UIFont fontWithName:YALatoLightFont size:kLabelFontSize] shadow:NO];
+        _shortDescriptionLabel.numberOfLines = 0;
+        _shortDescriptionLabel.text = self.data.shortDescription;
+        _shortDescriptionLabel.frame = self.shortDescriptionLabelFrame;
+    }
+    
+    return _shortDescriptionLabel;
+}
+
+
+- (CGRect)shortDescriptionLabelFrame
+{
+    [_shortDescriptionLabel sizeToFit];
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.phoneNumberLabel.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width + kBackButtonLeftPadding) * 2), self.shortDescriptionLabel.frame.size.height);
+}
 
 
 - (UIImageView *)imageView
