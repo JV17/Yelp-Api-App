@@ -19,6 +19,17 @@
  */
 - (void)searchViewFinishedWithSearchString:(NSString *)searchString;
 
+
+/**
+ Tells when something went wrong in a search.
+ 
+ @param error
+    The error found.
+ @param errorMessage
+    The user friendly error message.
+ */
+- (void)searchViewFinishedWithError:(NSError *)error errorMessage:(NSString *)errorMessage;
+
 @end
 
 

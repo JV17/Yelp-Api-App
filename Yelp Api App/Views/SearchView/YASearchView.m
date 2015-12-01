@@ -27,6 +27,10 @@ static NSString *const kTextFieldValidCharacters = @"abcdefghijklmnopqrstuvwxyzA
 // left padding view
 static CGFloat const kLeftPaddingWidth = 10;
 
+// error
+static NSString *const kErrorDomain = @"Not enough characters";
+static NSInteger const kErrorCode = 1;
+
 
 @implementation YASearchView
 
@@ -181,8 +185,19 @@ static CGFloat const kLeftPaddingWidth = 10;
  */
 - (BOOL)checkForValidInputWithText:(NSString *)text
 {
-    if (!text.length || text.length < 4)
+    if (!text.length || text.length < 3)
     {
+        if ([self.delegate respondsToSelector:@selector(searchViewFinishedWithError:errorMessage:)])
+        {
+            NSDictionary *userInfo = [NSDictionary errorDictionaryWithDescription:@"Not enough characters"
+                                                                           reason:@"Sorry, search with less than 3 characters are not allowed."
+                                                                       suggestion:@"Please enter 3 or more characters."];
+            
+            NSError *error = [NSError errorWithDomain:kErrorDomain code:kErrorCode userInfo:userInfo];
+
+            [self.delegate searchViewFinishedWithError:error errorMessage:@"Sorry, search with less than 3 characters are not allowed."];
+        }
+        
         return NO;
     }
     

@@ -127,6 +127,12 @@ static CGFloat const kResutlsViewPadding = 10;
 }
 
 
+- (void)searchViewFinishedWithError:(NSError *)error errorMessage:(NSString *)errorMessage
+{
+    [self showErrorWithError:error errorMessage:errorMessage];
+}
+
+
 - (void)dismissProgress
 {
     [KVNProgress dismiss];
