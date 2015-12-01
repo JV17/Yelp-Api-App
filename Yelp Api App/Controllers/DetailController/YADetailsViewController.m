@@ -51,7 +51,7 @@ static CGFloat const kLabelHeight = 20;
 {
     if (!_detailsView)
     {
-        _detailsView = [[YADetailsView alloc] initWithFrame:self.view.frame data:self.detailsData];
+        _detailsView = [[YADetailsView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, (self.view.frame.size.height - (kLabelHeight * 1.5))) data:self.detailsData];
         _detailsView.delegate = self;
     }
     

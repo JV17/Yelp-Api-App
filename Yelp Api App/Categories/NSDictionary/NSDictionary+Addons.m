@@ -25,7 +25,7 @@
     
     for (NSDictionary *dictionary in arrayDictionary)
     {
-        [responseDictionary setObject:dictionary forKey:[NSString stringWithFormat:@"%@%ld", keyPrefix, (index + 1)]];
+        [responseDictionary setObject:dictionary forKey:[NSString stringWithFormat:@"%@%zd", keyPrefix, (index + 1)]];
         index++;
     }
     

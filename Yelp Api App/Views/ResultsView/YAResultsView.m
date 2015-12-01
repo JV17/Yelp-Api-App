@@ -136,6 +136,7 @@ static CGFloat const kDuration = 0.3;
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
 
+    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     cell.backgroundColor = [[UIColor colorWithHexString:kCellBackgroundColor] colorWithAlphaComponent:0.9];
     
     cell.layer.cornerRadius = 5;

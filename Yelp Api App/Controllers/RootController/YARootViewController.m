@@ -102,8 +102,6 @@ static CGFloat const kResutlsViewPadding = 10;
 
 - (void)searchViewFinishedWithSearchString:(NSString *)searchString
 {
-    NSLog(@"%@", searchString);
-
     [self showOrHideSearchView];
     
     NSString *userLocation = [NSString stringWithFormat:@"%@, %@", self.userLocation.city, self.userLocation.state];
@@ -115,8 +113,8 @@ static CGFloat const kResutlsViewPadding = 10;
     {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.resultsData = [NSArray arrayFromResultsDictionary:jsonDictionary];
-            NSLog(@"%@", self.resultsData);
             [self.view addSubview:self.resultsView];
+
             [KVNProgress showSuccessWithStatus:@"Success"];
             [self performSelector:@selector(dismissProgress) withObject:nil afterDelay:0.7];
         });

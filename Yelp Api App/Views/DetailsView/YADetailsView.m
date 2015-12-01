@@ -12,6 +12,8 @@
 
 @interface YADetailsView()
 
+@property (nonatomic, strong) UIScrollView *scrollView;
+
 @property (nonatomic, strong) UILabel *nameLabel;
 
 @property (nonatomic, strong) UIImageView *imageView;
@@ -88,36 +90,13 @@ static CGFloat const kLabelLeftPadding = 20;
 
 - (void)setupDetailsView
 {
-    if (!self.nameLabel.window)
+    if (IS_IPHONE_4_OR_LESS)
     {
-        [self addSubview:self.nameLabel];
+        [self loadScrollView];
     }
-
-    if (!self.categoryLabel.window)
+    else
     {
-        [self addSubview:self.categoryLabel];
-    }
-    
-    if (!self.imageView.window)
-    {
-        [self addSubview:self.imageView];
-    }
-    
-    if (!self.addressLabel.window)
-    {
-        [self addSubview:self.addressTitleLabel];
-        [self addSubview:self.addressLabel];
-    }
-    
-    if (!self.phoneNumberLabel.window)
-    {
-        [self addSubview:self.phoneNumberLabel];
-    }
-
-    if (!self.reviewLabel.window)
-    {
-        [self addSubview:self.reviewTitleLabel];
-        [self addSubview:self.reviewLabel];
+        [self loadView];
     }
     
     if (!self.backButton.window)
@@ -129,7 +108,7 @@ static CGFloat const kLabelLeftPadding = 20;
 
 #pragma mark - Custom Accessors
 
-//TODO: add business category update
+#warning add business category update
 - (void)setData:(YAResultsData *)data
 {
     _data = data;
@@ -138,6 +117,25 @@ static CGFloat const kLabelLeftPadding = 20;
     {
         [self updateViewContentAndFrames];
     }
+}
+
+
+- (UIScrollView *)scrollView
+{
+    if (!_scrollView)
+    {
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        _scrollView.backgroundColor = [UIColor clearColor];
+        _scrollView.scrollEnabled = YES;
+    }
+    
+    return _scrollView;
+}
+
+
+- (CGFloat)scrollViewContentHeight
+{
+    return self.nameLabel.frame.size.height + self.categoryLabel.frame.size.height + self.imageView.frame.size.height + self.addressTitleLabel.frame.size.height + self.addressLabel.frame.size.height + self.phoneNumberLabel.frame.size.height + self.reviewLabel.frame.size.height + self.reviewTitleLabel.frame.size.height + (kTopPadding * 3) + (kDefaultPadding * 1.5) + 4;
 }
 
 
@@ -339,6 +337,61 @@ static CGFloat const kLabelLeftPadding = 20;
     }
 
     return label;
+}
+
+
+- (void)loadScrollView
+{
+    if (!self.scrollView.window)
+    {
+        [self addSubview:self.scrollView];
+        [self.scrollView addSubview:self.nameLabel];
+        [self.scrollView addSubview:self.categoryLabel];
+        [self.scrollView addSubview:self.imageView];
+        [self.scrollView addSubview:self.addressTitleLabel];
+        [self.scrollView addSubview:self.addressLabel];
+        [self.scrollView addSubview:self.phoneNumberLabel];
+        [self.scrollView addSubview:self.reviewTitleLabel];
+        [self.scrollView addSubview:self.reviewLabel];
+        
+        self.scrollView.contentSize = CGSizeMake(self.frame.size.width, self.scrollViewContentHeight);
+    }
+}
+
+
+- (void)loadView
+{
+    if (!self.nameLabel.window)
+    {
+        [self addSubview:self.nameLabel];
+    }
+    
+    if (!self.categoryLabel.window)
+    {
+        [self addSubview:self.categoryLabel];
+    }
+    
+    if (!self.imageView.window)
+    {
+        [self addSubview:self.imageView];
+    }
+    
+    if (!self.addressLabel.window)
+    {
+        [self addSubview:self.addressTitleLabel];
+        [self addSubview:self.addressLabel];
+    }
+    
+    if (!self.phoneNumberLabel.window)
+    {
+        [self addSubview:self.phoneNumberLabel];
+    }
+    
+    if (!self.reviewLabel.window)
+    {
+        [self addSubview:self.reviewTitleLabel];
+        [self addSubview:self.reviewLabel];
+    }
 }
 
 

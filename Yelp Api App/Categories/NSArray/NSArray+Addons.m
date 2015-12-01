@@ -29,9 +29,7 @@ static NSString *const kRatingImageKey = @"rating_img_url";
     {
         return nil;
     }
-    
-    NSLog(@"%@", dictionary);
-    
+        
     NSMutableArray<YAResultsData *> *resultsArray = [[NSMutableArray alloc] initWithCapacity:dictionary.count];
     
     for (NSString *key in dictionary)
