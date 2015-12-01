@@ -15,6 +15,8 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, strong) UIView *selectedRowView;
+
 @end
 
 
@@ -23,6 +25,7 @@ static CGFloat const kCellHeight = 70;
 static NSString *const kCellBackgroundColor = @"F7F7F7";
 static CGFloat const kCellHeaderHeight = 10;
 static CGFloat const kDuration = 0.3;
+static NSString *const kSelectedCellColor = @"8E8E93";
 
 
 @implementation YAResultsView
@@ -89,6 +92,18 @@ static CGFloat const kDuration = 0.3;
 }
 
 
+- (UIView *)selectedRowView
+{
+    if (!_selectedRowView)
+    {
+        _selectedRowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, kCellHeight)];
+        _selectedRowView.backgroundColor = [UIColor colorWithHexString:kSelectedCellColor];
+    }
+    
+    return _selectedRowView;
+}
+
+
 - (void)setData:(NSArray<YAResultsData *> *)data
 {
     _data = data;
@@ -138,6 +153,7 @@ static CGFloat const kDuration = 0.3;
 
     cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     cell.backgroundColor = [[UIColor colorWithHexString:kCellBackgroundColor] colorWithAlphaComponent:0.9];
+    cell.selectedBackgroundView = self.selectedRowView;
     
     cell.layer.cornerRadius = 5;
     cell.layer.masksToBounds = YES;
@@ -153,6 +169,8 @@ static CGFloat const kDuration = 0.3;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     if ([self.delegate respondsToSelector:@selector(resultsViewSelectedBusinessWithData:)])
     {
         [self.delegate resultsViewSelectedBusinessWithData:(YAResultsData *)[self.data objectAtIndex:indexPath.section]];
