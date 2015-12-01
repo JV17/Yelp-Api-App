@@ -61,21 +61,6 @@ static NSString *const kCellHighlightedColor = @"1AD6FD";
 }
 
 
-//- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
-//{
-//    [super setHighlighted:highlighted animated:animated];
-//    
-//    if (highlighted)
-//    {
-//        self.backgroundColor = [[UIColor colorWithHexString:kCellHighlightedColor] colorWithAlphaComponent:0.9];
-//    }
-//    else
-//    {
-//        self.backgroundColor = [[UIColor colorWithHexString:kCellNotHighlightedColor] colorWithAlphaComponent:0.9];
-//    }
-//}
-
-
 - (void)layoutSubviews
 {
     [super layoutSubviews];
