@@ -8,13 +8,20 @@
 
 #import "YADetailsViewController.h"
 #import "YADetailsView.h"
+#import "YACopyRightView.h"
 
 
 @interface YADetailsViewController () <YADetailsViewDelegate>
 
 @property (nonatomic, strong) YADetailsView *detailsView;
 
+@property (nonatomic, strong) YACopyRightView *copyrightView;
+
 @end
+
+
+// copy right label
+static CGFloat const kLabelHeight = 20;
 
 
 @implementation YADetailsViewController
@@ -28,6 +35,7 @@
     [self.view gradientBackgroundWithFirstColor:[UIColor colorWithHexString:YARootControllerFirstBgColor] secondColor:[UIColor colorWithHexString:YARootControllerSecondBgColor]];
     
     [self.view addSubview:self.detailsView];
+    [self.view addSubview:self.copyrightView];
 }
 
 
@@ -59,6 +67,18 @@
     {
         self.detailsView.data = self.detailsData;
     }
+}
+
+
+- (YACopyRightView *)copyrightView
+{
+    if (!_copyrightView)
+    {
+        _copyrightView = [[YACopyRightView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - kLabelHeight, self.view.frame.size.width, kLabelHeight) copyrightText:YACopyrightText copyrightImage:[UIImage imageNamed:YACopyrightImageName]];
+        _copyrightView.backgroundColor = [UIColor clearColor];
+    }
+    
+    return _copyrightView;
 }
 
 

@@ -28,7 +28,7 @@
 
 @property (nonatomic, strong) UILabel *addressTitleLabel;
 
-@property (nonatomic, strong) UILabel *ReviewTitleLabel;
+@property (nonatomic, strong) UILabel *reviewTitleLabel;
 
 @end
 
@@ -113,6 +113,7 @@ static NSString *const kBackButtonImageName = @"back";
 
     if (!self.reviewLabel.window)
     {
+        [self addSubview:self.reviewTitleLabel];
         [self addSubview:self.reviewLabel];
     }
     
@@ -276,6 +277,24 @@ static NSString *const kBackButtonImageName = @"back";
 }
 
 
+- (UILabel *)reviewTitleLabel
+{
+    if (!_reviewTitleLabel)
+    {
+        _reviewTitleLabel = [self labelWithFrame:self.reviewTitleLabelFrame font:[UIFont fontWithName:YALatoRegular size:kNameLabelFontSize] shadow:YES];
+        _reviewTitleLabel.text = @"Latest Review";
+    }
+    
+    return _reviewTitleLabel;
+}
+
+
+- (CGRect)reviewTitleLabelFrame
+{
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.phoneNumberLabel.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width) * 2), kNameLabelHeight);
+}
+
+
 - (UILabel *)reviewLabel
 {
     if (!_reviewLabel)
@@ -293,7 +312,7 @@ static NSString *const kBackButtonImageName = @"back";
 - (CGRect)reviewLabelFrame
 {
     [_reviewLabel sizeToFit];
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.phoneNumberLabel.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width) * 2), self.reviewLabel.frame.size.height);
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.reviewTitleLabel.frame), self.frame.size.width - ((self.backButton.frame.size.width) * 2), self.reviewLabel.frame.size.height);
 }
 
 

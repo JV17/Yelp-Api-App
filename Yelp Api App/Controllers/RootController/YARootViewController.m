@@ -27,7 +27,7 @@
 
 @property (nonatomic, strong) UIButton *searchButton;
 
-@property (nonatomic, strong) YACopyRightView *copyRightView;
+@property (nonatomic, strong) YACopyRightView *copyrightView;
 
 @property (nonatomic, strong) YADemoView *demoView;
 
@@ -55,7 +55,6 @@ static NSString *const kSearchButtonImageName = @"plus-black";
 // copy right label
 static CGFloat const kLabelHeight = 20;
 
-
 // resutls view
 static CGFloat const kResutlsViewPadding = 10;
 
@@ -73,7 +72,7 @@ static CGFloat const kResutlsViewPadding = 10;
     [self.view addSubview:self.demoView];
     [self.view addSubview:self.searchButton];
     [self.view addSubview:self.searchView];
-    [self.view addSubview:self.copyRightView];
+    [self.view addSubview:self.copyrightView];
     
     [self.location requestLocation];
 }
@@ -208,15 +207,15 @@ static CGFloat const kResutlsViewPadding = 10;
 }
 
 
-- (YACopyRightView *)copyRightView
+- (YACopyRightView *)copyrightView
 {
-    if (!_copyRightView)
+    if (!_copyrightView)
     {
-        _copyRightView = [[YACopyRightView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - kLabelHeight, self.view.frame.size.width, kLabelHeight) copyrightText:YACopyrightText copyrightImage:[UIImage imageNamed:YACopyrightImageName]];
-        _copyRightView.backgroundColor = [UIColor clearColor];
+        _copyrightView = [[YACopyRightView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - kLabelHeight, self.view.frame.size.width, kLabelHeight) copyrightText:YACopyrightText copyrightImage:[UIImage imageNamed:YACopyrightImageName]];
+        _copyrightView.backgroundColor = [UIColor clearColor];
     }
     
-    return _copyRightView;
+    return _copyrightView;
 }
 
 
@@ -259,7 +258,7 @@ static CGFloat const kResutlsViewPadding = 10;
 
 - (CGFloat)resultsViewHeight
 {
-    return (self.view.frame.size.height - self.searchButton.frame.size.height - self.copyRightView.frame.size.height - (kResutlsViewPadding * 2));
+    return (self.view.frame.size.height - self.searchButton.frame.size.height - self.copyrightView.frame.size.height - (kResutlsViewPadding * 2));
 }
 
 
