@@ -17,7 +17,7 @@ static NSString *const kBusinessCategoryKey = @"categories";
 static NSString *const kPhoneNumberKey = @"display_phone";
 static NSString *const kLocationKey = @"location";
 static NSString *const kAddressKey = @"display_address";
-static NSString *const kShortDescriptionKey = @"snippet_text";
+static NSString *const kReviewKey = @"snippet_text";
 static NSString *const kRatingImageKey = @"rating_img_url";
 
 
@@ -29,6 +29,8 @@ static NSString *const kRatingImageKey = @"rating_img_url";
     {
         return nil;
     }
+    
+    NSLog(@"%@", dictionary);
     
     NSMutableArray<YAResultsData *> *resultsArray = [[NSMutableArray alloc] initWithCapacity:dictionary.count];
     
@@ -49,7 +51,18 @@ static NSString *const kRatingImageKey = @"rating_img_url";
                 data.ratingImage = [UIImage imageWithURL:businessDic[kRatingImageKey]];
             });
             
-            data.businessCategory = businessDic[kBusinessCategoryKey];
+            NSArray *categories = businessDic[kBusinessCategoryKey];
+            
+            if (categories.count)
+            {
+                NSArray *category = categories[0];
+                
+                if (category.count)
+                {
+                    data.businessCategory = category[0];
+                }
+            }
+            
             data.phoneNumber = businessDic[kPhoneNumberKey];
             
             NSDictionary *addressDic = businessDic[kLocationKey];
@@ -64,7 +77,7 @@ static NSString *const kRatingImageKey = @"rating_img_url";
                 data.address = [NSString stringWithFormat:@"%@", addressArray[0]];
             }
             
-            data.shortDescription = businessDic[kShortDescriptionKey];
+            data.review = businessDic[kReviewKey];
             
             [resultsArray addObject:data];
         }

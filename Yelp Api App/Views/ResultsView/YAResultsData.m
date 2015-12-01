@@ -11,7 +11,7 @@
 
 @implementation YAResultsData
 
-- (instancetype)initWithName:(NSString *)name imagePreview:(UIImage *)image ratingImage:(UIImage *)ratingImage businessCategory:(NSString *)category phoneNumber:(NSString *)phone address:(NSString *)address shortDescription:(NSString *)description
+- (instancetype)initWithName:(NSString *)name imagePreview:(UIImage *)image ratingImage:(UIImage *)ratingImage businessCategory:(NSString *)category phoneNumber:(NSString *)phone address:(NSString *)address review:(NSString *)review
 {
     self = [super init];
     
@@ -23,7 +23,7 @@
         _businessCategory = category;
         _phoneNumber = phone;
         _address = address;
-        _shortDescription = description;
+        _review = review;
     }
     
     return self;

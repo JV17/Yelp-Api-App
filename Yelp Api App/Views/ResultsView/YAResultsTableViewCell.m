@@ -18,7 +18,7 @@
 
 @property (nonatomic, strong) UILabel *titleLabel;
 
-@property (nonatomic, strong) UILabel *descriptionLabel;
+@property (nonatomic, strong) UILabel *reviewLabel;
 
 @property (nonatomic, strong) UIImageView *ratingImageView;
 
@@ -68,7 +68,7 @@ static NSString *const kCellHighlightedColor = @"1AD6FD";
     self.borderView.frame = self.borderViewFrame;
     self.previewImageView.frame = self.previewImageViewFrame;
     self.titleLabel.frame = self.titleLabelFrame;
-    self.descriptionLabel.frame = self.descriptionLabelFrame;
+    self.reviewLabel.frame = self.reviewLabelFrame;
     self.ratingImageView.frame = self.ratingImageViewFrame;
     self.indicatorImageView.frame = self.indicatorImageViewFrame;
 }
@@ -90,8 +90,8 @@ static NSString *const kCellHighlightedColor = @"1AD6FD";
         self.titleLabel.text = self.data.name;
         [self addSubview:self.titleLabel];
         
-        self.descriptionLabel.text = self.data.shortDescription;
-        [self addSubview:self.descriptionLabel];
+        self.reviewLabel.text = self.data.review;
+        [self addSubview:self.reviewLabel];
         
         self.ratingImageView.image = self.data.ratingImage;
         [self addSubview:self.ratingImageView];
@@ -156,23 +156,23 @@ static NSString *const kCellHighlightedColor = @"1AD6FD";
 }
 
 
-- (UILabel *)descriptionLabel
+- (UILabel *)reviewLabel
 {
-    if (!_descriptionLabel)
+    if (!_reviewLabel)
     {
-        _descriptionLabel = [[UILabel alloc] initWithFrame:self.descriptionLabelFrame];
-        _descriptionLabel.backgroundColor = [UIColor clearColor];
-        _descriptionLabel.font = [UIFont fontWithName:YALatoLightFont size:kLabelFontSize];
-        _descriptionLabel.textColor = [UIColor colorWithHexString:kLabelTextColor];
-        _descriptionLabel.numberOfLines = 0;
-        _descriptionLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        _reviewLabel = [[UILabel alloc] initWithFrame:self.reviewLabelFrame];
+        _reviewLabel.backgroundColor = [UIColor clearColor];
+        _reviewLabel.font = [UIFont fontWithName:YALatoLightFont size:kLabelFontSize];
+        _reviewLabel.textColor = [UIColor colorWithHexString:kLabelTextColor];
+        _reviewLabel.numberOfLines = 0;
+        _reviewLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     }
     
-    return _descriptionLabel;
+    return _reviewLabel;
 }
 
 
-- (CGRect)descriptionLabelFrame
+- (CGRect)reviewLabelFrame
 {
     return CGRectMake(CGRectGetMaxX(self.previewImageView.frame) + kLeftPadding, CGRectGetMaxY(self.titleLabel.frame), self.titleLabel.frame.size.width, (kLabelHeight * 2));
 }
@@ -191,7 +191,7 @@ static NSString *const kCellHighlightedColor = @"1AD6FD";
 
 - (CGRect)ratingImageViewFrame
 {
-    return CGRectMake(CGRectGetMaxX(self.previewImageView.frame) + kLeftPadding, CGRectGetMaxY(self.descriptionLabel.frame) + 4, kRatingImageWidth, kRatingImageHeight);
+    return CGRectMake(CGRectGetMaxX(self.previewImageView.frame) + kLeftPadding, CGRectGetMaxY(self.reviewLabel.frame) + 4, kRatingImageWidth, kRatingImageHeight);
 }
 
 

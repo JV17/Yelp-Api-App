@@ -50,9 +50,9 @@
 
 
 /**
- The business short description.
+ The business latest review.
  */
-@property (nonatomic, strong) NSString *shortDescription;
+@property (nonatomic, strong) NSString *review;
 
 
 #pragma mark - Intializers
@@ -72,13 +72,13 @@
     The business phone number.
  @param address
     The business address.
- @param description
-    The business short description.
+ @param review
+    The business latest review.
  
  @return
-    An instancetype of @YAResultsData with image preview, ratingImage, business name, category, phone number, address and short description.
+    An instancetype of @YAResultsData with image preview, ratingImage, business name, category, phone number, address and short review.
  */
-- (instancetype)initWithName:(NSString *)name imagePreview:(UIImage *)image ratingImage:(UIImage *)ratingImage businessCategory:(NSString *)category phoneNumber:(NSString *)phone address:(NSString *)address shortDescription:(NSString *)description;
+- (instancetype)initWithName:(NSString *)name imagePreview:(UIImage *)image ratingImage:(UIImage *)ratingImage businessCategory:(NSString *)category phoneNumber:(NSString *)phone address:(NSString *)address review:(NSString *)review;
 
 
 @end

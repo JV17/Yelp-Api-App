@@ -22,9 +22,13 @@
 
 @property (nonatomic, strong) UILabel *addressLabel;
 
-@property (nonatomic, strong) UILabel *shortDescriptionLabel;
+@property (nonatomic, strong) UILabel *reviewLabel;
 
 @property (nonatomic, strong) UIButton *backButton;
+
+@property (nonatomic, strong) UILabel *addressTitleLabel;
+
+@property (nonatomic, strong) UILabel *ReviewTitleLabel;
 
 @end
 
@@ -38,9 +42,9 @@ static CGFloat const kMaxImageWidth = 160;
 static NSString *const kImageBorderColor = @"2B2B2B";
 
 // name label
-static CGFloat const kNameLabelHeight = 30;
+static CGFloat const kNameLabelHeight = 26;
 static CGFloat const kNameLabelFontSize = 20;
-static CGFloat const kLabelFontSize = 16;
+static CGFloat const kLabelFontSize = 18;
 static CGFloat const kLabelHeight = 20;
 
 // back button
@@ -85,12 +89,11 @@ static NSString *const kBackButtonImageName = @"back";
     {
         [self addSubview:self.nameLabel];
     }
-    
-#warning fix issue with business categories saving as NSArray.
-//    if (!self.categoryLabel.window)
-//    {
-//        [self addSubview:self.categoryLabel];
-//    }
+
+    if (!self.categoryLabel.window)
+    {
+        [self addSubview:self.categoryLabel];
+    }
     
     if (!self.imageView.window)
     {
@@ -99,6 +102,7 @@ static NSString *const kBackButtonImageName = @"back";
     
     if (!self.addressLabel.window)
     {
+        [self addSubview:self.addressTitleLabel];
         [self addSubview:self.addressLabel];
     }
     
@@ -107,9 +111,9 @@ static NSString *const kBackButtonImageName = @"back";
         [self addSubview:self.phoneNumberLabel];
     }
 
-    if (!self.shortDescriptionLabel.window)
+    if (!self.reviewLabel.window)
     {
-        [self addSubview:self.shortDescriptionLabel];
+        [self addSubview:self.reviewLabel];
     }
     
     if (!self.backButton.window)
@@ -128,21 +132,7 @@ static NSString *const kBackButtonImageName = @"back";
     
     if (self.data)
     {
-        self.nameLabel.text = self.data.name;
-        
-        self.imageView.frame = self.imageViewFrame;
-        self.imageView.image = self.mainImage;
-        
-        self.shortDescriptionLabel.text = self.data.shortDescription;
-        self.shortDescriptionLabel.frame = self.shortDescriptionLabelFrame;
-
-        self.phoneNumberLabel.text = self.data.phoneNumber;
-        self.phoneNumberLabel.frame = self.phoneNumberLabelFrame;
-
-        self.addressLabel.text = self.data.address;
-        self.addressLabel.frame = self.addressLabelFrame;
-        
-        [self setupDetailsView];
+        [self updateViewContentAndFrames];
     }
 }
 
@@ -204,63 +194,6 @@ static NSString *const kBackButtonImageName = @"back";
 }
 
 
-- (UILabel *)addressLabel
-{
-    if (!_addressLabel)
-    {
-        _addressLabel = [self labelWithFrame:self.addressLabelFrame font:[UIFont fontWithName:YALatoRegular size:kLabelFontSize] shadow:NO];
-        _addressLabel.text = self.data.address;
-    }
-    
-    return _addressLabel;
-}
-
-
-- (CGRect)addressLabelFrame
-{
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.imageView.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width) * 2), kLabelHeight);
-}
-
-
-- (UILabel *)phoneNumberLabel
-{
-    if (!_phoneNumberLabel)
-    {
-        _phoneNumberLabel = [self labelWithFrame:self.phoneNumberLabelFrame font:[UIFont fontWithName:YALatoRegular size:kLabelFontSize] shadow:NO];
-        _phoneNumberLabel.text = self.data.phoneNumber;
-    }
-    
-    return _phoneNumberLabel;
-}
-
-
-- (CGRect)phoneNumberLabelFrame
-{
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.addressLabel.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width) * 2), kLabelHeight);
-}
-
-
-- (UILabel *)shortDescriptionLabel
-{
-    if (!_shortDescriptionLabel)
-    {
-        _shortDescriptionLabel = [self labelWithFrame:CGRectZero font:[UIFont fontWithName:YALatoRegular size:kLabelFontSize] shadow:NO];
-        _shortDescriptionLabel.numberOfLines = 0;
-        _shortDescriptionLabel.text = self.data.shortDescription;
-        _shortDescriptionLabel.frame = self.shortDescriptionLabelFrame;
-    }
-    
-    return _shortDescriptionLabel;
-}
-
-
-- (CGRect)shortDescriptionLabelFrame
-{
-    [_shortDescriptionLabel sizeToFit];
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.phoneNumberLabel.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width) * 2), self.shortDescriptionLabel.frame.size.height);
-}
-
-
 - (UIImageView *)imageView
 {
     if (!_imageView)
@@ -285,7 +218,82 @@ static NSString *const kBackButtonImageName = @"back";
 
 - (CGRect)imageViewFrame
 {
-    return CGRectMake(((self.frame.size.width / 2) - (kMaxImageWidth / 2)), CGRectGetMaxY(self.nameLabel.frame) + kDefaultPadding, kMaxImageWidth, kMaxImageWidth);
+    return CGRectMake(((self.frame.size.width / 2) - (kMaxImageWidth / 2)), (CGRectGetMaxY(self.categoryLabel.frame) + (kDefaultPadding * 1.5)), kMaxImageWidth, kMaxImageWidth);
+}
+
+
+- (UILabel *)addressTitleLabel
+{
+    if (!_addressTitleLabel)
+    {
+        _addressTitleLabel = [self labelWithFrame:self.addressTitleLabelFrame font:[UIFont fontWithName:YALatoRegular size:kNameLabelFontSize] shadow:YES];
+        _addressTitleLabel.text = @"Contact Information";
+    }
+    
+    return _addressTitleLabel;
+}
+
+
+- (CGRect)addressTitleLabelFrame
+{
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.imageView.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width) * 2), kNameLabelHeight);
+}
+
+
+- (UILabel *)addressLabel
+{
+    if (!_addressLabel)
+    {
+        _addressLabel = [self labelWithFrame:self.addressLabelFrame font:[UIFont fontWithName:YALatoRegular size:kLabelFontSize] shadow:NO];
+        _addressLabel.text = self.data.address;
+    }
+    
+    return _addressLabel;
+}
+
+
+- (CGRect)addressLabelFrame
+{
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.addressTitleLabel.frame) + 2, self.frame.size.width - ((self.backButton.frame.size.width) * 2), kLabelHeight);
+}
+
+
+- (UILabel *)phoneNumberLabel
+{
+    if (!_phoneNumberLabel)
+    {
+        _phoneNumberLabel = [self labelWithFrame:self.phoneNumberLabelFrame font:[UIFont fontWithName:YALatoRegular size:kLabelFontSize] shadow:NO];
+        _phoneNumberLabel.text = self.data.phoneNumber;
+    }
+    
+    return _phoneNumberLabel;
+}
+
+
+- (CGRect)phoneNumberLabelFrame
+{
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.addressLabel.frame) + 2, self.frame.size.width - ((self.backButton.frame.size.width) * 2), kLabelHeight);
+}
+
+
+- (UILabel *)reviewLabel
+{
+    if (!_reviewLabel)
+    {
+        _reviewLabel = [self labelWithFrame:CGRectZero font:[UIFont fontWithName:YALatoRegular size:kLabelFontSize] shadow:NO];
+        _reviewLabel.numberOfLines = 0;
+        _reviewLabel.text = self.data.review;
+        _reviewLabel.frame = self.reviewLabelFrame;
+    }
+    
+    return _reviewLabel;
+}
+
+
+- (CGRect)reviewLabelFrame
+{
+    [_reviewLabel sizeToFit];
+    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.phoneNumberLabel.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width) * 2), self.reviewLabel.frame.size.height);
 }
 
 
@@ -308,6 +316,26 @@ static NSString *const kBackButtonImageName = @"back";
     }
 
     return label;
+}
+
+
+- (void)updateViewContentAndFrames
+{
+    self.nameLabel.text = self.data.name;
+    
+    self.imageView.frame = self.imageViewFrame;
+    self.imageView.image = self.mainImage;
+    
+    self.reviewLabel.text = self.data.review;
+    self.reviewLabel.frame = self.reviewLabelFrame;
+    
+    self.phoneNumberLabel.text = self.data.phoneNumber;
+    self.phoneNumberLabel.frame = self.phoneNumberLabelFrame;
+    
+    self.addressLabel.text = self.data.address;
+    self.addressLabel.frame = self.addressLabelFrame;
+    
+    [self setupDetailsView];
 }
 
 
