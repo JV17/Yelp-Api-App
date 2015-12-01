@@ -398,18 +398,19 @@ static CGFloat const kLabelLeftPadding = 20;
 - (void)updateViewContentAndFrames
 {
     self.nameLabel.text = self.data.name;
-    
+    self.categoryLabel.text = self.data.businessCategory;
+
     self.imageView.frame = self.imageViewFrame;
     self.imageView.image = self.mainImage;
-    
-    self.reviewLabel.text = self.data.review;
-    self.reviewLabel.frame = self.reviewLabelFrame;
-    
+        
     self.phoneNumberLabel.text = self.data.phoneNumber;
     self.phoneNumberLabel.frame = self.phoneNumberLabelFrame;
     
     self.addressLabel.text = self.data.address;
     self.addressLabel.frame = self.addressLabelFrame;
+
+    self.reviewLabel.text = self.data.review;
+    self.reviewLabel.frame = self.reviewLabelFrame;
     
     [self setupDetailsView];
 }
