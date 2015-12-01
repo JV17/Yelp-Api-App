@@ -26,10 +26,10 @@
  
  @param error
     The errer generated from the location request.
- @param
+ @param errorMessage
     A user friendly error message.
  */
-- (void)locationFinishedWithError:(NSError *)error errorMessage:(NSString *)errorMessages;
+- (void)locationFinishedWithError:(NSError *)error errorMessage:(NSString *)errorMessage;
 
 @end
 

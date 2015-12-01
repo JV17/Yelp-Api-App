@@ -92,9 +92,9 @@ static CGFloat const kResutlsViewPadding = 10;
 }
 
 
-- (void)locationFinishedWithError:(NSError *)error errorMessage:(NSString *)errorMessages
+- (void)locationFinishedWithError:(NSError *)error errorMessage:(NSString *)errorMessage
 {
-    NSLog(@"error: %@ error message: %@", error, errorMessages);
+    [self showErrorWithError:error errorMessage:errorMessage];
 }
 
 
@@ -111,6 +111,11 @@ static CGFloat const kResutlsViewPadding = 10;
     
     [self.network queryBusinessInformationWithTerm:searchString location:userLocation completionHandler:^(NSDictionary *jsonDictionary, NSError *error)
     {
+        if (error)
+        {
+            [self showErrorWithError:error errorMessage:error.domain];
+        }
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             self.resultsData = [NSArray arrayFromResultsDictionary:jsonDictionary];
             [self.view addSubview:self.resultsView];
@@ -339,6 +344,23 @@ static CGFloat const kResutlsViewPadding = 10;
             }
         }];
     }
+}
+
+
+#pragma mark - Error Handling
+
+- (void)showErrorWithError:(NSError *)error errorMessage:(NSString *)errorMessage
+{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:error.domain
+                                                                               message:errorMessage
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        [alertController dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [alertController addAction: action];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 @end
