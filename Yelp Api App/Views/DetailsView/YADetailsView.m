@@ -52,6 +52,9 @@ static CGFloat const kBackButtonTopPadding = 20;
 static CGFloat const kBackButtonSize = 50;
 static NSString *const kBackButtonImageName = @"back";
 
+// labels
+static CGFloat const kLabelLeftPadding = 20;
+
 
 @implementation YADetailsView
 
@@ -255,7 +258,7 @@ static NSString *const kBackButtonImageName = @"back";
 
 - (CGRect)addressLabelFrame
 {
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.addressTitleLabel.frame) + 2, self.frame.size.width - ((self.backButton.frame.size.width) * 2), kLabelHeight);
+    return CGRectMake(kLabelLeftPadding, CGRectGetMaxY(self.addressTitleLabel.frame) + 2, self.frame.size.width - (kLabelLeftPadding * 2), kLabelHeight);
 }
 
 
@@ -273,7 +276,7 @@ static NSString *const kBackButtonImageName = @"back";
 
 - (CGRect)phoneNumberLabelFrame
 {
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.addressLabel.frame) + 2, self.frame.size.width - ((self.backButton.frame.size.width) * 2), kLabelHeight);
+    return CGRectMake(kLabelLeftPadding, CGRectGetMaxY(self.addressLabel.frame) + 2, self.frame.size.width - (kLabelLeftPadding * 2), kLabelHeight);
 }
 
 
@@ -291,7 +294,7 @@ static NSString *const kBackButtonImageName = @"back";
 
 - (CGRect)reviewTitleLabelFrame
 {
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.phoneNumberLabel.frame) + kTopPadding, self.frame.size.width - ((self.backButton.frame.size.width) * 2), kNameLabelHeight);
+    return CGRectMake(kLabelLeftPadding, CGRectGetMaxY(self.phoneNumberLabel.frame) + kTopPadding, self.frame.size.width - (kLabelLeftPadding * 2), kNameLabelHeight);
 }
 
 
@@ -299,10 +302,11 @@ static NSString *const kBackButtonImageName = @"back";
 {
     if (!_reviewLabel)
     {
-        _reviewLabel = [self labelWithFrame:CGRectZero font:[UIFont fontWithName:YALatoRegular size:kLabelFontSize] shadow:NO];
-        _reviewLabel.numberOfLines = 0;
+        _reviewLabel = [self labelWithFrame:self.reviewLabelFrame font:[UIFont fontWithName:YALatoRegular size:kLabelFontSize] shadow:NO];
         _reviewLabel.text = self.data.review;
-        _reviewLabel.frame = self.reviewLabelFrame;
+        _reviewLabel.numberOfLines = 0;
+        _reviewLabel.adjustsFontSizeToFitWidth = NO;
+        [_reviewLabel sizeToFit];
     }
     
     return _reviewLabel;
@@ -311,8 +315,7 @@ static NSString *const kBackButtonImageName = @"back";
 
 - (CGRect)reviewLabelFrame
 {
-    [_reviewLabel sizeToFit];
-    return CGRectMake(CGRectGetMaxX(self.backButton.frame), CGRectGetMaxY(self.reviewTitleLabel.frame), self.frame.size.width - ((self.backButton.frame.size.width) * 2), self.reviewLabel.frame.size.height);
+    return CGRectMake(kLabelLeftPadding, CGRectGetMaxY(self.reviewTitleLabel.frame), self.frame.size.width - (kLabelLeftPadding * 2), kNameLabelHeight);
 }
 
 
@@ -325,6 +328,7 @@ static NSString *const kBackButtonImageName = @"back";
     label.font = font;
     label.textColor = [UIColor colorWithHexString:kTextColor];
     label.textAlignment = NSTextAlignmentCenter;
+    label.lineBreakMode = NSLineBreakByTruncatingTail;
     
     if (shadow)
     {
