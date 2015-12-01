@@ -108,7 +108,6 @@ static CGFloat const kLabelLeftPadding = 20;
 
 #pragma mark - Custom Accessors
 
-#warning add business category update
 - (void)setData:(YAResultsData *)data
 {
     _data = data;
