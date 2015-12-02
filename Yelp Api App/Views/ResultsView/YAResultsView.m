@@ -73,7 +73,7 @@ static NSString *const kSelectedCellColor = @"8E8E93";
     
     for (YAResultsData *cellData in self.data)
     {
-        NSString *cellIdentifier = [NSString stringWithFormat:@"CellWithIndex%d", index];
+        NSString *cellIdentifier = [NSString stringWithFormat:@"CellWithIndex%zd", index];
     
         YAResultsTableViewCell *cell = [[YAResultsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         
