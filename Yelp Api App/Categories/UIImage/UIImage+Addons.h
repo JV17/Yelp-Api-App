@@ -25,6 +25,14 @@
 + (UIImage *)imageWithSourceImage:(UIImage *)sourceImage scaledToWidth:(CGFloat)newWidth;
 
 
-+ (UIImage *)imageWithURL:(NSString *)url;
+/**
+ Retrives an image from provided url in the background thread. 
+ 
+ @param url
+    The image url.
+ @param completion
+    The completion block to return downloaded image or error.
+ */
++ (void)imageWithURL:(NSString *)url completion:(void (^)(UIImage *image, NSError *error))completion;
 
 @end

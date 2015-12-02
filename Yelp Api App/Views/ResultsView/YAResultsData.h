@@ -26,9 +26,21 @@
 
 
 /**
+ The business image preview url.
+ */
+@property (nonatomic, strong) NSString *imagePreviewURL;
+
+
+/**
  The business rating image.
  */
 @property (nonatomic, strong) UIImage *ratingImage;
+
+
+/**
+ The business rating image url.
+ */
+@property (nonatomic, strong) NSString *ratingImageURL;
 
 
 /**

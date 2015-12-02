@@ -109,20 +109,22 @@ static CGFloat const kResutlsViewPadding = 10;
     [KVNProgress setConfiguration:[KVNProgressConfiguration defaultConfiguration]];
     [KVNProgress showWithStatus:@"Loading"];
     
-    [self.network queryBusinessInformationWithTerm:searchString location:userLocation completionHandler:^(NSDictionary *jsonDictionary, NSError *error)
-    {
+    [self.network queryBusinessInformationWithTerm:searchString location:userLocation completionHandler:^(NSDictionary *jsonDictionary, NSError *error) {
+        
         if (error)
         {
             [self showErrorWithError:error errorMessage:error.domain];
         }
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.resultsData = [NSArray arrayFromResultsDictionary:jsonDictionary];
-            [self.view addSubview:self.resultsView];
-
-            [KVNProgress showSuccessWithStatus:@"Success"];
-            [self performSelector:@selector(dismissProgress) withObject:nil afterDelay:0.7];
-        });
+        else
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.resultsData = [NSArray arrayFromResultsDictionary:jsonDictionary];
+                [self.view addSubview:self.resultsView];
+                
+                [KVNProgress showSuccessWithStatus:@"Success"];
+                [self performSelector:@selector(dismissProgress) withObject:nil afterDelay:0.7];
+            });
+        }
     }];
 }
 

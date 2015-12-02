@@ -40,14 +40,9 @@ static NSString *const kRatingImageKey = @"rating_img_url";
             
             YAResultsData *data = [[YAResultsData alloc] init];
             data.name = businessDic[kNameKey];
-            
-            dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                data.imagePreview = [UIImage imageWithURL:businessDic[kImagePreviewKey]];
-            });
-            
-            dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                data.ratingImage = [UIImage imageWithURL:businessDic[kRatingImageKey]];
-            });
+        
+            data.imagePreviewURL = businessDic[kImagePreviewKey];
+            data.ratingImageURL = businessDic[kRatingImageKey];
             
             NSArray *categories = businessDic[kBusinessCategoryKey];
             

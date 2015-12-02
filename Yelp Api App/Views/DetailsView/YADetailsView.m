@@ -103,6 +103,8 @@ static CGFloat const kLabelLeftPadding = 20;
     {
         [self addSubview:self.backButton];
     }
+    
+    [self loadImageInBackgroundThread];
 }
 
 
@@ -213,7 +215,7 @@ static CGFloat const kLabelLeftPadding = 20;
 
 - (UIImage *)mainImage
 {
-    return [UIImage imageWithSourceImage:self.data.imagePreview scaledToWidth:kMaxImageWidth];
+    return [UIImage imageNamed:YANoImageName];
 }
 
 
@@ -391,6 +393,17 @@ static CGFloat const kLabelLeftPadding = 20;
         [self addSubview:self.reviewTitleLabel];
         [self addSubview:self.reviewLabel];
     }
+}
+
+
+- (void)loadImageInBackgroundThread
+{
+    [UIImage imageWithURL:self.data.imagePreviewURL completion:^(UIImage *image, NSError *error) {
+        if (image)
+        {
+            self.imageView.image = [UIImage imageWithSourceImage:image scaledToWidth:kMaxImageWidth];
+        }
+    }];
 }
 
 

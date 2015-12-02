@@ -84,7 +84,7 @@ static NSString *const kCellHighlightedColor = @"1AD6FD";
     {
         [self addSubview:self.borderView];
         
-        self.previewImageView.image = self.data.imagePreview;
+        self.previewImageView.image = [UIImage imageNamed:YANoImageName];
         [self addSubview:self.previewImageView];
         
         self.titleLabel.text = self.data.name;
@@ -93,11 +93,31 @@ static NSString *const kCellHighlightedColor = @"1AD6FD";
         self.reviewLabel.text = self.data.review;
         [self addSubview:self.reviewLabel];
         
-        self.ratingImageView.image = self.data.ratingImage;
+        self.ratingImageView.image = [UIImage imageNamed:YANoImageName];
         [self addSubview:self.ratingImageView];
         
         [self addSubview:self.indicatorImageView];
+        
+        [self loadImagesInBackgroundThread];
     }
+}
+
+
+- (void)loadImagesInBackgroundThread
+{
+    [UIImage imageWithURL:self.data.imagePreviewURL completion:^(UIImage *image, NSError *error) {
+        if (image)
+        {
+            self.previewImageView.image = image;
+        }
+    }];
+
+    [UIImage imageWithURL:self.data.ratingImageURL completion:^(UIImage *image, NSError *error) {
+        if (image)
+        {
+            self.ratingImageView.image = image;
+        }
+    }];
 }
 
 

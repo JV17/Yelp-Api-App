@@ -27,17 +27,37 @@
 }
 
 
-+ (UIImage *)imageWithURL:(NSString *)url
++ (void)imageWithURL:(NSString *)url completion:(void (^)(UIImage *image, NSError *error))completion
 {
-    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:url]];
-    UIImage *image = [UIImage imageWithData:data];
-    
-    if (!image)
+    if (!url.length)
     {
-        return [UIImage imageNamed:YANoImageName];
+        return;
     }
     
-    return image;
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+    
+    dispatch_async(queue, ^{
+    
+        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (!imageData)
+            {
+                NSDictionary *userInfo = [NSDictionary errorDictionaryWithDescription:@"Error retrieving image from url."
+                                                                               reason:@"No data from image url."
+                                                                           suggestion:@"Check if provided url is correct."];
+                
+                NSError *noDataError = [NSError errorWithDomain:@"No Image Data" code:400 userInfo:userInfo];
+                completion(nil, noDataError);
+            }
+            else
+            {
+                UIImage *image = [UIImage imageWithData:imageData];
+                completion(image, nil);
+            }
+        });
+    });
 }
 
 @end
