@@ -55,6 +55,8 @@ static NSString *const kCellHighlightedColor = @"1AD6FD";
 
 @implementation YAResultsTableViewCell
 
+#pragma mark - Lifecycle
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
@@ -74,6 +76,28 @@ static NSString *const kCellHighlightedColor = @"1AD6FD";
 }
 
 
+- (void)loadCell
+{
+    [self addSubview:self.borderView];
+    
+    self.previewImageView.image = [UIImage imageNamed:YANoImageName];
+    [self addSubview:self.previewImageView];
+    
+    self.titleLabel.text = self.data.name;
+    [self addSubview:self.titleLabel];
+    
+    self.reviewLabel.text = self.data.review;
+    [self addSubview:self.reviewLabel];
+    
+    self.ratingImageView.image = [UIImage imageNamed:YANoImageName];
+    [self addSubview:self.ratingImageView];
+    
+    [self addSubview:self.indicatorImageView];
+    
+    [self loadImagesInBackgroundThread];
+}
+
+
 #pragma mark - Custom Accessors
 
 - (void)setData:(YAResultsData *)data
@@ -82,23 +106,7 @@ static NSString *const kCellHighlightedColor = @"1AD6FD";
     
     if (data)
     {
-        [self addSubview:self.borderView];
-        
-        self.previewImageView.image = [UIImage imageNamed:YANoImageName];
-        [self addSubview:self.previewImageView];
-        
-        self.titleLabel.text = self.data.name;
-        [self addSubview:self.titleLabel];
-        
-        self.reviewLabel.text = self.data.review;
-        [self addSubview:self.reviewLabel];
-        
-        self.ratingImageView.image = [UIImage imageNamed:YANoImageName];
-        [self addSubview:self.ratingImageView];
-        
-        [self addSubview:self.indicatorImageView];
-        
-        [self loadImagesInBackgroundThread];
+        [self loadCell];
     }
 }
 
