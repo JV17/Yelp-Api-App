@@ -17,6 +17,8 @@
 
 @property (nonatomic, strong) UIView *selectedRowView;
 
+@property (nonatomic, strong) NSArray<UITableViewCell *> *tableViewCells;
+
 @end
 
 
@@ -60,7 +62,63 @@ static NSString *const kSelectedCellColor = @"8E8E93";
 
 - (void)setupResultsView
 {
-    [self addSubview:self.tableView];
+    [self loadTableViewCells];
+}
+
+
+- (void)loadTableViewCells
+{
+    NSMutableArray *cellArray = [[NSMutableArray alloc] initWithCapacity:self.data.count];
+    NSInteger index = 0;
+    
+    for (YAResultsData *cellData in self.data)
+    {
+        NSString *cellIdentifier = [NSString stringWithFormat:@"CellWithIndex%d", index];
+    
+        YAResultsTableViewCell *cell = [[YAResultsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        
+        // Remove seperator inset
+        if ([cell respondsToSelector:@selector(setSeparatorInset:)])
+        {
+            [cell setSeparatorInset:UIEdgeInsetsZero];
+        }
+        
+        // Prevent the cell from inheriting the Table View's margin settings
+        if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)])
+        {
+            [cell setPreservesSuperviewLayoutMargins:NO];
+        }
+        
+        // Explictly set your cell's layout margins
+        if ([cell respondsToSelector:@selector(setLayoutMargins:)])
+        {
+            [cell setLayoutMargins:UIEdgeInsetsZero];
+        }
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+        cell.backgroundColor = [[UIColor colorWithHexString:kCellBackgroundColor] colorWithAlphaComponent:0.9];
+        cell.selectedBackgroundView = self.selectedRowView;
+        
+        cell.layer.cornerRadius = 5;
+        cell.layer.masksToBounds = YES;
+        
+        cell.data = cellData;
+        
+        [cellArray addObject:cell];
+        
+        index++;
+    }
+    
+    self.tableViewCells = [cellArray copy];
+    
+    if (!self.tableView.window)
+    {
+        [self addSubview:self.tableView];
+    }
+    else
+    {
+        [self.tableView reloadData];
+    }
 }
 
 
@@ -76,11 +134,11 @@ static NSString *const kSelectedCellColor = @"8E8E93";
         _tableView.showsHorizontalScrollIndicator = NO;
         _tableView.showsVerticalScrollIndicator = NO;
         
-        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0"))
+        if ([_tableView respondsToSelector:@selector(setLayoutMargins:)])
         {
             _tableView.layoutMargins = UIEdgeInsetsZero;
         }
-        
+
         _tableView.bounces = YES;
         _tableView.scrollEnabled = YES;
         _tableView.delegate = self;
@@ -110,7 +168,7 @@ static NSString *const kSelectedCellColor = @"8E8E93";
     
     if (data.count)
     {
-        [self.tableView reloadData];
+        [self loadTableViewCells];
     }
 }
 
@@ -119,51 +177,7 @@ static NSString *const kSelectedCellColor = @"8E8E93";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"Cell";
-    
-    YAResultsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if (cell == nil)
-    {
-        cell = [[YAResultsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
-    
-    if ([self.tableView respondsToSelector:@selector(setLayoutMargins:)])
-    {
-        self.tableView.layoutMargins = UIEdgeInsetsZero;
-    }
-    
-    // Remove seperator inset
-    if ([cell respondsToSelector:@selector(setSeparatorInset:)])
-    {
-        [cell setSeparatorInset:UIEdgeInsetsZero];
-    }
-    
-    // Prevent the cell from inheriting the Table View's margin settings
-    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)])
-    {
-        [cell setPreservesSuperviewLayoutMargins:NO];
-    }
-    
-    // Explictly set your cell's layout margins
-    if ([cell respondsToSelector:@selector(setLayoutMargins:)])
-    {
-        [cell setLayoutMargins:UIEdgeInsetsZero];
-    }
-
-    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-    cell.backgroundColor = [[UIColor colorWithHexString:kCellBackgroundColor] colorWithAlphaComponent:0.9];
-    cell.selectedBackgroundView = self.selectedRowView;
-    
-    cell.layer.cornerRadius = 5;
-    cell.layer.masksToBounds = YES;
-    
-    if (indexPath.section < self.data.count)
-    {
-        cell.data = (YAResultsData *)[self.data objectAtIndex:indexPath.section];
-    }
-    
-    return cell;
+    return self.tableViewCells[indexPath.section];
 }
 
 
